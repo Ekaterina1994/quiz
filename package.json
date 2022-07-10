@@ -1,0 +1,33 @@
+{
+  "name": "quiz",
+  "version": "0.1.0",
+  "description": "Quiz project with MERN stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ekaterina1994/quiz.git"
+  },
+  "keywords": [
+    "mern",
+    "react"
+  ],
+  "author": "Ekaterina Veretennikova <katishteno@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ekaterina1994/quiz/issues"
+  },
+  "homepage": "https://github.com/Ekaterina1994/quiz#readme",
+  "dependencies": {
+    "config": "^3.3.7",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.4"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.19"
+  }
+}
