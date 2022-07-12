@@ -1,22 +1,6 @@
 import React, { useState } from "react";
+import data from "../data.json";
 
-const data = [
-  {
-    question: "What is your name?",
-    choices: ["Anna", "Victor", "Olga"],
-    rightAnswer: "Anna"
-  },
-  {
-    question: "What is your mother name?",
-    choices: ["Anna", "Kate", "Olga"],
-    rightAnswer: "Olga"
-  },
-  {
-    question: "What is your father name?",
-    choices: ["Victor", "Boris", "Slava"],
-    rightAnswer: "Boris"
-  }
-];
 
 const Questions = () => {
   const [score, setScore] = useState(0);
