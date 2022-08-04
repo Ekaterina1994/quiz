@@ -1,5 +1,5 @@
 {
 	"port": 3001,
 	"jwtSecret": "ekaterina quiz mern",
-	"mongoUri": "mongodb+srv://Ekaterina1994:5502641ktKT@cluster0.iyx8aew.mongodb.net/?retryWrites=true&w=majority"
+	"mongoUri": "mongodb+srv://Ekaterina:5502641ktKT@cluster0.07sir65.mongodb.net/?retryWrites=true&w=majority"
 }

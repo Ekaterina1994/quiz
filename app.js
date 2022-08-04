@@ -4,9 +4,9 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-app.use("/api/auth", require("./routes/auth.routes"));
+app.use("/api", require("./routes/quiz.routes"));
 
-const PORT = config.get("port") || 3001;
+const PORT = config.get("port") || 3001 ;
 
 async function start() {
   try {
