@@ -5,7 +5,7 @@ export const Button = () => {
   return (
     <div>
       <NavLink to="/result">
-        <a class="waves-effect waves-light btn-large">Button</a>
+        <button className="waves-effect waves-light btn-large">Button</button>
       </NavLink>
     </div>
   );

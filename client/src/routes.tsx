@@ -6,7 +6,7 @@ import { Result } from "./pages/Result";
 export const useRoutes = () => {
 	return (
 		<Routes>
-			<Route path="/" element={<Quiz />} exact />
+			<Route path="/" element={<Quiz />} />
 			<Route path="/result" element={<Result />} />
 		</Routes>
 	)
