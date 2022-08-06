@@ -1,12 +1,19 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
-export const Button = () => {
+function Button() {
   return (
     <div>
       <NavLink to="/result">
-        <button className="waves-effect waves-light btn-large">Button</button>
+        <button
+          type="submit"
+          className="waves-effect waves-light btn-large"
+        >
+          Button
+        </button>
       </NavLink>
     </div>
   );
-};
+}
+
+export default Button;
