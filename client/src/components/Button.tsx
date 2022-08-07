@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 
-function Button() {
+const Button = () => {
   return (
     <div>
       <NavLink to="/result">
@@ -14,6 +14,6 @@ function Button() {
       </NavLink>
     </div>
   );
-}
+};
 
 export default Button;

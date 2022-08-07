@@ -3,7 +3,7 @@ import "materialize-css";
 import {BrowserRouter as Router} from "react-router-dom";
 import useRoutes from "./routes";
 
-function App() {
+const App = () => {
   const routes = useRoutes(); // (false)
 
   return (
@@ -11,6 +11,6 @@ function App() {
       <div className="container">{routes}</div>
     </Router>
   );
-}
+};
 
 export default App;

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import data from "../data.json";
 
-function Questions() {
+const Questions = () => {
   const [score, setScore] = useState(0);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [answer, setAnswer] = useState("");
@@ -13,31 +13,33 @@ function Questions() {
   const submit = (e: any) => {
     e.preventDefault();
     if (answer === data[questionIndex].rightAnswer) {
-      setScore((score) => score + 1);
+      setScore((score) => { return score + 1; });
     }
     if (questionIndex < data.length) {
-      setQuestionIndex((i) => i + 1);
+      setQuestionIndex((i) => { return i + 1; });
     }
   };
   if (questionIndex < data.length) {
     return (
       <div>
         <label><h3>{data[questionIndex].question}</h3></label>
-        {data[questionIndex].choices.map((c: any, i) => (
-          <h5>
-            <label>
-              <input
-                type="radio"
-                name="choice"
-                value={c}
-                onChange={(e) => setAnswer(e.target.value)}
-                checked={answer === c}
-								key=
-              />
-              <span>{c}</span>
-            </label>
-          </h5>
-        ))}
+        {data[questionIndex].choices.map((c: any, i) => {
+          return (
+            <h5>
+              <label>
+                <input
+                  type="radio"
+                  name="choice"
+                  value={c}
+                  onChange={(e) => { return setAnswer(e.target.value); }}
+                  checked={answer === c}
+                  key={data.id}
+                />
+                <span>{c}</span>
+              </label>
+            </h5>
+          );
+        })}
         <button
           className="waves-effect waves-light btn-large"
           type="button"
@@ -70,6 +72,6 @@ function Questions() {
     </form>
   );
 
-}
+};
 
 export default Questions;
