@@ -80,3 +80,4 @@ logs
 # Ignore IDE specific files
 .vscode/
 
+node_modules

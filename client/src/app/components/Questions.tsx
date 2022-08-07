@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import data from "../data.json";
+import data from "../../data.json";
 
 const Questions = () => {
   const [score, setScore] = useState(0);

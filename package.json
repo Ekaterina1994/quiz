@@ -4,8 +4,8 @@
   "description": "Quiz project with MERN stack",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "server": "nodemon app.js",
+    "start": "node server/app.js",
+    "server": "nodemon server/app.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
