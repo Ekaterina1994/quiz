@@ -3,7 +3,13 @@ import {NavLink} from "react-router-dom";
 
 // компонент кнопки
 
-const Button = () => {
+type buttonType = "button" | "submit";
+
+interface IInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  type?: buttonType;
+}
+
+const Button: React.FC<IInputProps> = () => {
   return (
     <div>
       <NavLink to="/result">

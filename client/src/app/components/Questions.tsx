@@ -20,8 +20,8 @@ const Questions = () => {
 	то количество очков увеличивается на 1
 	*/
 
-  const submit = (e: any) => {
-    e.preventDefault();
+  const submit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.preventDefault();
     if (answer === data[questionIndex].rightAnswer) {
       setScore((score) => { return score + 1; });
     }
