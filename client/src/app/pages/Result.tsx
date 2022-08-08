@@ -1,5 +1,7 @@
 import React from "react";
 
+// Компонента выводящая результат
+
 const Result = () => {
   return (
     <div>
