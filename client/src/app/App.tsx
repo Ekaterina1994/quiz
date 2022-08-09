@@ -6,7 +6,7 @@ import useRoutes from "../routes";
 // Главный компонент, который отрисовывает элементы на странице в зависимости от роута (UseRoutes)
 
 const App = () => {
-  const routes = useRoutes(); // (false)
+  const routes = useRoutes();
 
   return (
     <Router>
