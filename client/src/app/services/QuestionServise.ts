@@ -1,4 +1,4 @@
-import {Question} from "./Model/Question";
+import {Question} from "./model/Question";
 import IQuestionService from "./IQuestionService";
 
 /**

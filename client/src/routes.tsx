@@ -5,7 +5,7 @@ import Result from "./app/pages/Result";
 
 // Роуты отслеживают url и при совпадении с указанным путем отрисовывают указанные элементы
 
-const useRoutes = () => {
+const useRoutes: React.FC = () => {
   return (
     <Routes>
       <Route

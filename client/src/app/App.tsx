@@ -5,8 +5,8 @@ import useRoutes from "../routes";
 
 // Главный компонент, который отрисовывает элементы на странице в зависимости от роута (UseRoutes)
 
-const App = () => {
-  const routes = useRoutes();
+const App: React.FC = () => {
+  const routes = useRoutes(false);
 
   return (
     <Router>

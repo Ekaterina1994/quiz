@@ -2,7 +2,7 @@ import React from "react";
 
 // Компонента выводящая результат
 
-const Result = () => {
+const Result: React.FC = () => {
   return (
     <div>
       <h1>Result</h1>

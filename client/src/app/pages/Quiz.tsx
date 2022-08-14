@@ -3,7 +3,7 @@ import Questions from "../components/Questions";
 
 // Страница с заголовком и компонентой - вопросами
 
-const Quiz = () => {
+const Quiz: React.FC = () => {
   return (
     <div>
       <h1>Hello, Quiz!</h1>

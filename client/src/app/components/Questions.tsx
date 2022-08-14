@@ -4,7 +4,7 @@ import data from "../../data.json";
 
 // Questions - компонента включающая в себя все элементы анкеты
 
-const Questions = () => {
+const Questions: React.FC = () => {
   const [score, setScore] = useState(0);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [answer, setAnswer] = useState("");
