@@ -1,21 +1,17 @@
-/**
- * Название проекта на клиенте
- */
+// Название проекта на клиенте
+
 export class Question {
 
-  /**
-	 * Название вопроса
-	 */
+  // Название вопроса
+
   public question: string;
 
-  /**
-	 * Варианты ответов (массив строк)
-	 */
+  // Варианты ответов (массив строк)
+
   public choices: Array<string>;
 
-  /**
-	 * Правильный вариант ответа
-	 */
+  // Правильный вариант ответа
+
   public rightAnswer: string;
 
   constructor(question: Partial<Question>) {

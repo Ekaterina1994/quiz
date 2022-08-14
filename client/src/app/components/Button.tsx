@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 
 type buttonType = "button" | "submit";
 
-interface IInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface IInputProps extends React.MouseEvent<HTMLButtonElement> {
   type?: buttonType;
 }
 
