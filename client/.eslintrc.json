@@ -44,7 +44,7 @@
     "@typescript-eslint/typedef": [
       "error",
       {
-        "arrayDestructuring": true,
+        //"arrayDestructuring": true,
         "arrowCallSignature": true,
         "arrowParameter": true,
         "callSignature": true,

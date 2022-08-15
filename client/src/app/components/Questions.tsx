@@ -1,18 +1,28 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import data from "../../data.json";
 
 // Компонент Question включает в себя все элементы анкеты (вопросы и ответы)
 
-// interface IScore {
-//   score: number;
-//   setScore: React.Dispatch<React.SetStateAction<number>>;
-// }
+export interface IScore {
+  score: number;
+  // setScore: React.SetStateAction<IScore> => void;
+}
 
-const Questions: React.FC = () => {
+export interface IQuestionIndex {
+  questionIndex: number;
+}
 
-  const [score, setScore] = useState<number>(0);
-  // const [questionIndex, setQuestionIndex] = useState<number>(0);
-  // const [answer, setAnswer] = useState<string>("");
+export interface IAnswer {
+  answer: string;
+}
+
+export interface IAll extends IScore, IQuestionIndex, IAnswer {}
+
+const Questions: React.FC<IAll> = () => {
+
+  const [score, setScore] = useState<IScore>({score: 0});
+  const [questionIndex, setQuestionIndex] = useState<IQuestionIndex>({questionIndex: 0});
+  const [answer, setAnswer] = useState<IAnswer>({answer: ""});
 
   // сброс счетчика очков до 0
 
@@ -22,24 +32,24 @@ const Questions: React.FC = () => {
   //   setQuestionIndex(0);
   // }, []);
 
-  const restart = () => {
-    setScore: React.Dispatch<React.SetStateAction<number>>;
-  //   setAnswer("");
-  //   setQuestionIndex(0);
+  const restart: React.FC<IAll> = (): void => {
+    setScore({score: 0});
+    setAnswer({answer: ""});
+    setQuestionIndex({questionIndex: 0});
   };
 
   /* функция отправки ответа на вопрос. Если выбранный ответ совпадает со значением ключа rightAnswer,
 	то количество очков увеличивается на 1
 	*/
 
-  const submit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-	  event.preventDefault();
-	  if (answer === data[questionIndex].rightAnswer) {
-	    setScore((score: number) => { return score + 1; });
-	  }
-	  if (questionIndex < data.length) {
-	    setQuestionIndex((i) => { return i + 1; });
-	  }
+  const submit: React.FC = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+    event.preventDefault();
+    if (answer === data[questionIndex].rightAnswer) {
+      setScore((score) => { return score + 1; });
+    }
+    if (questionIndex < data.length) {
+      setQuestionIndex((i) => { return i + 1; });
+    }
   };
 
   /* если индекс вопроса меньше длины массива с вопросами, то на странице будет выводиться новый вопрос,
@@ -47,14 +57,14 @@ const Questions: React.FC = () => {
 	*/
 
   if (questionIndex < data.length) {
-	  return (
-  <div>
+    return (
+      <div>
         <label><h3>{data[questionIndex].question}</h3></label>
         {data[questionIndex].choices.map((c: any, i) => {
-	        return (
-  <h5>
+          return (
+            <h5>
               <label>
-      <input
+                <input
                   type="radio"
                   name="choice"
                   value={c}
@@ -62,26 +72,26 @@ const Questions: React.FC = () => {
                   checked={answer === c}
                   key={data.id}
                 />
-      <span>{c}</span>
-    </label>
+                <span>{c}</span>
+              </label>
             </h5>
-	        );
-	      })}
+          );
+        })}
 
         <button
-      className="waves-effect waves-light btn-large"
-      type="button"
-      onClick={submit}
-    >
-      check
-    </button>
+          className="waves-effect waves-light btn-large"
+          type="button"
+          onClick={submit}
+        >
+          check
+        </button>
 
         <p>
-      score:
+          score:
           {score}
-    </p>
+        </p>
       </div>
-	  );
+    );
   }
 
   return (
