@@ -1,13 +1,14 @@
-import {Question} from "../model/Question";
+export interface IScore {
+  score: number;
+  // setScore: React.SetStateAction<IScore> => void;
+}
 
-/**
- * Методы сервиса для работы с проектами
- */
-export default interface IQuestionService {
+export interface IQuestionIndex {
+  questionIndex: number;
+}
 
-  /**
-	 * Получает доступные вопросы
-	 */
-  getAllQuestions(): Promise<Question[]>;
+export interface IAnswer {
+  answer: string;
+}
 
-};;;;;;;;;;;;;;;;;;;;;;
+export interface IAll extends IScore, IQuestionIndex, IAnswer {}

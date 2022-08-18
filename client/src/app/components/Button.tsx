@@ -3,13 +3,7 @@ import {NavLink} from "react-router-dom";
 
 // компонент кнопки
 
-type buttonType = "button" | "submit";
-
-interface IInputProps extends React.MouseEvent<HTMLButtonElement> {
-  type?: buttonType;
-}
-
-const Button: React.FC<IInputProps> = () => {
+const Button: React.FC = () => {
   return (
     <div>
       <NavLink to="/result">

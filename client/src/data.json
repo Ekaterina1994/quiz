@@ -2,16 +2,19 @@
   {
     "question": "What is your name?",
     "choices": ["Anna", "Victor", "Olga"],
-    "rightAnswer": "Anna"
+    "rightAnswer": "Anna",
+		"key": 1
   },
   {
     "question": "What is your mother name?",
     "choices": ["Anna", "Kate", "Olga"],
-    "rightAnswer": "Olga"
+    "rightAnswer": "Olga",
+		"key": 2
   },
   {
     "question": "What is your father name?",
     "choices": ["Victor", "Boris", "Slava"],
-    "rightAnswer": "Boris"
+    "rightAnswer": "Boris",
+		"key": 3
   }
 ]
