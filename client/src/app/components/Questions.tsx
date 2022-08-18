@@ -3,7 +3,9 @@ import data from "../../data.json";
 // import {IScore, IQuestionIndex, IAnswer, IAll} from "../services/IQuestionService";
 // import {QuestionFunction} from "../services/Functions";
 
-// Компонент Question включает в себя все элементы анкеты (вопросы и ответы)
+/**
+ * Компонент Question включает в себя все элементы анкеты (вопросы и ответы)
+ */
 
 export interface IScore {
   score: number;
@@ -36,7 +38,9 @@ const Questions: React.FC = () => {
   // const [questionIndex, setQuestionIndex] = useState(0);
   // const [answer, setAnswer] = useState("");
 
-  // сброс счетчика очков до 0
+  /**
+ * сброс счетчика очков до 0
+	*/
 
   const restart: React.FC = () => {
 	  // useEffect(() => {
@@ -58,7 +62,8 @@ const Questions: React.FC = () => {
   //   setQuestionIndex(0);
   // };
 
-  /* функция отправки ответа на вопрос. Если выбранный ответ совпадает со значением ключа rightAnswer,
+  /**
+	 *  функция отправки ответа на вопрос. Если выбранный ответ совпадает со значением ключа rightAnswer,
 	то количество очков увеличивается на 1
 	*/
 
@@ -72,7 +77,8 @@ const Questions: React.FC = () => {
     }
   };
 
-  /* если индекс вопроса меньше длины массива с вопросами, то на странице будет выводиться новый вопрос,
+  /**
+	 * если индекс вопроса меньше длины массива с вопросами, то на странице будет выводиться новый вопрос,
 	если же нет - то будет выводиться result
 	*/
 

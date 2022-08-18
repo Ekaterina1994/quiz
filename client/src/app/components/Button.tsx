@@ -1,7 +1,9 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 
-// компонент кнопки
+/**
+ * компонент кнопки
+ */
 
 const Button: React.FC = () => {
   return (
