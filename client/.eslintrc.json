@@ -34,7 +34,7 @@
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/no-use-before-define": ["error"],
     "no-shadow": "off",
-    //"@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-shadow": ["error"],
     "comma-spacing": ["error", { "before": false, "after": true }],
     "semi-spacing": ["error", { "before": false, "after": true }],
     "no-multi-spaces": "error",
@@ -44,7 +44,7 @@
     "@typescript-eslint/typedef": [
       "error",
       {
-        //"arrayDestructuring": true,
+        "arrayDestructuring": false,
         "arrowCallSignature": true,
         "arrowParameter": true,
         "callSignature": true,
@@ -156,6 +156,8 @@
     "react/self-closing-comp": "error",
     "react/jsx-wrap-multilines": "error",
     "react/jsx-one-expression-per-line": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
     "import/extensions": [
       "error",
       "ignorePackages",

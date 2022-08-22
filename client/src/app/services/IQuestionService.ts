@@ -11,4 +11,10 @@ export interface IAnswer {
   answer: string;
 }
 
-export interface IAll extends IScore, IQuestionIndex, IAnswer {}
+export interface IAll extends IScore, IQuestionIndex, IAnswer { }
+
+export interface IFunctions {
+  setScore: number;
+  setAnswer: string;
+  setQuestionIndex: number;
+}
