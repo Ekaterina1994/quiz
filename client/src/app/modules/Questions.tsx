@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import data from "../../data.json";
+import data from "../store/data.json";
 // import {IAll} from "../services/IQuestionService";
 // import {QuestionFunction} from "../services/Functions";
 

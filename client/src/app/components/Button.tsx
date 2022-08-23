@@ -10,7 +10,6 @@ const Button: React.FC = () => {
     <div>
       {/* <NavLink to="/result"> */}
       <button
-        // type="submit"
         className="waves-effect waves-light btn-large"
         type="button"
 

@@ -16,36 +16,38 @@ Quiz is an app where you can test your knowledge about the world. This is a usef
 
 **_Main modules_**
 
-This app has two main modules:
+This application has the following architecture:
 
-1. Server part
-2. Client part
-
-Server part include:
-
-- Config file with information for mongoDB;
-- Routes file with routes path;
-- App file (or index file), where we connect our app with server.
-
-Client part include:
-
-- Tune files (ESLint, Prettier, .gitignore);
-- Components (which we can reuse);
-- And main file for render page (index.tsx)
+- app:
+  - components:
+    - Button.tsx
+  - modules:
+    - Questions.tsx
+  - pages:
+    - Quiz.tsx
+    - Result.tsx
+  - services:
+    - IQuestionService.ts
+  - store:
+    - data.json (file with questions, answers, right answers and keys)
+  - index.tsx
+  - routes.tsx
+- docs:
+  - RULES.md
 
 **_Technologies_**
 
-MongoDB
-Express
 React
 TypeScript
 NodeJS
-Material UI library
 SCSS
 
 **_Instructions_**
 
-If you want to open this project firstly you need to install all the dependencies, plugins and libraries. Then you can write on the terminal "npm run dev". This command will start both of script - server and client.:
-$ cd ../quiz
-$ npm install
-$ npm run dev
+Follow the next steps for start project:
+
+1. Clone all repository on your computer (git clone git@github.com:Ekaterina1994/quiz.git);
+2. Install all the dependencies (~/quiz$ npm install);
+3. Enter into folder "client" (~/quiz$ cd client);
+4. Install all the dependencies (~/quiz/client$ npm install);
+5. Start script for open application (~/quiz/$ npm run client).
