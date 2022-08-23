@@ -1,4 +1,4 @@
-# quiz
+# **_Quiz_**
 
 Quiz is an app where you can test your knowledge about the world. This is a useful game for broadening one's horizons. This app looks just as simple questionnaire. There are multiple answers for each question. But only one is right.I create this app because I want to learn new technologies like Express, MongoDB etc.
 

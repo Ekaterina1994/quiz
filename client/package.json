@@ -18,8 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-		"flow": "flow",
-		"eslint": "eslint src --ext .ts, .tsx",
+    "flow": "flow",
+    "eslint": "eslint src --ext .ts, .tsx",
     "eject": "react-scripts eject"
   },
   "lint": "eslint \"src/**/*.ts\"",

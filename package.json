@@ -7,7 +7,7 @@
     "start": "node server/app.js",
     "server": "nodemon server/app.js",
     "client": "npm run start --prefix client",
-		"flow": "flow",
+    "flow": "flow",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
