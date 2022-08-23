@@ -3,8 +3,8 @@
 ## GIT
 
 - This project has the one branch called "main". If you need to create a new branch it's name should to start by little letter;
-- Each commit should look like the template:
-  $ git commit -m "#issue's_number-issue's_name/part-of-task-which-was-done".
+- Each commit message and commit command must follow the following pattern:
+  $ git commit -m "#issue_number-issue_name/part_of_task_which_was_done".
 
 ## FILE'S AND FOLDER'S NAMES
 
@@ -14,8 +14,7 @@
 
 ## DOCUMENTATIONS
 
-- In README file should be describe project, it's goals, used technologies and instructions about to start the app;
-- All modules must be described in README file: for what it need and other useful info.
+- The README file should contain a description of the project, its goals, technologies used, and instructions for running the application.
 
 ## COMMUNICATION
 
