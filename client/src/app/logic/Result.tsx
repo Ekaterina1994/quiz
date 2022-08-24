@@ -1,8 +1,8 @@
 import React from "react";
 
 /**
- * Компонента выводящая результат */
-
+ * Компонента выводящая результат
+ */
 const Result: React.FC = () => {
   return (
     <div>

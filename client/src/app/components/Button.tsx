@@ -3,7 +3,6 @@ import React from "react";
 /**
  * компонент кнопки
  */
-
 const Button: React.FC = () => {
   return (
     <div>

@@ -4,7 +4,6 @@ import data from "../store/data.json";
 /**
  * Компонент Question включает в себя все элементы анкеты (вопросы и ответы)
  */
-
 const Questions: React.FC = () => {
 
   const [score, setScore] = useState<number>(0);
@@ -14,7 +13,6 @@ const Questions: React.FC = () => {
   /**
  	 * сброс счетчика очков до 0
 	 */
-
   const restart: () => void = () => {
     setScore(0);
     setAnswer("");
@@ -49,7 +47,6 @@ const Questions: React.FC = () => {
 	 * если индекс вопроса меньше длины массива с вопросами, то на странице будет выводиться новый вопрос,
 	 * если же нет - то будет выводиться result
 	 */
-
   if (questionIndex < data.length) {
     return (
       <div>
