@@ -1,5 +1,4 @@
 import React from "react";
-// import {NavLink} from "react-router-dom";
 
 /**
  * компонент кнопки
@@ -8,15 +7,12 @@ import React from "react";
 const Button: React.FC = () => {
   return (
     <div>
-      {/* <NavLink to="/result"> */}
       <button
         className="waves-effect waves-light btn-large"
         type="button"
-
       >
         Button
       </button>
-      {/* </NavLink> */}
     </div>
   );
 };

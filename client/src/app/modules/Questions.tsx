@@ -1,7 +1,5 @@
 import React, {useState} from "react";
 import data from "../store/data.json";
-// import {IAll} from "../services/IQuestionService";
-// import {QuestionFunction} from "../services/Functions";
 
 /**
  * Компонент Question включает в себя все элементы анкеты (вопросы и ответы)
@@ -62,7 +60,7 @@ const Questions: React.FC = () => {
               <label>
                 <input
                   type="radio"
-                  //  name="choice"
+                  name="choice"
                   value={c}
                   onChange={onChange}
                   checked={answer === c}

@@ -1,6 +1,5 @@
 export interface IScore {
   score: number;
-  // setScore: React.SetStateAction<IScore> => void;
 }
 
 export interface IQuestionIndex {
