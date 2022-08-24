@@ -1,13 +1,12 @@
 # **_Quiz_**
 
-Quiz is an app where you can test your knowledge about the world. This is a useful game for broadening one's horizons. This app looks just as simple questionnaire. There are multiple answers for each question. But only one is right.I create this app because I want to learn new technologies like Express, MongoDB etc.
+Quiz is an app where you can test your knowledge about the world. This is a useful game for broadening one's horizons. This app looks just as simple questionnaire. There are multiple answers for each question. But only one is right. I create this app because I want to learn new technologies like React, TypeScript etc.
 
 **_Table of contents_**
 
 - [Project goals](#project-goals)
 - [Main modules](#main-modules)
 - [Technologies](#technologies)
-- [Instructions](#instructions)
 
 **_Project goals_**
 
@@ -16,22 +15,18 @@ Quiz is an app where you can test your knowledge about the world. This is a usef
 
 **_Main modules_**
 
-This application has the following architecture:
+This application has the following main parts:
 
-- app:
-  - components:
-    - Button.tsx
-  - modules:
-    - Questions.tsx
-  - pages:
-    - Quiz.tsx
-    - Result.tsx
-  - services:
-    - IQuestionService.ts
-  - store:
-    - data.json (file with questions, answers, right answers and keys)
-  - index.tsx
-  - routes.tsx
+- client:
+  - src:
+    - app:
+      - components (contain little and basic elements)
+      - modules (contain few elements and works by getting data from services)
+      - logic (logical parts of the project, such as the main menu page), the quiz itself, the results)
+      - services (contain function which mapping questions for quiz from store)
+      - store (contain function which get questions for quiz from data.json)
+    - index.tsx (the main file)
+    - routes.tsx (contain routes based on url)
 - docs:
   - RULES.md
 
@@ -39,15 +34,12 @@ This application has the following architecture:
 
 React
 TypeScript
-NodeJS
-SCSS
+CSS (SCSS)
 
-**_Instructions_**
+P.S:
+I am ready to discuss any job offers and answer your questions. Send me an email at a convenient time for you:
+katishteno@mail.ru
 
-Follow the next steps for start project:
-
-1. Clone all repository on your computer (git clone git@github.com:Ekaterina1994/quiz.git);
-2. Install all the dependencies (~/quiz$ npm install);
-3. Enter into folder "client" (~/quiz$ cd client);
-4. Install all the dependencies (~/quiz/client$ npm install);
-5. Start script for open application (~/quiz/$ npm run client).
+YouTube: https://www.youtube.com/channel/UCEzXFClFND8K9vqYSfb3YAA
+LinkedIn: https://www.linkedin.com/in/ekaterina-veretennikova-73b22521b/
+CV: https://ekaterina1994.github.io/rsschool-cv/ or https://Ekaterina1994.github.io/rsschool-cv/cv

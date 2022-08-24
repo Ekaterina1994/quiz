@@ -8,13 +8,13 @@
 
 ## FILE'S AND FOLDER'S NAMES
 
-- Folder's names must be written with little letters;
-- File's names (components and other files in the app folder) should be written with big letters and settings files (tsconfig, package.json and others) with little letters;
-- File's name must contain the name of the main entity of this file.
+- Folder names must start with a small letter;
+- File names (components and other files in the app folder) should be written with big letters and settings files (tsconfig, package.json and others) with little letters;
+- File names must contain the name of the main entity of this file.
 
 ## DOCUMENTATIONS
 
-- The README file should contain a description of the project, its goals, technologies used, and instructions for running the application.
+- The README file in the root folder should contain a description of the project, its goals, technologies used, and the README file in the client folder should contain instructions for running the application.
 
 ## COMMUNICATION
 
