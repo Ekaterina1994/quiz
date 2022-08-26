@@ -6,7 +6,7 @@ import "materialize-css";
 const Menu: React.FC = () => {
   return (
     <nav>
-      <div className="nav-wrapper">
+      <div className="nav-wrapper teal lighten-1">
         <ul className="left hide-on-med-and-down">
           <li>
             <NavLink to="/">Home</NavLink>
