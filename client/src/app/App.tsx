@@ -9,6 +9,8 @@ import NotFoundPage from "./logic/error/NotFoundPage";
  * Главный компонент отрисовывает элементы на странице в зависимости от Route
  */
 const App: React.FC = () => {
+  const SettingsPath: string = "settings";
+  const ErrorPath: string = "404";
   return (
     <Router>
       <Routes>
@@ -18,15 +20,15 @@ const App: React.FC = () => {
           <Route index
             element={<HomePage />}
           />
-          <Route path="settings"
+          <Route path={SettingsPath}
             element={<SettingsPage />}
           />
-          <Route path="404"
+          <Route path={ErrorPath}
             element={<NotFoundPage />}
           />
           <Route path="*"
             element={(
-              <Navigate to="/404"
+              <Navigate to={`/${ErrorPath}`}
                 replace
               />
             )}
