@@ -2,7 +2,9 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import "materialize-css";
 
-/* Компонент Меню с навигацией */
+/**
+ * Компонент Меню с навигацией
+ */
 const Menu: React.FC = () => {
   return (
     <nav>

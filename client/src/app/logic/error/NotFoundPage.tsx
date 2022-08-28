@@ -1,6 +1,8 @@
 import React from "react";
 
-/* Компонент страницы "Настройки" */
+/**
+ * Компонент страницы "Настройки"
+ */
 const NotFoundPage: React.FC = () => {
   return (
     <section className="container">
