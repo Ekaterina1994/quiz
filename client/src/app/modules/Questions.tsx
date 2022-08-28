@@ -1,5 +1,7 @@
-import React, {useState} from "react";
-import data from "../store/data.json";
+import React, {useState, useEffect} from "react";
+import {Question} from "../services/ExampleService";
+import {exampleService} from "../services/ServiceInitialization";
+// import data from "../store/data.json";
 
 /**
  * Компонент Question включает в себя все элементы анкеты (вопросы и ответы)
@@ -9,6 +11,15 @@ const Questions: React.FC = () => {
   const [score, setScore] = useState<number>(0);
   const [questionIndex, setQuestionIndex] = useState<number>(0);
   const [answer, setAnswer] = useState<string>("");
+
+  const [data, setData] = useState<Question[]>([]);
+  const loadData: () => void = async () => {
+    const newData: Question[] = await exampleService.getDataExample();
+    setData(newData);
+  };
+  useEffect(() => {
+    loadData();
+  }, []);
 
   /**
  	 * сброс счетчика очков до 0
