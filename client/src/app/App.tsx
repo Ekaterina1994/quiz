@@ -1,9 +1,9 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import Layout from "./pages/Layout";
-import SettingsPage from "./pages/SettingsPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import HomePage from "./logic/home/HomePage";
+import Layout from "./logic/layout/Layout";
+import SettingsPage from "./logic/settings/SettingsPage";
+import NotFoundPage from "./logic/error/NotFoundPage";
 
 /**
  * Главный компонент отрисовывает элементы на странице в зависимости от Route

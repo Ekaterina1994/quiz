@@ -1,6 +1,8 @@
 import React from "react";
 
-/* Компонент страницы "Настройки" */
+/**
+ * Компонент страницы "Настройки"
+ */
 const SettingsPage: React.FC = () => {
   return <h1>Settings Page</h1>;
 };
