@@ -1,4 +1,5 @@
 import React from "react";
+import Headline from "../components/Headline";
 
 /**
  * Компонента выводящая результат
@@ -6,7 +7,7 @@ import React from "react";
 const Result: React.FC = () => {
   return (
     <div>
-      <h1>Result</h1>
+      <Headline headline="Result" />
     </div>
   );
 };

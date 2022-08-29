@@ -1,5 +1,6 @@
 import React from "react";
 import Questions from "../modules/Questions";
+import Headline from "../components/Headline";
 
 /**
  * Страница с заголовком и компонентой - вопросами
@@ -7,7 +8,7 @@ import Questions from "../modules/Questions";
 const Quiz: React.FC = () => {
   return (
     <div>
-      <h1>Hello, Quiz!</h1>
+      <Headline headline="Hello, Quiz!" />
       <Questions />
     </div>
   );
