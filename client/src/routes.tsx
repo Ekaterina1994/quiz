@@ -9,14 +9,8 @@ import Result from "./app/logic/Result";
 const useRoutes: React.FC = () => {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={<Quiz />}
-      />
-      <Route
-        path="/result"
-        element={<Result />}
-      />
+      <Route path="/" element={<Quiz />} />
+      <Route path="/result" element={<Result />} />
     </Routes>
   );
 };

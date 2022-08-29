@@ -11,6 +11,7 @@ import NotFoundPage from "./logic/error/NotFoundPage";
 const App: React.FC = () => {
   const SettingsPath: string = "settings";
   const ErrorPath: string = "404";
+
   return (
     <Router>
       <Routes>
