@@ -14,25 +14,11 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/"
-          element={<Layout />}
-        >
-          <Route index
-            element={<HomePage />}
-          />
-          <Route path={SettingsPath}
-            element={<SettingsPage />}
-          />
-          <Route path={ErrorPath}
-            element={<NotFoundPage />}
-          />
-          <Route path="*"
-            element={(
-              <Navigate to={`/${ErrorPath}`}
-                replace
-              />
-            )}
-          />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path={SettingsPath} element={<SettingsPage />} />
+          <Route path={ErrorPath} element={<NotFoundPage />} />
+          <Route path="*" element={(<Navigate to={`/${ErrorPath}`} replace />)} />
         </Route>
       </Routes>
     </Router>

@@ -24,6 +24,7 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
+    "react/jsx-first-prop-new-line": [1, "multiline"],
     "no-tabs": ["error", { "allowIndentationTabs": true }],
     "max-lines": ["error", 3000],
     "semi": ["error", "always"],
@@ -146,7 +147,7 @@
     ],
     "react/jsx-curly-spacing": "error",
     "react/jsx-key": "error",
-    "react/jsx-max-props-per-line": ["error", { "maximum": 1 }],
+    "react/jsx-max-props-per-line": ["error", { "maximum": 2 }],
     "react/jsx-no-duplicate-props": "error",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",

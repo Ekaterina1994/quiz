@@ -6,7 +6,7 @@ import React from "react";
 const Result: React.FC = () => {
   return (
     <div>
-      <h1>Result</h1>
+      <h1 className="1" title="123">Result</h1>
     </div>
   );
 };
