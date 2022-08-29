@@ -12,6 +12,9 @@ const Questions: React.FC = () => {
   const [questionIndex, setQuestionIndex] = useState<number>(0);
   const [answer, setAnswer] = useState<string>("");
 
+  /**
+ 	 * Функция получения данных из сервисного слоя
+ 	 */
   const [data, setData] = useState<Question[]>([]);
   const loadData: () => void = async () => {
     const newData: Question[] = await exampleService.getDataExample();
@@ -23,7 +26,7 @@ const Questions: React.FC = () => {
 
   /**
  	 * сброс счетчика очков до 0
-	 */
+   */
   const restart: () => void = () => {
     setScore(0);
     setAnswer("");
