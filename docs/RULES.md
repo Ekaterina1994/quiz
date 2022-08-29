@@ -29,6 +29,15 @@
 ## CODE
 
 - Props should be formatted as follows: if there is one prop, then all in one line, if there are several props, then each prop in the tag on a new line;
+- Constants should be formatted as follow:
+  - if the value of the constant is known before the code is executed (for example, the hexadecimal value for red), then we use capital letters and, if necessary, an underscore:
+
+`const COLOR_RED = #123fff`
+
+	- if the constants are calculated during script execution, but do not change after their initial assignment, then use uppercase letters and CamelCase:
+
+`const newResult = a * b`
+
 - Comments for code are formatted as:
 
 ```
