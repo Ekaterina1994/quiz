@@ -3,7 +3,9 @@ import {ExampleService} from "./ExampleService";
 /**
  * Объявление переменной serviceExampleConfig, которая указывает путь получения данных
  */
-const serviceExampleConfig: {pathToBack: string} = {pathToBack: "http://path/to/back"};
+const PATH_TO_BACK: string = "http://path/to/back";
+
+const serviceExampleConfig: {pathToBack: string} = {pathToBack: `${PATH_TO_BACK}`};
 
 /**
  * Объявление константы, с помощью которой можно создавать новые классы на основе созданного ранее

@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {Question} from "../services/ExampleService";
 import {exampleService} from "../services/ServiceInitialization";
-// import data from "../store/data.json";
 
 /**
  * Компонент Question включает в себя все элементы анкеты (вопросы и ответы)
