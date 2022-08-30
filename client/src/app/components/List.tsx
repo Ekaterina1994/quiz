@@ -1,6 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import "materialize-css";
+import styles from "./List.module.scss";
 
 /**
  * Компонент Меню с навигацией
@@ -14,9 +15,9 @@ export type Props = {
 const List: React.FC<Props> = ({pathHome, pathSettings}: Props) => {
   return (
     <nav>
-      <div className="nav-wrapper teal lighten-1">
-        <ul className="left hide-on-med-and-down">
-          <li>
+      <div className={styles.wrapper}>
+        <ul className={styles.list}>
+          <li className={styles.item}>
             <NavLink to={pathHome}>Home</NavLink>
           </li>
           <li>

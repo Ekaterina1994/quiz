@@ -1,0 +1,9 @@
+@import '../../index.scss';
+
+.headline {
+	margin: $h1_margin;
+	font-size: $h1_font_size;
+	line-height: $h1_lineheight;
+	color: $color_text_main;
+	font-family: $normalized_font_family;
+}

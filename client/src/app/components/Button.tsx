@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Button.module.scss";
 
 /**
  * компонент кнопки
@@ -8,7 +9,7 @@ const Button: React.FC = () => {
   return (
     <div>
       <button
-        className="waves-effect waves-light btn-large"
+        className={styles.btn}
         type="button"
       >
         Button

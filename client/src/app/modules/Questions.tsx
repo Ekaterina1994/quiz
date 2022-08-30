@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Question} from "../services/ExampleService";
 import {exampleService} from "../services/ServiceInitialization";
+import styles from "../components/Button.module.scss";
 
 /**
  * Компонент Question включает в себя все элементы анкеты (вопросы и ответы)
@@ -83,7 +84,7 @@ const Questions: React.FC = () => {
         })}
 
         <button
-          className="waves-effect waves-light btn-large"
+          className={styles.btn}
           type="button"
           onClick={submit}
         >
@@ -102,7 +103,7 @@ const Questions: React.FC = () => {
     <form>
       <div>
         <button
-          className="waves-effect waves-light btn-large"
+          className={styles.btn}
           type="button"
           onClick={restart}
         >
