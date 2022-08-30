@@ -1,6 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import "materialize-css";
+import clsx from "clsx";
 import styles from "./List.module.scss";
 
 /**
@@ -15,9 +16,9 @@ export type Props = {
 const List: React.FC<Props> = ({pathHome, pathSettings}: Props) => {
   return (
     <nav>
-      <div className={styles.wrapper}>
-        <ul className={styles.list}>
-          <li className={styles.item}>
+      <div className={clsx(styles.wrapper)}>
+        <ul className={clsx(styles.list)}>
+          <li className={clsx(styles.item)}>
             <NavLink to={pathHome}>Home</NavLink>
           </li>
           <li>

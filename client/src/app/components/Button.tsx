@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 import styles from "./Button.module.scss";
 
 /**
@@ -9,7 +10,7 @@ const Button: React.FC = () => {
   return (
     <div>
       <button
-        className={styles.btn}
+        className={clsx(styles.btn)}
         type="button"
       >
         Button

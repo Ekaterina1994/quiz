@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 import styles from "./Paragraph.module.scss";
 
 /**
@@ -9,7 +10,7 @@ export type Props = { text: string };
 const Paragraph: React.FC<Props> = ({text}: Props) => {
   return (
     <div>
-      <p className={styles.paragraph}>{text}</p>
+      <p className={clsx(styles.paragraph)}>{text}</p>
     </div>
   );
 };
