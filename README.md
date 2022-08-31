@@ -1,6 +1,6 @@
 # **_Quiz_**
 
-Quiz is an app where you can test your knowledge about the world. This is a useful game for broadening one's horizons. This app looks just as simple questionnaire. There are multiple answers for each question. But only one is right. I create this app because I want to learn new technologies like React, TypeScript etc.
+Quiz is an app where you can test your knowledge about the world. This is a useful game for broadening one's horizons. This app looks just as simple questionnaire. There are multiple answers for each question. But only one is right.
 
 **_Table of contents_**
 
@@ -8,27 +8,34 @@ Quiz is an app where you can test your knowledge about the world. This is a usef
 - [Main modules](#main-modules)
 - [Technologies](#technologies)
 
-**_Project goals_**
+**_Project goal_**
 
-- To help people to test them and show how little they know about universe;
-- Explore interest in this type of application to conduct a situation analysis;
+- Effective consolidation of knowledge in an exciting form;
 
 **_Main modules_**
 
 This application has the following main parts:
 
-- client:
-  - src:
-    - app:
-      - components (contain little and basic elements)
-      - modules (contain few elements and works by getting data from services)
-      - logic (logical parts of the project, such as the main menu page), the quiz itself, the results)
-      - services (contain function which mapping questions for quiz from store)
-      - store (contain function which get questions for quiz from data.json)
-    - index.tsx (the main file)
-    - routes.tsx (contain routes based on url)
-- docs:
-  - RULES.md
+- client
+- docs
+
+The folder "client" contains the root folder of the project "src" and the folder "public" with the "index.html" root page.
+The folder "docs" contains the file "RULES.md" with project rules.
+
+```sh
+└── src/                        #
+    ├── app/                    # Layer: Application
+    |   ├── components/         # A collection of UI components like buttons, modals, inputs, loader, etc., 
+    |   |                       # that can be used across various files in the project. 
+    |   |                       #
+    |   ├── logic/              # Logical parts of the project, such as the main menu page, the quiz itself, the results
+    |   |                       #
+    |   └── services/           # Logic for obtaining data from external sources
+    |                           #
+    ├── index.scss/             # Root style file 
+    |                           #
+    └── index.tsx/              # Root script file                  
+```
 
 **_Technologies_**
 
