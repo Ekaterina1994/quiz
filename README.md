@@ -10,7 +10,7 @@ Quiz is an app where you can test your knowledge about the world. This is a usef
 
 **_Project goal_**
 
-- Effective consolidation of knowledge in an exciting form;
+Effective consolidation of knowledge in an exciting form.
 
 **_Main modules_**
 
@@ -25,10 +25,11 @@ The folder "docs" contains the file "RULES.md" with project rules.
 ```sh
 └── src/                        #
     ├── app/                    # Layer: Application
-    |   ├── components/         # A collection of UI components like buttons, modals, inputs, loader, etc., 
-    |   |                       # that can be used across various files in the project. 
+    |   ├── components/         # A collection of UI components like buttons, modals, inputs,
+    |   |                       # loader, etc., that can be used across various files in the project.                        
     |   |                       #
-    |   ├── logic/              # Logical parts of the project, such as the main menu page, the quiz itself, the results
+    |   ├── logic/              # Logical parts of the project, such as the main menu page,
+    |   |                       # the quiz itself, the results
     |   |                       #
     |   └── services/           # Logic for obtaining data from external sources
     |                           #
@@ -39,14 +40,19 @@ The folder "docs" contains the file "RULES.md" with project rules.
 
 **_Technologies_**
 
-React
-TypeScript
-CSS (SCSS)
+- React
+- TypeScript
+- CSS (SCSS)
 
 P.S:
-I am ready to discuss any job offers and answer your questions. Send me an email at a convenient time for you:
+We're ready to discuss any job offers and answer your questions. Send me an email at a convenient time for you:
 katishteno@mail.ru
 
+Ekaterina:
 YouTube: https://www.youtube.com/channel/UCEzXFClFND8K9vqYSfb3YAA
 LinkedIn: https://www.linkedin.com/in/ekaterina-veretennikova-73b22521b/
 CV: https://ekaterina1994.github.io/rsschool-cv/ or https://Ekaterina1994.github.io/rsschool-cv/cv
+
+Yuri:
+LinkedIn: https://www.linkedin.com/in/yuri-prigara/
+CV: https://www.linkedin.com/feed/update/urn:li:activity:6958064508523225089?utm_source=share&utm_medium=member_desktop
