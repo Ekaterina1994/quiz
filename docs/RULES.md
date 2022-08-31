@@ -2,14 +2,15 @@
 
 ## GIT
 
-- This project has the one branch called "main". If you need to create a new branch it's name should to start by little letter;
+- This project has the one branch called "main" where we work on client part of app.
+- If you need to create a new branch (for example you will create a server part) it's name should to start by little letter;
 - We should use only English for describe tasks, issues, write comments etc;
 - One task - one issue. No need to do some tasks in one issue;
-- Tasks start under the supervision of Victor;
-- When task starts start, we must clearly describe the conditions what is necessary to complete;
-- If the task can be described by item, then we start the items in the description as a list;
+- When task starts, we must clearly describe "definition of done" (describe the full functionality of the task, what should be in the end);
+- If the task can be described by item, then we start the items in the description as a numbered list;
 - Each commit message and commit command must follow the following pattern:
-  $ git commit -m "#issue_number-issue_name/part_of_task_which_was_done".
+
+`"#issue_number-issue_name/part_of_task_which_was_done"`
 
 ## FILE'S AND FOLDER'S NAMES
 
@@ -19,7 +20,7 @@
 
 ## DOCUMENTATIONS
 
-- The README file in the root folder should contain a description of the project, its goals, technologies used, and the README file in the client folder should contain instructions for running the application.
+- The README file in the root folder should contain a description of the project, its goals, technologies used, and the README files in the subfolders should contain instructions for running the application or other useful information.
 
 ## COMMUNICATION
 
@@ -28,29 +29,52 @@
 
 ## CODE
 
-- Props should be formatted as follows: if there is one prop, then all in one line, if there are several props, then each prop in the tag on a new line;
+- We have a standard config file ESLint in the root folder (".eslintrc.json"), if we use TypeScript we should use it's rules;
 - Constants should be formatted as follow:
-  - if the value of the constant is known before the code is executed (for example, the hexadecimal value for red), then we use capital letters and, if necessary, an underscore:
 
-`const COLOR_RED = #123fff`
+  - we use capital letters and an underscore, if the value of the constant is known before the code is executed and "hardcoded" (for example, the hexadecimal value for red):
 
-	- if the constants are calculated during script execution, but do not change after their initial assignment, then use uppercase letters and CamelCase:
+	`const COLOR_RED = "#F00";`
 
-`const newResult = a * b`
+  - we use lower letters and "camelCase", if the constants are calculated during script execution (we don't know a result before script), but do not change after their initial assignment:
 
-- Comments for code are formatted as:
+	`const newResult = a * b; // where a and b - random numbers. If a and b are immutable, for example a is a number of hours in a day and b is a number of minutes in an hour, then this constant must be written with capital letters`
 
-```
-/*
- * comments
- */
-```
-
-- Take out such elements as lists, headings, pieces of text, etc. into separate components;
-- Where immutable strings are used (for example, in routes, etc.) it is better to use constants. They can be used with curly braces:
+- If we have immutable values ("magic values") and it is not clear what they mean it is better to use constants. They can be used with curly braces. For example we have code:
 
 ```
-const ROUTE = "dfjsoifjseoghsgeso"
-...
-<Route path={ROUTE} element={<SettingsPage />} />
+const potentialEnergy = (double mass, double height) => {
+  return mass * height * 9.81;
+}
 ```
+But what is a number 9,81? It's a "magic number", so better to convert code into:
+
+```
+const GRAVITATIONAL_CONSTANT = 9.81;
+
+const  potentialEnergy = (double mass, double height) => {
+  return mass * height * GRAVITATIONAL_CONSTANT;
+}
+
+```
+
+## COMMENTS
+
+- All commits must start with big letter;
+
+- We use different types of comments depending on the need: 
+
+	- If we need comment something into JSX  we must use a format:
+
+	`{/* Comment */}`
+
+	- JSDoc comments should generally be placed immediately before the code being documented.
+
+	```
+	/*
+	 * Comments
+	 */
+	```
+	- If we need to comment something (only a single line) outside of the render block we can use the next format:
+
+`// Comment`
