@@ -5,12 +5,13 @@ import styles from "./Paragraph.module.scss";
 /**
  * Компонента выводящая обычный текст
  */
-export type Props = { text: string };
+export type ParagraphText = { text: string };
 
-const Paragraph: React.FC<Props> = ({text}: Props) => {
+const Paragraph: React.FC<ParagraphText> = (props: ParagraphText) => {
+  const paragraphClassName: string = clsx(styles.paragraph);
   return (
     <div>
-      <p className={clsx(styles.paragraph)}>{text}</p>
+      <p className={paragraphClassName}>{props.text}</p>
     </div>
   );
 };

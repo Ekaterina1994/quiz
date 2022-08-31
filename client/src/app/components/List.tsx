@@ -13,11 +13,14 @@ interface PathName {
 }
 
 const List: React.FC<PathName> = (props: PathName) => {
+  const wrapperClassName: string = clsx(styles.wrapper);
+  const listClassName: string = clsx(styles.list);
+  const itemClassName: string = clsx(styles.item);
   return (
     <nav>
-      <div className={clsx(styles.wrapper)}>
-        <ul className={clsx(styles.list)}>
-          <li className={clsx(styles.item)}>
+      <div className={wrapperClassName}>
+        <ul className={listClassName}>
+          <li className={itemClassName}>
             <NavLink to={props.pathMain}>Home</NavLink>
           </li>
           <li>

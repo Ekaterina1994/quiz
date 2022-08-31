@@ -6,11 +6,11 @@ import styles from "./Button.module.scss";
  * компонент кнопки
  */
 const Button: React.FC = () => {
-
+  const btnClassName: string = clsx(styles.btn);
   return (
     <div>
       <button
-        className={clsx(styles.btn)}
+        className={btnClassName}
         type="button"
       >
         Button

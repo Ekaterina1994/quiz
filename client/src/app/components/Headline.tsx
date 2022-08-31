@@ -5,12 +5,13 @@ import styles from "./Headline.module.scss";
 /**
  * Компонента выводящая заголовок первого уровня
  */
-export type Props = { headline: string };
+export type HeadlineText = { headline: string };
 
-const Headline: React.FC<Props> = ({headline}: Props) => {
+const Headline: React.FC<HeadlineText> = (props: HeadlineText) => {
+  const headlineClassName: string = clsx(styles.headline);
   return (
     <div>
-      <h1 className={clsx(styles.headline)}>{headline}</h1>
+      <h1 className={headlineClassName}>{props.headline}</h1>
     </div>
   );
 };

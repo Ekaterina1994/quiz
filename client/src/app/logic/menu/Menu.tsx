@@ -6,11 +6,11 @@ import List from "../../components/List";
  * Компонент Меню с навигацией
  */
 const Menu: React.FC = () => {
-  const HOME_PATH: string = "/";
+  const MAIN_PATH: string = "/";
   const SETTINGS_PATH: string = "/settings";
 
   return (
-    <List pathMain={HOME_PATH} pathSettings={SETTINGS_PATH} />
+    <List pathMain={MAIN_PATH} pathSettings={SETTINGS_PATH} />
   );
 };
 
