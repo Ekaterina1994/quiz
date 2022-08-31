@@ -1,6 +1,5 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import "materialize-css";
 import clsx from "clsx";
 import styles from "./List.module.scss";
 
@@ -8,21 +7,21 @@ import styles from "./List.module.scss";
  * Компонент Меню с навигацией
  */
 
-export type Props = {
-  pathHome: string,
-  pathSettings: string
-};
+interface PathName {
+  pathMain: string;
+  pathSettings: string;
+}
 
-const List: React.FC<Props> = ({pathHome, pathSettings}: Props) => {
+const List: React.FC<PathName> = (props: PathName) => {
   return (
     <nav>
       <div className={clsx(styles.wrapper)}>
         <ul className={clsx(styles.list)}>
           <li className={clsx(styles.item)}>
-            <NavLink to={pathHome}>Home</NavLink>
+            <NavLink to={props.pathMain}>Home</NavLink>
           </li>
           <li>
-            <NavLink to={pathSettings}>Settings</NavLink>
+            <NavLink to={props.pathSettings}>Settings</NavLink>
           </li>
         </ul>
       </div>

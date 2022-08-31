@@ -10,7 +10,7 @@ const Menu: React.FC = () => {
   const SETTINGS_PATH: string = "/settings";
 
   return (
-    <List pathHome={HOME_PATH} pathSettings={SETTINGS_PATH} />
+    <List pathMain={HOME_PATH} pathSettings={SETTINGS_PATH} />
   );
 };
 

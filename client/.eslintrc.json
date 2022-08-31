@@ -25,6 +25,7 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "react/jsx-first-prop-new-line": [1, "multiline"],
+    "react/destructuring-assignment": ["error", "never"],
     "no-tabs": ["error", { "allowIndentationTabs": true }],
     "max-lines": ["error", 3000],
     "semi": ["error", "always"],

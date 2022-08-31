@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
-import HomePage from "./logic/home/HomePage";
+import HomePage from "./logic/home/MainPage";
 import Layout from "./logic/layout/Layout";
 import SettingsPage from "./logic/settings/SettingsPage";
 import NotFoundPage from "./logic/error/NotFoundPage";
