@@ -1,8 +1,8 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
-import MainPage from "./logic/home/MainPage";
-import SettingsPage from "./logic/settings/SettingsPage";
-import NotFoundPage from "./logic/error/NotFoundPage";
+import MainPage from "./logic/mainPage/MainPage";
+import SettingsPage from "./logic/settingsPage/SettingsPage";
+import ErrorPage from "./logic/errorPage/ErrorPage";
 import Quiz from "./logic/Quiz";
 
 const SETTINGS_PATH = "settings";
@@ -16,7 +16,7 @@ const App: React.FC = () => {
         <Route path="/" element={<MainPage />}>
           <Route index element={<Quiz />} />
           <Route path={SETTINGS_PATH} element={<SettingsPage />} />
-          <Route path={ERROR_PATH} element={<NotFoundPage />} />
+          <Route path={ERROR_PATH} element={<ErrorPage />} />
           <Route path="*" element={(<Navigate to={`/${ERROR_PATH}`} />)} />
         </Route>
       </Routes>

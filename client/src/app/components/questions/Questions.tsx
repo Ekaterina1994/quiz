@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Quiz} from "src/app/logic/model/Quiz";
-import {quizService} from "../services/ServiceInitialization";
-import styles from "../components/Button.module.scss";
+import {quizService} from "../../services/ServiceInitialization";
+import styles from "../../components/Button.module.scss";
 
 // Question component
 const Questions: React.FC = () => {

@@ -1,13 +1,13 @@
 import React from "react";
-import Paragraph from "../../components/Paragraph";
-import Headline from "../../components/Headline";
+import Paragraph from "../../components/paragraph/Paragraph";
+import Headline from "../../components/headline/Headline";
 
 const CONTAINER = "container";
 const ERROR_NUMBER = "404";
 const ERROR_TEXT = "Settings Page";
 
 // Error page
-const NotFoundPage: React.FC = () => {
+const ErrorPage: React.FC = () => {
   return (
     <section className={CONTAINER}>
       <Headline headline={ERROR_NUMBER} />
@@ -16,4 +16,4 @@ const NotFoundPage: React.FC = () => {
   );
 };
 
-export default NotFoundPage;
+export default ErrorPage;

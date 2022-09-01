@@ -1,6 +1,6 @@
 import {Quiz} from "src/app/logic/model/Quiz";
 import IQuizService from "src/app/services/IQuizService";
-import data from "../store/data.json";
+import data from "src/app/data.json";
 
 // Class which describe path for get data
 export class QuizService implements IQuizService {
