@@ -22,22 +22,6 @@ This application has the following main parts:
 The folder "client" contains the root folder of the project "src" and the folder "public" with the "index.html" root page.
 The folder "docs" contains the file "RULES.md" with project rules.
 
-```sh
-└── src/                        #
-    ├── app/                    # Layer: Application
-    |   ├── components/         # A collection of UI components like buttons, modals, inputs,
-    |   |                       # loader, etc., that can be used across various files in the project.                        
-    |   |                       #
-    |   ├── logic/              # Logical parts of the project, such as the main menu page,
-    |   |                       # the quiz itself, the results
-    |   |                       #
-    |   └── services/           # Logic for obtaining data from external sources
-    |                           #
-    ├── index.scss/             # Root style file 
-    |                           #
-    └── index.tsx/              # Root script file                  
-```
-
 **_Technologies_**
 
 - React
