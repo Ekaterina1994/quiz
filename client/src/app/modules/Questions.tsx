@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
-import {Question} from "../services/ExampleService";
-import {exampleService} from "../services/ServiceInitialization";
+import {Quiz} from "src/app/logic/model/Quiz";
+import {quizService} from "../services/ServiceInitialization";
 import styles from "../components/Button.module.scss";
 
 // Question component
@@ -10,9 +10,9 @@ const Questions: React.FC = () => {
   const [questionIndex, setQuestionIndex] = useState<number>(0);
   const [answer, setAnswer] = useState<string>("");
 
-  const [data, setData] = useState<Question[]>([]);
+  const [data, setData] = useState<Quiz[]>([]);
   const loadData: () => void = async () => {
-    const newData: Question[] = await exampleService.getDataExample();
+    const newData: Quiz[] = await quizService.getDataExample();
     setData(newData);
   };
   useEffect(() => {
