@@ -12,7 +12,7 @@ const Questions: React.FC = () => {
 
   const [data, setData] = useState<Quiz[]>([]);
   const loadData: () => void = async () => {
-    const newData: Quiz[] = await quizService.getDataExample();
+    const newData: Quiz[] = await quizService.getData();
     setData(newData);
   };
   useEffect(() => {

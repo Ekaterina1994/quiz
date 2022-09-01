@@ -1,19 +1,19 @@
-import { Quiz } from "src/app/logic/model/Quiz";
+import {Quiz} from "src/app/logic/model/Quiz";
+import IQuizService from "src/app/services/IQuizService";
 import data from "../store/data.json";
 
 // Class which describe path for get data
-export class QuizService {
+export class QuizService implements IQuizService {
 
-  public pathToBack: string;
+  public pathToData: string;
 
-  constructor(config: any) {
-    this.pathToBack = config.data;
+  constructor(pathToData: any) {
+    this.pathToData = pathToData;
   }
 
   // Method which return data
-  public async getDataExample(): Promise<Quiz[]> {
-    // fetch data or something else
-    return data;
+  public async getData(): Promise<Quiz[]> {
+    return data as Quiz[];
   }
 
 }

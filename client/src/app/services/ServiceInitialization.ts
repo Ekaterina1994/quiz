@@ -1,8 +1,6 @@
 import {QuizService} from "./QuizService";
 
-const PATH_TO_BACK = "http://path/to/back";
-
-const serviceExampleConfig: {pathToBack: string} = {pathToBack: `${PATH_TO_BACK}`};
+const serviceConfig: {pathToData: string} = {pathToData: "../store/data.json"};
 
 // Creating a new class based on Example Service
-export const quizService: QuizService = new QuizService(serviceExampleConfig);
+export const quizService: QuizService = new QuizService(serviceConfig);
