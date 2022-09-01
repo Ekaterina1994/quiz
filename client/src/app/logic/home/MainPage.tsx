@@ -1,12 +1,18 @@
 import React from "react";
 import "materialize-css";
-import useRoutes from "../../../routes";
+import {Outlet} from "react-router-dom";
+import Menu from "../menu/Menu";
 
 // Main page
 const MainPage: React.FC = () => {
-  const routes: React.ReactElement<string, string> | null = useRoutes(false);
-
-  return <div className="container">{routes}</div>;
+  return (
+    <div className="container">
+      <Menu />
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
 };
 
 export default MainPage;

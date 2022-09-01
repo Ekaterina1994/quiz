@@ -8,7 +8,9 @@ const SETTINGS_PATH = "/settings";
 // Header with links
 const Menu: React.FC = () => {
   return (
-    <List pathMain={MAIN_PATH} pathSettings={SETTINGS_PATH} />
+    <div>
+      <List pathMain={MAIN_PATH} pathSettings={SETTINGS_PATH} />
+    </div>
   );
 };
 
