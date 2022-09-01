@@ -6,9 +6,7 @@ const CONTAINER = "container";
 const ERROR_NUMBER = "404";
 const ERROR_TEXT = "Settings Page";
 
-/**
- * Компонент страницы "Настройки"
- */
+// Error page
 const NotFoundPage: React.FC = () => {
   return (
     <section className={CONTAINER}>

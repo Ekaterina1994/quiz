@@ -3,18 +3,13 @@ import {Question} from "../services/ExampleService";
 import {exampleService} from "../services/ServiceInitialization";
 import styles from "../components/Button.module.scss";
 
-/**
- * Компонент Question включает в себя все элементы анкеты (вопросы и ответы)
- */
+// Question component
 const Questions: React.FC = () => {
 
   const [score, setScore] = useState<number>(0);
   const [questionIndex, setQuestionIndex] = useState<number>(0);
   const [answer, setAnswer] = useState<string>("");
 
-  /**
- 	 * Функция получения данных из сервисного слоя
- 	 */
   const [data, setData] = useState<Question[]>([]);
   const loadData: () => void = async () => {
     const newData: Question[] = await exampleService.getDataExample();
@@ -24,19 +19,14 @@ const Questions: React.FC = () => {
     loadData();
   }, []);
 
-  /**
- 	 * сброс счетчика очков до 0
-   */
+  // Function for set Score to 0
   const restart: () => void = () => {
     setScore(0);
     setAnswer("");
     setQuestionIndex(0);
   };
 
-  /**
-	 *  Функция отправки ответа на вопрос. Если выбранный ответ совпадает со значением ключа rightAnswer,
-	 *  то количество очков увеличивается на 1
-   */
+  // Function for to send answer. If its right answer - number of points grow
   const submit: (event: React.MouseEvent) => void = (
     event: React.MouseEvent,
   ) => {
@@ -57,10 +47,7 @@ const Questions: React.FC = () => {
     setAnswer(e.target.value);
   };
 
-  /**
-	 * если индекс вопроса меньше длины массива с вопросами, то на странице будет выводиться новый вопрос,
-	 * если же нет - то будет выводиться result
-	 */
+  // If index less then length of array with questions, then new question will show on the page, if not - then result will show
   if (questionIndex < data.length) {
     return (
       <div>

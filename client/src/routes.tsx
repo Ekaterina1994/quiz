@@ -3,9 +3,7 @@ import {Routes, Route} from "react-router-dom";
 import Quiz from "./app/logic/Quiz";
 import Result from "./app/logic/Result";
 
-/**
- * Роуты отслеживают url и при совпадении с указанным путем отрисовывают указанные элементы
- */
+// Routes
 const useRoutes: React.FC = () => {
   return (
     <Routes>

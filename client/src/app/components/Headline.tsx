@@ -2,9 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./Headline.module.scss";
 
-/**
- * Компонента выводящая заголовок первого уровня
- */
+// Headline component
 export type HeadlineText = { headline: string };
 
 const Headline: React.FC<HeadlineText> = (props: HeadlineText) => {

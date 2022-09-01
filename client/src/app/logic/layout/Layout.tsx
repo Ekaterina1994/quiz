@@ -3,9 +3,7 @@ import "materialize-css";
 import {Outlet} from "react-router-dom";
 import Menu from "../menu/Menu";
 
-/**
- * Компонент макет страницы
- */
+// Layout
 const Layout: React.FC = () => {
   return (
     <>

@@ -1,8 +1,6 @@
 import data from "../store/data.json";
 
-/**
- * Объявление типов для Question
- */
+// Question model
 export type Question = {
   question: string;
   choices: string[];
@@ -10,9 +8,7 @@ export type Question = {
   key: number;
 }
 
-/**
- * Объявление класса и передача типов его параметрам
- */
+// Class which describe path for get data
 export class ExampleService {
 
   public pathToBack: string;
@@ -23,9 +19,7 @@ export class ExampleService {
     this.pathToBack = config.pathToBack;
   }
 
-  /**
-	 * Объявление метода, который возвращает данные полученные по определенному пути (в данном случае из файла data.json)
-	 */
+  // Method which return data
   public async getDataExample(): Promise<Question[]> {
     // fetch data or something else
     return this.data;

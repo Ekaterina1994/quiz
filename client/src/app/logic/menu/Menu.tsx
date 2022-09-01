@@ -5,9 +5,7 @@ import List from "../../components/List";
 const MAIN_PATH = "/";
 const SETTINGS_PATH = "/settings";
 
-/**
- * Компонент Меню с навигацией
- */
+// Header with links
 const Menu: React.FC = () => {
   return (
     <List pathMain={MAIN_PATH} pathSettings={SETTINGS_PATH} />

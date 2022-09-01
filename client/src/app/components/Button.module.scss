@@ -1,29 +1,29 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .btn {
-	display            : inline-block;
-	overflow           : hidden;
-	-webkit-user-select: none;
-	user-select        : none;
-	vertical-align     : middle;
-	transition         : $transition;
-	cursor             : pointer;
-	height             : 54px;
-	line-height        : 54px;
-	font-size          : 15px;
-	padding            : 0 29px;
-	text-decoration    : none;
-	color              : $color_text_additional;
-	background-color   : $main_color;
-	text-align         : center;
-	letter-spacing     : .5px;
-	border             : none;
-	border-radius      : $border_radius;
-	text-transform     : uppercase;
-	box-shadow         : $box-shadow;
-	font-family        : $normalized_font_family;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  transition: $transition;
+  cursor: pointer;
+  height: 54px;
+  line-height: 54px;
+  font-size: 15px;
+  padding: 0 29px;
+  text-decoration: none;
+  color: $color_text_additional;
+  background-color: $main_color;
+  text-align: center;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: $border_radius;
+  text-transform: uppercase;
+  box-shadow: $box-shadow;
+  font-family: $normalized_font_family;
 
-	&:hover {
-		background-color: $color_hover_link;
-	}
+  &:hover {
+    background-color: $color_hover_link;
+  }
 }

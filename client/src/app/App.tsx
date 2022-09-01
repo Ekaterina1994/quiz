@@ -8,9 +8,7 @@ import NotFoundPage from "./logic/error/NotFoundPage";
 const SETTINGS_PATH = "settings";
 const ERROR_PATH = "404";
 
-/**
- * Главный компонент отрисовывает элементы на странице в зависимости от Route
- */
+// The main component with routes
 const App: React.FC = () => {
   return (
     <Router>

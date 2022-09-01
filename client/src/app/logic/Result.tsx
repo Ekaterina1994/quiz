@@ -3,9 +3,7 @@ import Headline from "../components/Headline";
 
 const RESULT = "Result";
 
-/**
- * Компонента выводящая результат
- */
+// Result page
 const Result: React.FC = () => {
 
   return (
