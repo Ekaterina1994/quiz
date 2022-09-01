@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import clsx from "clsx";
-import styles from "./List.module.scss";
+import styles from "src/app/components/list/List.module.scss";
 
 interface PathName {
   pathMain: string;

@@ -1,7 +1,7 @@
 import React from "react";
 import "materialize-css";
 import {Outlet} from "react-router-dom";
-import Menu from "../menu/Menu";
+import Menu from "src/app/logic/menu/Menu";
 
 // Main page
 const MainPage: React.FC = () => {

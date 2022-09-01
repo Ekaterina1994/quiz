@@ -195,8 +195,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"],
-        "paths": ["src"]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   }

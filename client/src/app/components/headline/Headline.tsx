@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./Headline.module.scss";
+import styles from "src/app/components/headline/Headline.module.scss";
 
 // Headline component
 export type HeadlineText = { headline: string };

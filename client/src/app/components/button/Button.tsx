@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./Button.module.scss";
+import styles from "src/app/components/button/Button.module.scss";
 
 // Button component
 const Button: React.FC = () => {

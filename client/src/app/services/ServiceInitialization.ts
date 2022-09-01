@@ -1,4 +1,4 @@
-import {QuizService} from "./QuizService";
+import {QuizService} from "src/app/services/QuizService";
 
 const serviceConfig: {pathToData: string} = {pathToData: "../store/data.json"};
 

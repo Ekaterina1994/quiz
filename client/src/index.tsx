@@ -1,7 +1,7 @@
 import React from "react";
 import {createRoot, Root} from "react-dom/client";
-import "./index.scss";
-import App from "./app/App";
+import "src/index.scss";
+import App from "src/app/App";
 
 // Root file which render component App
 const rootElement: HTMLElement | null = document.getElementById("root");

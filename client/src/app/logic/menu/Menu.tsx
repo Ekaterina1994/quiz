@@ -1,6 +1,6 @@
 import React from "react";
 import "materialize-css";
-import List from "../../components/list/List";
+import List from "src/app/components/list/List";
 
 const MAIN_PATH = "/";
 const SETTINGS_PATH = "/settings";

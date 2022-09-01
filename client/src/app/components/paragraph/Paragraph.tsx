@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./Paragraph.module.scss";
+import styles from "src/app/components/paragraph/Paragraph.module.scss";
 
 export type ParagraphText = { text: string };
 

@@ -1,6 +1,6 @@
 import React from "react";
-import Questions from "../components/questions/Questions";
-import Headline from "../components/headline/Headline";
+import Questions from "src/app/components/questions/Questions";
+import Headline from "src/app/components/headline/Headline";
 
 const TITLE = "Hello, Quiz!";
 
