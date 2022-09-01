@@ -13,9 +13,10 @@ interface PathName {
 }
 
 const List: React.FC<PathName> = (props: PathName) => {
-  const wrapperClassName: string = clsx(styles.wrapper);
-  const listClassName: string = clsx(styles.list);
-  const itemClassName: string = clsx(styles.item);
+  const wrapperClassName = clsx(styles.wrapper);
+  const listClassName = clsx(styles.list);
+  const itemClassName = clsx(styles.item);
+
   return (
     <nav>
       <div className={wrapperClassName}>

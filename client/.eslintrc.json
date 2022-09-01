@@ -53,8 +53,8 @@
         "memberVariableDeclaration": true,
         "parameter": true,
         "propertyDeclaration": true,
-        "objectDestructuring": true,
-        "variableDeclaration": true
+        "objectDestructuring": true
+        //"variableDeclaration": true
       }
     ],
     "@typescript-eslint/no-inferrable-types": 0,

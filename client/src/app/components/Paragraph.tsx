@@ -8,7 +8,8 @@ import styles from "./Paragraph.module.scss";
 export type ParagraphText = { text: string };
 
 const Paragraph: React.FC<ParagraphText> = (props: ParagraphText) => {
-  const paragraphClassName: string = clsx(styles.paragraph);
+  const paragraphClassName = clsx(styles.paragraph);
+
   return (
     <div>
       <p className={paragraphClassName}>{props.text}</p>

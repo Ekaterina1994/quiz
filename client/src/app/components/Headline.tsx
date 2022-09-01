@@ -8,7 +8,8 @@ import styles from "./Headline.module.scss";
 export type HeadlineText = { headline: string };
 
 const Headline: React.FC<HeadlineText> = (props: HeadlineText) => {
-  const headlineClassName: string = clsx(styles.headline);
+  const headlineClassName = clsx(styles.headline);
+
   return (
     <div>
       <h1 className={headlineClassName}>{props.headline}</h1>
