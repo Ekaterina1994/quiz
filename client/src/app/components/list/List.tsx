@@ -19,7 +19,7 @@ const List: React.FC<PathName> = (props: PathName) => {
       <div className={wrapperClassName}>
         <ul className={listClassName}>
           <li className={itemClassName}>
-            <NavLink to={props.pathMain}>Home</NavLink>
+            <NavLink to={props.pathMain}>Main</NavLink>
           </li>
           <li>
             <NavLink to={props.pathSettings}>Settings</NavLink>

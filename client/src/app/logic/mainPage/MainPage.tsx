@@ -1,17 +1,22 @@
 import React from "react";
-import "materialize-css";
-import {Outlet} from "react-router-dom";
-import Menu from "src/app/logic/menu/Menu";
+import clsx from "clsx";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import classNames from "classnames";
+import styles from "src/app/logic/mainPage/MainPage.module.scss";
+import btnStyles from "src/app/components/button/Button.module.scss";
+import {NavLink} from "react-router-dom";
+import {QUIZ_PATH} from "src/app/App";
 
 // Main page
 const MainPage: React.FC = () => {
+  const mainClassName = clsx(styles.main);
+  const btnClassName = clsx(btnStyles.btn);
+  const btnStartClassName = clsx(btnStyles.btnStart);
+
   return (
-    <div className="container">
-      <Menu />
-      <main>
-        <Outlet />
-      </main>
-    </div>
+    <main className={mainClassName}>
+      <NavLink className={classNames(btnClassName, btnStartClassName)} to={QUIZ_PATH}>Start</NavLink>
+    </main>
   );
 };
 

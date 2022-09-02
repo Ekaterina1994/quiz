@@ -1,5 +1,4 @@
 import React from "react";
-import "materialize-css";
 import List from "src/app/components/list/List";
 
 const MAIN_PATH = "/";
@@ -8,9 +7,7 @@ const SETTINGS_PATH = "/settings";
 // Header with links
 const Menu: React.FC = () => {
   return (
-    <div>
-      <List pathMain={MAIN_PATH} pathSettings={SETTINGS_PATH} />
-    </div>
+    <List pathMain={MAIN_PATH} pathSettings={SETTINGS_PATH} />
   );
 };
 

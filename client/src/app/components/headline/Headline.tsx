@@ -9,9 +9,7 @@ const Headline: React.FC<HeadlineText> = (props: HeadlineText) => {
   const headlineClassName = clsx(styles.headline);
 
   return (
-    <div>
-      <h1 className={headlineClassName}>{props.headline}</h1>
-    </div>
+    <h1 className={headlineClassName}>{props.headline}</h1>
   );
 };
 

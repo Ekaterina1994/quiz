@@ -9,9 +9,7 @@ const Paragraph: React.FC<ParagraphText> = (props: ParagraphText) => {
   const paragraphClassName = clsx(styles.paragraph);
 
   return (
-    <div>
-      <p className={paragraphClassName}>{props.text}</p>
-    </div>
+    <p className={paragraphClassName}>{props.text}</p>
   );
 };
 
