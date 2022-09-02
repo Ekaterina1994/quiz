@@ -1,6 +1,5 @@
 import React from "react";
 import clsx from "clsx";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import classNames from "classnames";
 import styles from "src/app/logic/mainPage/MainPage.module.scss";
 import btnStyles from "src/app/components/button/Button.module.scss";
