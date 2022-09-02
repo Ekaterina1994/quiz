@@ -3,11 +3,11 @@ import questionsDTO from "src/app/data.json";
 import {questionsRoundDTO} from "./IQuestionsDTO";
 
 // Class which describe path for get data
-export class QuizService {
+export class QuizServiceStub {
 
-  public pathToData: string;
+  public pathToData: {pathToData: string};
 
-  constructor(serviceConfig: string) {
+  constructor(serviceConfig: {pathToData: string}) {
     this.pathToData = serviceConfig;
   }
 

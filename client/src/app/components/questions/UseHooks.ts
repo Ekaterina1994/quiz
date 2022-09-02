@@ -1,8 +1,9 @@
 import React, {useState} from "react";
-import {Quiz} from "src/app/logic/model/Quiz";
+import {QuizRound} from "src/app/model/QuizRound";
 import useGetData from "./UseGetData";
 
-const useHooks = (): [any, any, any, Quiz[], any] => {
+const useHooks = (): [number, number, string, QuizRound[], {onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  submit: (event: React.MouseEvent) => void; restart: () => void;}] => {
 
   const [score, setScore] = useState<number>(0);
   const [questionIndex, setQuestionIndex] = useState<number>(0);

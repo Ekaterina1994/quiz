@@ -1,13 +1,13 @@
 import {useState, useEffect} from "react";
-import {Quiz} from "src/app/logic/model/Quiz";
+import {QuizRound} from "src/app/model/QuizRound";
 import {quizService} from "src/app/services/ServiceInitialization";
 
-const useGetData = (): [Quiz[]] => {
+const useGetData = (): [QuizRound[]] => {
 
-  const [data, setData] = useState<Quiz[]>([]);
+  const [data, setData] = useState<QuizRound[]>([]);
 
   const loadData: () => void = async () => {
-    const newData: Quiz[] = await quizService.getData();
+    const newData: QuizRound[] = await quizService.getData();
     setData(newData);
   };
   useEffect(() => {
