@@ -16,11 +16,11 @@ export class QuizService {
   /**
 	 * Method which return data
 	 */
-  public async getData(): Promise<QuizRound[]> {
+  public async getQuestions(): Promise<QuizRound[]> {
     const path = this.pathToData;
-    const question = questionsDTO.map((questionsElement: questionsRoundDTO) => {return new QuizRound(questionsElement);}, path);
+    const questions = questionsDTO.map((questionsElement: questionsRoundDTO) => {return new QuizRound(questionsElement);}, path);
 
-    return question;
+    return questions;
   }
 
 }

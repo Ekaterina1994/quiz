@@ -16,7 +16,7 @@ export class QuizServiceStub {
   /**
 	 * Method which return data
 	 */
-  public async getData(): Promise<QuizRound[]> {
+  public async getQuestions(): Promise<QuizRound[]> {
     const path = this.pathToData;
     const questions = questionsDTO.map((questionsElement: questionsRoundDTO) => {
       return new QuizRound(questionsElement);

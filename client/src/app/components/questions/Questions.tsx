@@ -8,18 +8,18 @@ import useHooks from "./UseHooks";
 const Questions: React.FC = () => {
 
   // Call custom hook
-  const [score, questionIndex, answer, data, methods] = useHooks();
+  const [score, questionIndex, answer, question, methods] = useHooks();
 
   /**
 	 * If index of question less then length of array with questions,
    * then new question will show on the page, if not - then result will show
 	 */
-  if (data) {
-    if (questionIndex < data.length) {
+  if (question) {
+    if (questionIndex < question.length) {
       return (
         <div>
-          <label><h3>{data[questionIndex]?.question}</h3></label>
-          {data[questionIndex]?.choices.map((c: string) => {
+          <label><h3>{question[questionIndex]?.question}</h3></label>
+          {question[questionIndex]?.choices.map((c: string) => {
             return (
               <h5 key={c}>
                 <label>
@@ -29,7 +29,7 @@ const Questions: React.FC = () => {
                     value={c}
                     onChange={methods.onChange}
                     checked={answer === c}
-                    key={data[questionIndex]?.key}
+                    key={question[questionIndex]?.key}
                   />
                   <span>{c}</span>
                 </label>

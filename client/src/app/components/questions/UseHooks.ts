@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {QuizRound} from "src/app/model/QuizRoundModel";
-import useGetData from "./UseGetData";
+import useGetQuestions from "./UseGetQuestions";
 
 /**
  * Custom hook function
@@ -12,7 +12,7 @@ const useHooks = (): [number, number, string, QuizRound[], {onChange: (e: React.
   const [score, setScore] = useState<number>(0);
   const [questionIndex, setQuestionIndex] = useState<number>(0);
   const [answer, setAnswer] = useState<string>("");
-  const [data] = useGetData();
+  const [question] = useGetQuestions();
 
   // Function for set Score to 0
   const restart: () => void = () => {
@@ -26,13 +26,13 @@ const useHooks = (): [number, number, string, QuizRound[], {onChange: (e: React.
     event: React.MouseEvent,
   ) => {
     event.preventDefault();
-    if (data) {
-      const isRightAnswer: boolean = answer === data[questionIndex]?.rightAnswer;
+    if (question) {
+      const isRightAnswer: boolean = answer === question[questionIndex]?.rightAnswer;
       if (isRightAnswer) {
         setScore(score + 1);
       }
 
-      const isMoreQuestionsAvailable: boolean = questionIndex < data.length;
+      const isMoreQuestionsAvailable: boolean = questionIndex < question.length;
       if (isMoreQuestionsAvailable) {
         setQuestionIndex(questionIndex + 1);
       }
@@ -46,7 +46,7 @@ const useHooks = (): [number, number, string, QuizRound[], {onChange: (e: React.
 
   const methods = {onChange, submit, restart};
 
-  return [score, questionIndex, answer, data, methods];
+  return [score, questionIndex, answer, question, methods];
 };
 
 export default useHooks;
