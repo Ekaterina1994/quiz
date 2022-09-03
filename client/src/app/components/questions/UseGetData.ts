@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import {QuizRound} from "src/app/model/QuizRound";
+import {QuizRound} from "src/app/model/QuizRoundModel";
 import {quizService} from "src/app/services/ServiceInitialization";
 
 const useGetData = (): [QuizRound[]] => {

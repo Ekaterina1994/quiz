@@ -1,4 +1,4 @@
-import {QuizRound} from "src/app/model/QuizRound";
+import {QuizRound} from "src/app/model/QuizRoundModel";
 import questionsDTO from "src/app/data.json";
 import {questionsRoundDTO} from "./IQuestionsDTO";
 
@@ -13,7 +13,8 @@ export class QuizService {
 
   // Method which return data
   public async getData(): Promise<QuizRound[]> {
-    const question = questionsDTO.map((questionsElement: questionsRoundDTO) => {return new QuizRound(questionsElement);});
+    const path = this.pathToData;
+    const question = questionsDTO.map((questionsElement: questionsRoundDTO) => {return new QuizRound(questionsElement);}, path);
 
     return question;
   }

@@ -1,4 +1,4 @@
-import {questionsRoundDTO} from "../services/QuizServiceStub";
+import {questionsRoundDTO} from "src/app/services/IQuestionsDTO";
 
 export class QuizRound {
 

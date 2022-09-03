@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {QuizRound} from "src/app/model/QuizRound";
+import {QuizRound} from "src/app/model/QuizRoundModel";
 import useGetData from "./UseGetData";
 
 const useHooks = (): [number, number, string, QuizRound[], {onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

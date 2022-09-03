@@ -1,21 +1,24 @@
-import {QuizRound} from "src/app/model/QuizRound";
+import {QuizRound} from "src/app/model/QuizRoundModel";
 import questionsDTO from "src/app/data.json";
 import {questionsRoundDTO} from "./IQuestionsDTO";
 
 // Class which describe path for get data
 export class QuizServiceStub {
 
-  public pathToData: {pathToData: string};
+  public pathToData: string;
 
-  constructor(serviceConfig: {pathToData: string}) {
-    this.pathToData = serviceConfig;
+  constructor() {
+    this.pathToData = `${"../store/data.json"}`;
   }
 
   // Method which return data
   public async getData(): Promise<QuizRound[]> {
-    const question = questionsDTO.map((questionsElement: questionsRoundDTO) => {return new QuizRound(questionsElement);});
+    const path = this.pathToData;
+    const questions = questionsDTO.map((questionsElement: questionsRoundDTO) => {
+      return new QuizRound(questionsElement);
+    }, path);
 
-    return question;
+    return questions;
   }
 
 }
