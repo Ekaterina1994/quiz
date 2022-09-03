@@ -1,5 +1,5 @@
 import React from "react";
-import Headline from "src/app/components/headline/Headline";
+import Headline from "src/app/component/headline/Headline";
 
 const SETTINGS_PAGE = "Settings Page";
 

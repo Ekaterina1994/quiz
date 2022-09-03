@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "src/app/components/button/Button.module.scss";
+import styles from "src/app/component/button/Button.module.scss";
 import useHooks from "./UseHooks";
 
 /**

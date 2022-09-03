@@ -13,19 +13,34 @@ $normalize_headings: true !default;
 
 $h1_font_size: 4.2rem !default;
 $paragraph_size: 1.65rem !default;
+$font_size_button: 15px;
 
 $h1_margin: 2,8rem 0 1,68rem 0 !default;
 
 $h1_lineheight: 110% !default;
 
 $main_color: #26a69a;
-$background: #fff !default;
+$background_color: #fff !default;
 $color_text_main: #000 !default;
 $color_text_additional: #fff !default;
 $color_text_paragraph: rgba(0, 0, 0, 0.87);
-$color_hover_link: #26978c;
+$color_hover_link: #21867c;
 
+$width_menu: 70px;
+$width_button: 150px;
+$height_button: 54px;
+$line-height: 54px;
+$width_main : 60vw;
+$height_main: 90vh;
+$height_list: 54px;
+$line-height_list: 54px;
 
+$margin_main: 0 20vw;
+
+$padding_button: 0 29px;
+
+$letter-spacing: 0.5px;
+$gap: 20px;
 $transition: 0.3s ease-out;
 
 $border_radius: 2px;

@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "src/app/components/Button.module.scss";
+import styles from "src/app/component/Button.module.scss";
 
 /**
  * Button component

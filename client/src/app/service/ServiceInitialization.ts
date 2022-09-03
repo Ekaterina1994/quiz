@@ -1,4 +1,4 @@
-import {QuizServiceStub} from "src/app/services/QuizServiceStub";
+import {QuizServiceStub} from "src/app/service/QuizServiceStub";
 import config from "src/app/config.json";
 import {QuizService} from "./QuizService";
 

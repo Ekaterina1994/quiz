@@ -1,13 +1,20 @@
 import React from "react";
-import Quiz from "src/app/logic/Quiz";
+import "materialize-css";
+import Questions from "src/app/component/questions/Questions";
+import clsx from "clsx";
+import styles from "src/app/logic/quizPage/QuizPage.module.scss";
 
 /**
- * Page with game QUIZ
+ * Quiz page
  */
-const QuizPage: React.FC = () => {
+const Quiz: React.FC = () => {
+  const questionClassName = clsx(styles.container);
+
   return (
-    <Quiz />
+    <section className={questionClassName}>
+      <Questions />
+    </section>
   );
 };
 
-export default QuizPage;
+export default Quiz;

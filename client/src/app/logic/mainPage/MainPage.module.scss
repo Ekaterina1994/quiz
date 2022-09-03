@@ -1,5 +1,12 @@
+@import 'src/index.scss';
+
 .main {
-	width : 60vw;
-	margin: 0 auto;
-	text-align: center;
+	width : $width_main;
+	height: $height_main;
+	margin: $margin_main;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: $gap;
 }
+

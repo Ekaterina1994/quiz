@@ -5,7 +5,6 @@ import styles from "src/app/components/list/List.module.scss";
 
 interface PathName {
   pathMain: string;
-  pathSettings: string;
 }
 
 /**
@@ -17,18 +16,14 @@ const List: React.FC<PathName> = (props: PathName) => {
   const itemClassName = clsx(styles.item);
 
   return (
-    <nav>
-      <div className={wrapperClassName}>
-        <ul className={listClassName}>
-          <li className={itemClassName}>
-            <NavLink to={props.pathMain}>Main</NavLink>
-          </li>
-          <li>
-            <NavLink to={props.pathSettings}>Settings</NavLink>
-          </li>
-        </ul>
-      </div>
+    <nav className={wrapperClassName}>
+      <ul className={listClassName}>
+        <li className={itemClassName}>
+          <NavLink to={props.pathMain}>Main</NavLink>
+        </li>
+      </ul>
     </nav>
+
   );
 };
 

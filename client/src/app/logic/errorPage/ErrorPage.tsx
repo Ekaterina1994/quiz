@@ -1,6 +1,6 @@
 import React from "react";
-import Paragraph from "src/app/components/paragraph/Paragraph";
-import Headline from "src/app/components/headline/Headline";
+import Paragraph from "src/app/component/paragraph/Paragraph";
+import Headline from "src/app/component/headline/Headline";
 
 const CONTAINER = "container";
 const ERROR_NUMBER = "404";

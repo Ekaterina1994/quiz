@@ -6,7 +6,7 @@ import SettingsPage from "src/app/logic/settingsPage/SettingsPage";
 import QuizPage from "src/app/logic/quizPage/QuizPage";
 import ErrorPage from "src/app/logic/errorPage/ErrorPage";
 
-const SETTINGS_PATH = "settings";
+export const SETTINGS_PATH = "settings";
 export const QUIZ_PATH = "quiz";
 
 /**

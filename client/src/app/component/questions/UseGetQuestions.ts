@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 import {QuizRound} from "src/app/model/QuizRoundModel";
-import {quizService} from "src/app/services/ServiceInitialization";
+import {quizService} from "src/app/service/ServiceInitialization";
 
 /**
  * Custom hook function
