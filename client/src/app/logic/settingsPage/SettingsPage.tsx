@@ -3,7 +3,9 @@ import Headline from "src/app/components/headline/Headline";
 
 const SETTINGS_PAGE = "Settings Page";
 
-// Settings page
+/**
+ * Settings page
+ */
 const SettingsPage: React.FC = () => {
   return <Headline headline={SETTINGS_PAGE} />;
 };

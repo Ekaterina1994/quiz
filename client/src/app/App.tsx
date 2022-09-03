@@ -9,7 +9,9 @@ import ErrorPage from "src/app/logic/errorPage/ErrorPage";
 const SETTINGS_PATH = "settings";
 export const QUIZ_PATH = "quiz";
 
-// The main component with routes
+/**
+ * The main component with routes
+ */
 const App: React.FC = () => {
   return (
     <Router>

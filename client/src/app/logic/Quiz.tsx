@@ -5,7 +5,9 @@ import Headline from "src/app/components/headline/Headline";
 
 const TITLE = "Hello, Quiz!";
 
-// Quiz page
+/**
+ * Quiz page
+ */
 const Quiz: React.FC = () => {
 
   return (

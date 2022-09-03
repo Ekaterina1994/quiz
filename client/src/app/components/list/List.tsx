@@ -8,7 +8,9 @@ interface PathName {
   pathSettings: string;
 }
 
-// Navigation component
+/**
+ * Navigation component to main Page
+ */
 const List: React.FC<PathName> = (props: PathName) => {
   const wrapperClassName = clsx(styles.wrapper);
   const listClassName = clsx(styles.list);

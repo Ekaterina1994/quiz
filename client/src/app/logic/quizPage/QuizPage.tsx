@@ -1,7 +1,9 @@
 import React from "react";
 import Quiz from "src/app/logic/Quiz";
 
-// Main page
+/**
+ * Page with game QUIZ
+ */
 const QuizPage: React.FC = () => {
   return (
     <Quiz />

@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import {QuizRound} from "src/app/model/QuizRoundModel";
 import useGetData from "./UseGetData";
 
+/**
+ * Custom hook function
+ * @returns score, questionIndex, answer, data and methods: onChange, submit, restart
+ */
 const useHooks = (): [number, number, string, QuizRound[], {onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   submit: (event: React.MouseEvent) => void; restart: () => void;}] => {
 
@@ -35,6 +39,7 @@ const useHooks = (): [number, number, string, QuizRound[], {onChange: (e: React.
     }
   };
 
+  // Function, keeps track of the selected answer
   const onChange: (e: React.ChangeEvent<HTMLInputElement>) => void = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAnswer(e.target.value);
   };

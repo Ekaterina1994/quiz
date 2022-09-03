@@ -5,7 +5,9 @@ import btnStyles from "src/app/components/button/Button.module.scss";
 import {NavLink} from "react-router-dom";
 import {QUIZ_PATH} from "src/app/App";
 
-// Main page
+/**
+ * Main page
+ */
 const MainPage: React.FC = () => {
   const mainClassName = clsx(styles.main);
   const btnStartClassName = clsx(btnStyles.btnStart, btnStyles.btn);

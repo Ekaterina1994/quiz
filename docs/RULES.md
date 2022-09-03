@@ -47,6 +47,7 @@ const potentialEnergy = (double mass, double height) => {
   return mass * height * 9.81;
 }
 ```
+
 But what is a number 9,81? It's a "magic number", so better to convert code into:
 
 ```
@@ -64,17 +65,14 @@ const  potentialEnergy = (double mass, double height) => {
 
 - We use different types of comments depending on the need: 
 
-	- If we need comment something into JSX  we must use a format:
-
-	`{/* Comment */}`
-
-	- JSDoc comments should generally be placed immediately before the code being documented.
+	- JSDoc comments should generally be placed immediately before the code being documented. This kind of comment describes the entities to use. Usually these elements can be found in different files (they are often exported). Also we can use this type of comments in we need to use a multiple comments:
 
 	```
 	/*
 	 * Comments
 	 */
 	```
-	- If we need to comment something (only a single line) outside of the render block we can use the next format:
 
-`// Comment`
+	- If we need to comment something in oneline outside of the render block we can use the next format:
+
+	`// Comment`

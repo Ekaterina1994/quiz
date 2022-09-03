@@ -2,7 +2,9 @@ import {QuizRound} from "src/app/model/QuizRoundModel";
 import questionsDTO from "src/app/data.json";
 import {questionsRoundDTO} from "./IQuestionsDTO";
 
-// Class which describe path for get data
+/**
+ * Class which use when the client have internet
+ */
 export class QuizService {
 
   public pathToData: string;
@@ -11,7 +13,9 @@ export class QuizService {
     this.pathToData = serviceConfig;
   }
 
-  // Method which return data
+  /**
+	 * Method which return data
+	 */
   public async getData(): Promise<QuizRound[]> {
     const path = this.pathToData;
     const question = questionsDTO.map((questionsElement: questionsRoundDTO) => {return new QuizRound(questionsElement);}, path);

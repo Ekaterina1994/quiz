@@ -2,14 +2,18 @@ import React from "react";
 import styles from "src/app/components/button/Button.module.scss";
 import useHooks from "./UseHooks";
 
-// Question component
+/**
+ * Question component
+ */
 const Questions: React.FC = () => {
 
   // Call custom hook
   const [score, questionIndex, answer, data, methods] = useHooks();
 
-  // If index of question less then length of array with questions,
-  // then new question will show on the page, if not - then result will show
+  /**
+	 * If index of question less then length of array with questions,
+   * then new question will show on the page, if not - then result will show
+	 */
   if (data) {
     if (questionIndex < data.length) {
       return (

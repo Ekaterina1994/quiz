@@ -4,7 +4,9 @@ import styles from "src/app/components/paragraph/Paragraph.module.scss";
 
 export type ParagraphText = { text: string };
 
-// Paragraph component
+/**
+ * Paragraph component
+ */
 const Paragraph: React.FC<ParagraphText> = (props: ParagraphText) => {
   const paragraphClassName = clsx(styles.paragraph);
 

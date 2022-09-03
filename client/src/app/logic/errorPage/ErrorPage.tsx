@@ -6,7 +6,9 @@ const CONTAINER = "container";
 const ERROR_NUMBER = "404";
 const ERROR_TEXT = "Settings Page";
 
-// Error page
+/**
+ * Error page
+ */
 const ErrorPage: React.FC = () => {
   return (
     <section className={CONTAINER}>
