@@ -4,6 +4,8 @@
 
 - This project has the one branch called "main" where we work on client part of app.
 - If you need to create a new branch (for example you will create a server part) it's name should to start by little letter;
+- Separate feature branches are used to solve specific problems. Each task has a number and a name (title). Accordingly, the branch for this task should look like:
+`7-create-server`
 - We should use only English for describe tasks, issues, write comments etc;
 - One task - one issue. No need to do some tasks in one issue;
 - When task starts, we must clearly describe "definition of done" (describe the full functionality of the task, what should be in the end);
