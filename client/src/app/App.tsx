@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Menu from "src/app/logic/menu/Menu";
+import Header from "src/app/component/header/Header";
 import MainPage from "src/app/logic/mainPage/MainPage";
 import SettingsPage from "src/app/logic/settingsPage/SettingsPage";
 import QuizPage from "src/app/logic/quizPage/QuizPage";
@@ -15,7 +15,7 @@ export const QUIZ_PATH = "quiz";
 const App: React.FC = () => {
   return (
     <Router>
-      <Menu />
+      <Header />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path={SETTINGS_PATH} element={<SettingsPage />} />

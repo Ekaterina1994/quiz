@@ -1,0 +1,10 @@
+@import "src/index.scss";
+
+.header {
+  height: $height_button;
+  width: $width_header;
+  line-height: $line-height;
+  padding: $padding_button;
+  background-color: $main_color;
+  box-shadow: $box-shadow;
+}
