@@ -2,6 +2,7 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import clsx from "clsx";
 import styles from "src/app/component/header/Header.module.scss";
+import btnStyles from "src/app/component/button/Button.module.scss";
 
 const MAIN_PATH = "/";
 
@@ -10,10 +11,11 @@ const MAIN_PATH = "/";
  */
 const Header: React.FC = () => {
   const headerClassName = clsx(styles.header);
+  const btnClassName = clsx(btnStyles.btn);
 
   return (
     <header className={headerClassName}>
-      <NavLink to={MAIN_PATH}>Main</NavLink>
+      <NavLink className={btnClassName} to={MAIN_PATH}>Main</NavLink>
     </header>
   );
 };

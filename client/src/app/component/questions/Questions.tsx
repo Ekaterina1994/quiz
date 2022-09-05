@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "src/app/component/button/Button.module.scss";
+import Button from "src/app/component/button/Button";
+import Paragraph from "src/app/component/paragraph/Paragraph";
 import useHooks from "./UseHooks";
 
 /**
@@ -17,7 +18,7 @@ const Questions: React.FC = () => {
   if (question) {
     if (questionIndex < question.length) {
       return (
-        <div>
+        <>
           <label><h3>{question[questionIndex]?.question}</h3></label>
           {question[questionIndex]?.choices.map((c: string) => {
             return (
@@ -36,40 +37,18 @@ const Questions: React.FC = () => {
               </h5>
             );
           })}
-
-          <button
-            className={styles.btn}
-            type="button"
-            onClick={methods.submit}
-          >
-            check
-          </button>
-
-          <p>
-            score:
-            {score}
-          </p>
-        </div>
+          <Button name="Check" handleClick={methods.submit} />
+          <Paragraph text={`score: ${score}`} />
+        </>
       );
     }
   }
 
   return (
-    <form>
-      <div>
-        <button
-          className={styles.btn}
-          type="button"
-          onClick={methods.restart}
-        >
-          Restart
-        </button>
-      </div>
-      <h5>
-        score:
-        {score}
-      </h5>
-    </form>
+    <>
+      <Button name="Restart" handleClick={methods.restart} />
+      <Paragraph text={`score: ${score}`} />
+    </>
   );
 };
 

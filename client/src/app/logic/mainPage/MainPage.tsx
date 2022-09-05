@@ -10,12 +10,12 @@ import {QUIZ_PATH, SETTINGS_PATH} from "src/app/App";
  */
 const MainPage: React.FC = () => {
   const mainClassName = clsx(styles.main);
-  const btnStartClassName = clsx(btnStyles.btnStart, btnStyles.btn);
+  const btnClassName = clsx(btnStyles.btn);
 
   return (
     <main className={mainClassName}>
-      <NavLink className={btnStartClassName} to={QUIZ_PATH}>Start</NavLink>
-      <NavLink className={btnStartClassName} to={SETTINGS_PATH}>Settings</NavLink>
+      <NavLink className={btnClassName} to={QUIZ_PATH}>Start</NavLink>
+      <NavLink className={btnClassName} to={SETTINGS_PATH}>Settings</NavLink>
     </main>
   );
 };
