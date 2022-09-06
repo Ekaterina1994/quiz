@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "src/app/component/button/Button.module.scss";
-import useHooks from "./UseHooks";
+import Button from "src/app/component/button/Button";
+import Paragraph from "src/app/component/paragraph/Paragraph";
+import useGetQuestions from "src/app/component/questions/useGetQuestions";
 
 /**
  * Question component
@@ -8,7 +9,7 @@ import useHooks from "./UseHooks";
 const Questions: React.FC = () => {
 
   // Call custom hook
-  const [score, questionIndex, answer, question, methods] = useHooks();
+  const [score, questionIndex, answer, question, methods] = useGetQuestions();
 
   /**
 	 * If index of question less then length of array with questions,
@@ -17,8 +18,12 @@ const Questions: React.FC = () => {
   if (question) {
     if (questionIndex < question.length) {
       return (
-        <div>
-          <label><h3>{question[questionIndex]?.question}</h3></label>
+        <>
+          <label>
+            <h3>
+              {question[questionIndex]?.question}
+            </h3>
+          </label>
           {question[questionIndex]?.choices.map((c: string) => {
             return (
               <h5 key={c}>
@@ -36,40 +41,18 @@ const Questions: React.FC = () => {
               </h5>
             );
           })}
-
-          <button
-            className={styles.btn}
-            type="button"
-            onClick={methods.submit}
-          >
-            check
-          </button>
-
-          <p>
-            score:
-            {score}
-          </p>
-        </div>
+          <Button name="Check" handleClick={methods.submit} />
+          <Paragraph text={`score: ${score}`} />
+        </>
       );
     }
   }
 
   return (
-    <form>
-      <div>
-        <button
-          className={styles.btn}
-          type="button"
-          onClick={methods.restart}
-        >
-          Restart
-        </button>
-      </div>
-      <h5>
-        score:
-        {score}
-      </h5>
-    </form>
+    <>
+      <Button name="Restart" handleClick={methods.restart} />
+      <Paragraph text={`score: ${score}`} />
+    </>
   );
 };
 
