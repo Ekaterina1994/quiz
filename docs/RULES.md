@@ -5,12 +5,15 @@
 - This project has the one branch called "main" where we work on client part of app.
 - If you need to create a new branch (for example you will create a server part) it's name should to start by little letter;
 - Separate feature branches are used to solve specific problems. Each task has a number and a name (title). Accordingly, the branch for this task should look like:
-`7-create-server`
+
+`{{issue_number}}-{{issue_name}}`
+If a name (title) consists of several words, then write the words with a hyphen '-'.
 - One task - one issue. No need to do some tasks in one issue;
 - If the task can be described by item, then we start the items in the description as a numbered list;
 - Each commit must follow the following pattern:
 
 `"#{{issue_number}}-{{issue_name}}/{{part_of_task_which_was_done}}"`
+- You need to select `merge squash` and create a commit message that combines the description of all commit messages in a branche.
 
 ## FILE'S AND FOLDER'S NAMES
 
@@ -55,15 +58,19 @@ const  potentialEnergy = (double mass, double height) => {
 
 ```
 
-- Use `PascalCase` for React components:
+- Use `PascalCase` for React components and interface name:
 ```
-import ReservationCard from './ReservationCard';
+import MainPage from "src/app/logic/mainPage/MainPage";
 ```
-
+```
+interface SwitchProps {
+  ...
+}
+```
 
 ## COMMENTS
 
-- All commits must start with big letter;
+- All comments must start with big letter;
 
 - We use different types of comments depending on the need: 
 
