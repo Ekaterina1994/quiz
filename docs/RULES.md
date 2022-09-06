@@ -5,13 +5,11 @@
 - This project has the one branch called "main" where we work on client part of app.
 - If you need to create a new branch (for example you will create a server part) it's name should to start by little letter;
 - Separate feature branches are used to solve specific problems. Each task has a number and a name (title). Accordingly, the branch for this task should look like:
-
-`{{issue_number}}-{{issue_name}}`
+`{{issue_number}}-{{issue_name}}`  
 If a name (title) consists of several words, then write the words with a hyphen '-'.
 - One task - one issue. No need to do some tasks in one issue;
 - If the task can be described by item, then we start the items in the description as a numbered list;
-- Each commit must follow the following pattern:
-
+- Each commit must follow the following pattern:  
 `"#{{issue_number}}-{{issue_name}}/{{part_of_task_which_was_done}}"`
 - You need to select `merge squash` and create a commit message that combines the description of all commit messages in a branche.
 
@@ -40,24 +38,18 @@ If a name (title) consists of several words, then write the words with a hyphen 
 ```
 const COLOR_RED = "#F00";
 ```
-
   - we use lower letters and "camelCase", if the constants are calculated during script execution (we don't know a result before script), but do not change after their initial assignment:
-
 ```
 const newResult = a * b; // where a and b - random numbers. If a and b are immutable, for example a is a number of hours in a day and b is a number of minutes in an hour, then this constant must be written with capital letters`
 ```
-
-- If we have "magic values" and it is not clear what they mean it is better to use constants. The name of the constant should convey the meaning of the number.
-
+  - If we have "magic values" and it is not clear what they mean it is better to use constants. The name of the constant should convey the meaning of the number.
 ```
 const GRAVITATIONAL_CONSTANT = 9.81;
 
 const  potentialEnergy = (double mass, double height) => {
   return mass * height * GRAVITATIONAL_CONSTANT;
 }
-
 ```
-
 - Use `PascalCase` for React components and interface name:
 ```
 import MainPage from "src/app/logic/mainPage/MainPage";
@@ -66,6 +58,10 @@ import MainPage from "src/app/logic/mainPage/MainPage";
 interface SwitchProps {
   ...
 }
+```
+- Import styles from modules using the "styles" keyword:
+```
+import styles from "src/app/component/button/Button.module.scss";
 ```
 
 ## COMMENTS
