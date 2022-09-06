@@ -8,11 +8,11 @@ Quiz is an app where you can test your knowledge about the world. This is a usef
 - [Main modules](#main-modules)
 - [Technologies](#technologies)
 
-**_Project goal_**
+**_Project goal_** <a name="project-goals"></a>  
 
 Effective consolidation of knowledge in an exciting form.
 
-**_Main modules_**
+**_Main modules_** <a name="main-modules"></a>  
 
 This application has the following main parts:
 
@@ -22,7 +22,7 @@ This application has the following main parts:
 The folder "client" contains the root folder of the project "src" and the folder "public" with the "index.html" root page.
 The folder "docs" contains the file "RULES.md" with project rules.
 
-**_Technologies_**
+**_Technologies_** <a name="technologies"></a>  
 
 - React
 - TypeScript
@@ -35,9 +35,8 @@ We're ready to discuss any job offers and answer your questions.
 Send me an email at a convenient time for you: katishteno@mail.ru
 
 **Ekaterina:**
-
 - YouTube: https://www.youtube.com/channel/UCEzXFClFND8K9vqYSfb3YAA
-- LinkedIn: https://www.linkedin.com/in/ekaterina-veretennikova-73b22521b/
+- LinkedIn: https://www.linkedin.com/in/ekaterina-veretennikova/
 - CV: https://ekaterina1994.github.io/rsschool-cv/ or https://Ekaterina1994.github.io/rsschool-cv/cv
 
 **Yuri:**
