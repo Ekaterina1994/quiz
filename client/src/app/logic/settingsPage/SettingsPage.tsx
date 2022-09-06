@@ -2,13 +2,9 @@ import React, {useState} from "react";
 import Headline from "src/app/component/headline/Headline";
 import Switch from "src/app/component/switch/Switch";
 
-const SETTINGS_PAGE = "Offline / Online";
-
-/**
- * Settings page
- */
 const SettingsPage: React.FC = () => {
   const [isToggle, setIsToggle] = useState(false);
+  const SETTINGS_PAGE = "Offline / Online";
 
   const handleChange = (): void => {
     setIsToggle(!isToggle);

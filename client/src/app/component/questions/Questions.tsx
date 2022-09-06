@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "src/app/component/button/Button";
 import Paragraph from "src/app/component/paragraph/Paragraph";
-import useHooks from "./UseHooks";
+import useGetQuestions from "src/app/component/questions/useGetQuestions";
 
 /**
  * Question component
@@ -9,7 +9,7 @@ import useHooks from "./UseHooks";
 const Questions: React.FC = () => {
 
   // Call custom hook
-  const [score, questionIndex, answer, question, methods] = useHooks();
+  const [score, questionIndex, answer, question, methods] = useGetQuestions();
 
   /**
 	 * If index of question less then length of array with questions,
@@ -19,7 +19,11 @@ const Questions: React.FC = () => {
     if (questionIndex < question.length) {
       return (
         <>
-          <label><h3>{question[questionIndex]?.question}</h3></label>
+          <label>
+            <h3>
+              {question[questionIndex]?.question}
+            </h3>
+          </label>
           {question[questionIndex]?.choices.map((c: string) => {
             return (
               <h5 key={c}>
