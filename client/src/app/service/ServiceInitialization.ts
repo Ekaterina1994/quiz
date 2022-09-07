@@ -1,6 +1,6 @@
 import {QuizServiceStub} from "src/app/service/QuizServiceStub";
 import config from "src/app/config.json";
-import {QuizService} from "./QuizService";
+import {QuizService} from "src/app/service/QuizService";
 
 /**
  * Creating a new class based on QuizServiceServiceStub (if we get data locally)

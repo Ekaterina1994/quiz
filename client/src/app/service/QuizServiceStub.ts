@@ -1,6 +1,6 @@
 import {QuizRound} from "src/app/model/QuizRoundModel";
 import questionsDTO from "src/app/data.json";
-import {questionsRoundDTO} from "./IQuestionsDTO";
+import {questionsRoundDTO} from "src/app/model/QuestionsDTO";
 
 /**
  * Class which use when the client doesn't have internet
