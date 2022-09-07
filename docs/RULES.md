@@ -43,16 +43,16 @@ If a name (title) consists of several words, then write the words with a hyphen 
 * Constants should be formatted as follow:
 
     * we use capital letters and an underscore, if the value of the constant is known before the code is executed and "hardcoded" (for example, the hexadecimal value for red):
-
-```
-const COLOR_RED = "#F00";
-```
+    
+    ```
+    const COLOR_RED = "#F00";
+    ```
 
     * we use lower letters and "camelCase", if the constants are calculated during script execution (we don't know a result before script), but do not change after their initial assignment:
 
-```
-const newResult = a * b; // where a and b - random numbers. If a and b are immutable, for example a is a number of hours in a day and b is a number of minutes in an hour, then this constant must be written with capital letters`
-```
+    ```
+    const newResult = a * b; // where a and b - random numbers.
+    ```
 
   - If we have "magic values" it is better to use constants. The name of the constant should convey the meaning of the number.
 
