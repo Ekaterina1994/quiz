@@ -54,7 +54,7 @@ If a name (title) consists of several words, then write the words with a hyphen 
     const newResult = a * b; // where a and b - random numbers.
     ```
 
-  - If we have "magic values" it is better to use constants. The name of the constant should convey the meaning of the number.
+* If we have "magic values" it is better to use constants. The name of the constant should convey the meaning of the number.
 
 ```
 const GRAVITATIONAL_CONSTANT = 9.81;
