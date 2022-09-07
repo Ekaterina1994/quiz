@@ -10,7 +10,6 @@
 {{issue_number}}-{{issue_name-long-name}}"
 ```
 
-If a name (title) consists of several words, then write the words with a hyphen '-'.
 - One task - one issue. No need to do some tasks in one issue;
 - If the task can be described by item, then we start the items in the description as a numbered list;
 - Each commit must follow the following pattern: 
