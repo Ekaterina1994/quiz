@@ -1,5 +1,5 @@
 import {QuizRound} from "src/app/model/QuizRoundModel";
-import {fetchRequest} from "./fetchUtils";
+import {fetchRequest} from "./FetchUtils";
 import {questionsRoundDTO} from "./IQuestionsDTO";
 
 /**
