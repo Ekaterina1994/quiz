@@ -95,16 +95,17 @@ import styles from "src/app/component/button/Button.module.scss";
 - We use different types of comments depending on the need: 
 
 	1. JSDoc comments should generally be placed immediately before the code being documented. This kind of comment describes the entities to use. Usually these elements can be found in different files (they are often exported). Also we can use this type of comments in we need to use a multiple comments:  
+  
 
-```
-/**
- * Comments
- */
-```  
+	```
+	/**
+	 * Comments
+	 */
+	```  
 
 	2. If we need to comment something in oneline outside of the render block we can use the next format:  
-	  
+  
 	
-```
-// Comment
-```
+	```
+	// Comment
+	```
