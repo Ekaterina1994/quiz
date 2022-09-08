@@ -1,6 +1,7 @@
 import {QuizRound} from "src/app/model/QuizRoundModel";
-import {fetchRequest} from "./FetchUtils";
-import {questionsRoundDTO} from "./IQuestionsDTO";
+
+import {fetchRequest} from "src/app/service/FetchUtils";
+import {questionsRoundDTO} from "src/app/model/QuestionsDTO";
 
 /**
  * Class which use when the client have internet

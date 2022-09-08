@@ -1,5 +1,5 @@
 /**
- * INterface to describe types of one element among all questions
+ * Describe types of one element among all questions
  */
 
 export interface questionsRoundDTO {

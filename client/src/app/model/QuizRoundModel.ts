@@ -1,4 +1,4 @@
-import {questionsRoundDTO} from "src/app/service/IQuestionsDTO";
+import {questionsRoundDTO} from "src/app/model/QuestionsDTO";
 
 /**
  * Model which describe types anout variables used in one round
