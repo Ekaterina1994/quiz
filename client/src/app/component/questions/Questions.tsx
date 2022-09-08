@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "src/app/component/button/Button";
 import Paragraph from "src/app/component/paragraph/Paragraph";
-import useGetQuestions from "src/app/component/questions/useGetQuestions";
+import useGetQuestions from "src/app/component/questions/UseGetQuestions";
 
 /**
  * Question component

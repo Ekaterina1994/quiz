@@ -1,5 +1,6 @@
 import {QuizRound} from "src/app/model/QuizRoundModel";
-import questionsDTO from "src/app/data.json";
+import questionsDTO from "src/app/questionsRoundDTO.json";
+// import {fetchRequest} from "./fetchUtils";
 import {questionsRoundDTO} from "./IQuestionsDTO";
 
 /**
@@ -7,10 +8,10 @@ import {questionsRoundDTO} from "./IQuestionsDTO";
  */
 export class QuizServiceStub {
 
-  public pathToData: string;
+  private pathToData: string;
 
   constructor() {
-    this.pathToData = `${"../store/data.json"}`;
+    this.pathToData = `${"src/app/questionsRoundDTO.json"}`;
   }
 
   /**
@@ -18,6 +19,8 @@ export class QuizServiceStub {
 	 */
   public async getQuestions(): Promise<QuizRound[]> {
     const path = this.pathToData;
+    // const {content: questionsDTO}: {content: QuizRound[]} = await fetchRequest.get(path);
+
     const questions = questionsDTO.map((questionsElement: questionsRoundDTO) => {
       return new QuizRound(questionsElement);
     }, path);
