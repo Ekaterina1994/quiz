@@ -98,7 +98,7 @@ import styles from "src/app/component/button/Button.module.scss";
  */
 ```  
 
-	- If we need to comment something in oneline outside of the render block we can use the next format:  
+- If we need to comment something in oneline outside of the render block we can use the next format:  
   
 ```
 // Comment
