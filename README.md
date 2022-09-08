@@ -37,7 +37,7 @@ Send me an email at a convenient time for you: katishteno@mail.ru
 **Ekaterina:**
 - YouTube: https://www.youtube.com/channel/UCEzXFClFND8K9vqYSfb3YAA
 - LinkedIn: https://www.linkedin.com/in/ekaterina-veretennikova/
-- CV: https://ekaterina1994.github.io/rsschool-cv/ or https://Ekaterina1994.github.io/rsschool-cv/cv
+- CV: https://drive.google.com/file/d/1NviTOHXLySRWCSIPp9n_3J3hbzBOninB/view?usp=sharing
 
 **Yuri:**
 - LinkedIn: https://www.linkedin.com/in/yuri-prigara/
