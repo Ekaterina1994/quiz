@@ -43,16 +43,16 @@
 
     * we use capital letters and an underscore, if the value of the constant is known before the code is executed and "hardcoded" (for example, the hexadecimal value for red):  
 		  
-    ```
-    const COLOR_RED = "#F00";
-    ```  
+  ```
+  const COLOR_RED = "#F00";
+  ```  
     
     * we use lower letters and "camelCase", if the constants are calculated during script execution (we don't know a result before script), but do not change after their initial assignment:  
       
 
-    ```
-    const newResult = a * b; // where a and b - random numbers.
-    ```  
+	```
+	const newResult = a * b; // where a and b - random numbers.
+	```  
     
 
 * If we have "magic values" it is better to use constants. The name of the constant should convey the meaning of the number.  
@@ -94,16 +94,15 @@ import styles from "src/app/component/button/Button.module.scss";
 
 - We use different types of comments depending on the need: 
 
-	- JSDoc comments should generally be placed immediately before the code being documented. This kind of comment describes the entities to use. Usually these elements can be found in different files (they are often exported). Also we can use this type of comments in we need to use a multiple comments:  
-	
+		* JSDoc comments should generally be placed immediately before the code being documented. This kind of comment describes the entities to use. Usually these elements can be found in different files (they are often exported). Also we can use this type of comments in we need to use a multiple comments:  
+
 	```
 	/**
 	 * Comments
 	 */
 	```  
-	
 
-	- If we need to comment something in oneline outside of the render block we can use the next format:  
+		* If we need to comment something in oneline outside of the render block we can use the next format:  
 	  
 	
 	```
