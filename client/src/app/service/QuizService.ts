@@ -1,10 +1,9 @@
 import {QuizRound} from "src/app/model/QuizRoundModel";
-
 import {fetchRequest} from "src/app/service/FetchUtils";
 import {questionsRoundDTO} from "src/app/model/QuestionsDTO";
 
 /**
- * Class which use when the client have internet
+ * Use when the client have internet
  */
 export class QuizService {
 
@@ -15,7 +14,7 @@ export class QuizService {
   }
 
   /**
-	 * Method which return data
+	 * Return array with questions, answers, right answers, keys
 	 */
   public async getQuestions(): Promise<QuizRound[]> {
     const url = this.baseUrl;

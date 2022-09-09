@@ -1,20 +1,32 @@
 import {questionsRoundDTO} from "src/app/model/QuestionsDTO";
 
 /**
- * Model which describe types anout variables used in one round
+ * DTO of questions for each round
  */
 export class QuizRound {
 
+  /**
+	 * Text of question
+	 */
   public question: string;
 
+  /**
+	 * Array of answers
+	 */
   public choices: string[];
 
+  /**
+	 * Text of qright answer
+	 */
   public rightAnswer: string;
 
+  /**
+	 * ID for each round
+	 */
   public key: string;
 
   /**
-	 * Create a new Quiz
+	 * Quiz round
 	 */
   constructor(quizSeed: questionsRoundDTO) {
     this.question = quizSeed.question;
