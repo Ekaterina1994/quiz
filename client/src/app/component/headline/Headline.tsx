@@ -3,10 +3,13 @@ import clsx from "clsx";
 import styles from "src/app/component/headline/Headline.module.scss";
 
 /**
- * Headline component
+ * Contain attributes for each headline
  */
 export type HeadlineText = { headline: string };
 
+/**
+ * Headline component
+ */
 const Headline: React.FC<HeadlineText> = (props: HeadlineText) => {
   const headlineClassName = clsx(styles.headline);
 

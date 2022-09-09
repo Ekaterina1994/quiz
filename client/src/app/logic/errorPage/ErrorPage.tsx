@@ -6,6 +6,7 @@ const ErrorPage: React.FC = () => {
   const CONTAINER = "container";
   const ERROR_NUMBER = "404";
   const ERROR_TEXT = "Settings Page";
+
   return (
     <section className={CONTAINER}>
       <Headline headline={ERROR_NUMBER} />

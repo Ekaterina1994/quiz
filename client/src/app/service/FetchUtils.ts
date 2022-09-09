@@ -1,9 +1,17 @@
-/** Methods request */
+/**
+ * Methods request
+ */
 export enum FetchMethod {
   GET = "GET",
   DELETE = "DELETE",
 }
 
+/**
+ * Request
+ * @param url path to database with data for quiz
+ * @param method GET or DELETE
+ * @returns response with data (quiz questions, answers, etc) or Error
+ */
 export const request = async (url: string, method: FetchMethod): Promise<any> => {
   const rawResponse = await fetch(url, {method});
 
@@ -17,6 +25,9 @@ export const request = async (url: string, method: FetchMethod): Promise<any> =>
   throw new Error(String(rawResponse.status));
 };
 
+/**
+ * Types of requests
+ */
 export const fetchRequest = {
 
   /**

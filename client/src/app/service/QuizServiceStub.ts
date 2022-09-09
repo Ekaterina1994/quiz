@@ -11,6 +11,10 @@ export class QuizServiceStub {
 	 * Return array with questions, answers, right answers, keys
 	 */
   public async getQuestions(): Promise<QuizRound[]> {
+
+    /**
+		 * New array with questions for all quiz
+		 */
     const questions = questionsDTO.map((questionsElement: questionsRoundDTO) => {
       return new QuizRound(questionsElement);
     });

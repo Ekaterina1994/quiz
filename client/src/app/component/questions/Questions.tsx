@@ -4,7 +4,7 @@ import Paragraph from "src/app/component/paragraph/Paragraph";
 import useGetQuestions from "src/app/component/questions/UseGetQuestions";
 
 /**
- * Question component
+ * Quiz component
  */
 const Questions: React.FC = () => {
 
