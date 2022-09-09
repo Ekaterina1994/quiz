@@ -9,7 +9,7 @@ const ErrorPage: React.FC = () => {
 
   return (
     <section className={CONTAINER}>
-      <Headline headline={ERROR_NUMBER} />
+      <Headline text={ERROR_NUMBER} />
       <Paragraph text={ERROR_TEXT} />
     </section>
   );

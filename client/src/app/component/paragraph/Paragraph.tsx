@@ -5,12 +5,14 @@ import styles from "src/app/component/paragraph/Paragraph.module.scss";
 /**
  * Contain attributes for each paragraph
  */
-export type ParagraphText = { text: string };
+export interface ParagraphProps {
+  text: string;
+};
 
 /**
  * Paragraph component
  */
-const Paragraph: React.FC<ParagraphText> = (props: ParagraphText) => {
+const Paragraph: React.FC<ParagraphProps> = (props: ParagraphProps) => {
   const paragraphClassName = clsx(styles.paragraph);
 
   return (

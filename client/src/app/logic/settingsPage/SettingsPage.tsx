@@ -14,7 +14,7 @@ const SettingsPage: React.FC = () => {
 
   return (
     <>
-      <Headline headline={SETTINGS_PAGE} />
+      <Headline text={SETTINGS_PAGE} />
       <Switch isToggle={isToggle} onToggle={handleChange} />
     </>
   );

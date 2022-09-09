@@ -5,16 +5,15 @@ import styles from "src/app/component/headline/Headline.module.scss";
 /**
  * Contain attributes for each headline
  */
-export type HeadlineText = { headline: string };
+export interface HeadlineProps {
+  text: string;
+};
 
-/**
- * Headline component
- */
-const Headline: React.FC<HeadlineText> = (props: HeadlineText) => {
+const Headline: React.FC<HeadlineProps> = (props: HeadlineProps) => {
   const headlineClassName = clsx(styles.headline);
 
   return (
-    <h1 className={headlineClassName}>{props.headline}</h1>
+    <h1 className={headlineClassName}>{props.text}</h1>
   );
 };
 

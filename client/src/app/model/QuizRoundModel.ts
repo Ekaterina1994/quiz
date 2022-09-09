@@ -1,9 +1,9 @@
-import {questionsRoundDTO} from "src/app/model/QuestionsDTO";
+import {questionsRoundDTO} from "src/app/model/QuestionsRoundDTO";
 
 /**
  * DTO of questions for each round
  */
-export class QuizRound {
+export class QuizRoundModel {
 
   /**
 	 * Text of question

@@ -1,18 +1,18 @@
 import {useState, useEffect} from "react";
-import {QuizRound} from "src/app/model/QuizRoundModel";
+import {QuizRoundModel} from "src/app/model/QuizRoundModel";
 import {quizService} from "src/app/service/ServiceInitialization";
 
 /**
  * Custom hook
  * @returns questions
  */
-const useFetch = (): [QuizRound[]] => {
+const useFetch = (): [QuizRoundModel[]] => {
 
-  const [question, setQuestion] = useState<QuizRound[]>([]);
+  const [question, setQuestion] = useState<QuizRoundModel[]>([]);
 
   // Get questions and give it to us
   const loadQuestion: () => void = async () => {
-    const newData: QuizRound[] = await quizService.getQuestions();
+    const newData: QuizRoundModel[] = await quizService.getQuestions();
     setQuestion(newData);
   };
   useEffect(() => {

@@ -6,7 +6,7 @@ import styles from "src/app/component/button/Button.module.scss";
 /**
  * Contain attributes for each link
  */
-interface LinkProps {
+export interface LinkProps {
   to: string;
   name: string;
 }
