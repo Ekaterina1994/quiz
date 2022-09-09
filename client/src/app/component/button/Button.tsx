@@ -2,6 +2,9 @@ import React from "react";
 import clsx from "clsx";
 import styles from "src/app/component/button/Button.module.scss";
 
+/**
+ * Contain attributes for each button
+ */
 interface ButtonProps {
   name: string;
   handleClick: (event: React.MouseEvent<Element, MouseEvent>) => void;

@@ -2,6 +2,9 @@ import React from "react";
 import clsx from "clsx";
 import styles from "src/app/component/paragraph/Paragraph.module.scss";
 
+/**
+ * Contain attributes for each paragraph
+ */
 export type ParagraphText = { text: string };
 
 /**

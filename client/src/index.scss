@@ -1,12 +1,9 @@
-@import "~materialize-css/dist/css/materialize.min.css";
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-// Set the default font family here so you don't have to override it later
 $normalized_font_family: "Roboto", sans-serif !default;
 
 $normalize_headings: true !default;

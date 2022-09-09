@@ -3,7 +3,7 @@ import {QuizRound} from "src/app/model/QuizRoundModel";
 import useFetch from "src/app/component/questions/useFetch";
 
 /**
- * Custom hook function
+ * Custom hook
  * @returns score, questionIndex, answer, data and methods: onChange, submit, restart
  */
 const useGetQuestions = (): [number, number, string, QuizRound[], {onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -14,14 +14,14 @@ const useGetQuestions = (): [number, number, string, QuizRound[], {onChange: (e:
   const [answer, setAnswer] = useState<string>("");
   const [question] = useFetch();
 
-  // Function for set Score to 0
+  // Set Score to 0
   const restart: () => void = () => {
     setScore(0);
     setAnswer("");
     setQuestionIndex(0);
   };
 
-  // Function for to send answer. If its right answer - number of points grow
+  // Send answer. If its right answer - number of points grow
   const submit: (event: React.MouseEvent) => void = (
     event: React.MouseEvent,
   ) => {
@@ -39,7 +39,7 @@ const useGetQuestions = (): [number, number, string, QuizRound[], {onChange: (e:
     }
   };
 
-  // Function, keeps track of the selected answer
+  // Keeps track of the selected answer
   const onChange: (e: React.ChangeEvent<HTMLInputElement>) => void = (e: React.ChangeEvent<HTMLInputElement>) => {
     setAnswer(e.target.value);
   };
