@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import clsx from "clsx";
 import styles from "src/app/component/button/Button.module.scss";
 
-interface LinkProps {
+export interface LinkProps {
   to: string;
   name: string;
 }

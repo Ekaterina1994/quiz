@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import switchStyles from "src/app/component/switch/Switch.module.scss";
 
-interface SwitchProps {
+export interface SwitchProps {
   isToggle: boolean;
   onToggle: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

@@ -1,9 +1,9 @@
-import {questionsRoundDTO} from "src/app/model/QuestionsDTO";
+import {questionsRoundDTO} from "src/app/model/QuestionsRoundDTO";
 
 /**
  * Model which describe types anout variables used in one round
  */
-export class QuizRound {
+export class QuizRoundModel {
 
   public question: string;
 

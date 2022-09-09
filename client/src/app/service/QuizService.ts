@@ -1,7 +1,7 @@
-import {QuizRound} from "src/app/model/QuizRoundModel";
+import {QuizRoundModel} from "src/app/model/QuizRoundModel";
 
 import {fetchRequest} from "src/app/service/FetchUtils";
-import {questionsRoundDTO} from "src/app/model/QuestionsDTO";
+import {questionsRoundDTO} from "src/app/model/QuestionsRoundDTO";
 
 /**
  * Class which use when the client have internet
@@ -17,12 +17,12 @@ export class QuizService {
   /**
 	 * Method which return data
 	 */
-  public async getQuestions(): Promise<QuizRound[]> {
+  public async getQuestions(): Promise<QuizRoundModel[]> {
     const url = this.baseUrl;
-    const {content: questionsDTO}: {content: QuizRound[]} = await fetchRequest.get(url);
+    const {content: questionsDTO}: {content: QuizRoundModel[]} = await fetchRequest.get(url);
 
     const questions = questionsDTO.map((questionsElement: questionsRoundDTO) => {
-      return new QuizRound(questionsElement);
+      return new QuizRoundModel(questionsElement);
     });
 
     return questions;

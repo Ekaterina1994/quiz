@@ -1,13 +1,15 @@
 import React, {useState} from "react";
-import {QuizRound} from "src/app/model/QuizRoundModel";
+import {QuizRoundModel} from "src/app/model/QuizRoundModel";
 import useFetch from "src/app/component/questions/useFetch";
 
 /**
  * Custom hook function
  * @returns score, questionIndex, answer, data and methods: onChange, submit, restart
  */
-const useGetQuestions = (): [number, number, string, QuizRound[], {onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  submit: (event: React.MouseEvent) => void; restart: () => void;}] => {
+const useGetQuestions = (): [number, number, string, QuizRoundModel[],
+  {onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    submit: (event: React.MouseEvent) => void; restart: () => void;
+  }] => {
 
   const [score, setScore] = useState<number>(0);
   const [questionIndex, setQuestionIndex] = useState<number>(0);
