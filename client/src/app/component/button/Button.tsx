@@ -5,7 +5,7 @@ import styles from "src/app/component/button/Button.module.scss";
 /**
  * Contain attributes for each button
  */
-interface ButtonProps {
+export interface ButtonProps {
   name: string;
   handleClick: (event: React.MouseEvent<Element, MouseEvent>) => void;
 }
@@ -13,7 +13,7 @@ interface ButtonProps {
 /**
  * Button component
  */
-const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
+export const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   const btnClassName = clsx(styles.btn);
 
   return (
@@ -26,5 +26,3 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
     </button>
   );
 };
-
-export default Button;

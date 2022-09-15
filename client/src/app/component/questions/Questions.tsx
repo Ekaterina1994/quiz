@@ -1,12 +1,12 @@
 import React from "react";
-import Button from "src/app/component/button/Button";
-import Paragraph from "src/app/component/paragraph/Paragraph";
-import useGetQuestions from "src/app/component/questions/UseGetQuestions";
+import {Button} from "src/app/component/button/Button";
+import {Paragraph} from "src/app/component/paragraph/Paragraph";
+import {useGetQuestions} from "src/app/component/questions/UseGetQuestions";
 
 /**
  * Quiz component
  */
-const Questions: React.FC = () => {
+export const Questions: React.FC = () => {
 
   // Call custom hook
   const [score, questionIndex, answer, question, methods] = useGetQuestions();
@@ -55,5 +55,3 @@ const Questions: React.FC = () => {
     </>
   );
 };
-
-export default Questions;

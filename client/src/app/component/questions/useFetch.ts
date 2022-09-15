@@ -6,7 +6,7 @@ import {quizService} from "src/app/service/ServiceInitialization";
  * Custom hook
  * @returns questions
  */
-const useFetch = (): [QuizRoundModel[]] => {
+export const useFetch = (): [QuizRoundModel[]] => {
 
   const [question, setQuestion] = useState<QuizRoundModel[]>([]);
 
@@ -22,5 +22,3 @@ const useFetch = (): [QuizRoundModel[]] => {
   return [question];
 
 };
-
-export default useFetch;

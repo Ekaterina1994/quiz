@@ -12,12 +12,10 @@ export interface ParagraphProps {
 /**
  * Paragraph component
  */
-const Paragraph: React.FC<ParagraphProps> = (props: ParagraphProps) => {
+export const Paragraph: React.FC<ParagraphProps> = (props: ParagraphProps) => {
   const paragraphClassName = clsx(styles.paragraph);
 
   return (
     <p className={paragraphClassName}>{props.text}</p>
   );
 };
-
-export default Paragraph;

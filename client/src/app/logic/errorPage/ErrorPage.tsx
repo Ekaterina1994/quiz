@@ -1,10 +1,10 @@
 import React from "react";
-import Link from "src/app/component/link/Link";
-import Paragraph from "src/app/component/paragraph/Paragraph";
-import Headline from "src/app/component/headline/Headline";
+import {Link} from "src/app/component/link/Link";
+import {Paragraph} from "src/app/component/paragraph/Paragraph";
+import {Headline} from "src/app/component/headline/Headline";
 import {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
 
-const ErrorPage: React.FC = () => {
+export const ErrorPage: React.FC = () => {
   const CONTAINER = "container";
   const ERROR_NUMBER = "404";
   const ERROR_TEXT = "Settings Page";
@@ -19,5 +19,3 @@ const ErrorPage: React.FC = () => {
     </>
   );
 };
-
-export default ErrorPage;

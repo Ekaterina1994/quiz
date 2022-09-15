@@ -10,7 +10,7 @@ export interface SwitchProps {
 /**
  * Switch component
  */
-const Switch: React.FC<SwitchProps> = (props: SwitchProps) => {
+export const Switch: React.FC<SwitchProps> = (props: SwitchProps) => {
   const containerClassName = clsx(switchStyles.container);
   const inputClassName = clsx(switchStyles.container__input);
   const switchClassName = clsx(switchStyles.container__switch);
@@ -26,5 +26,3 @@ const Switch: React.FC<SwitchProps> = (props: SwitchProps) => {
     </label>
   );
 };
-
-export default Switch;
