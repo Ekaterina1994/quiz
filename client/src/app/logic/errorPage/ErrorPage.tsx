@@ -1,6 +1,8 @@
 import React from "react";
+import Link from "src/app/component/link/Link";
 import Paragraph from "src/app/component/paragraph/Paragraph";
 import Headline from "src/app/component/headline/Headline";
+import {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
 
 const ErrorPage: React.FC = () => {
   const CONTAINER = "container";
@@ -8,10 +10,13 @@ const ErrorPage: React.FC = () => {
   const ERROR_TEXT = "Settings Page";
 
   return (
-    <section className={CONTAINER}>
-      <Headline text={ERROR_NUMBER} />
-      <Paragraph text={ERROR_TEXT} />
-    </section>
+    <>
+      <Link name="To menu" to={MAIN_PATH} />
+      <section className={CONTAINER}>
+        <Headline text={ERROR_NUMBER} />
+        <Paragraph text={ERROR_TEXT} />
+      </section>
+    </>
   );
 };
 
