@@ -2,9 +2,7 @@
 
 ## GIT
 
-- This project has the one branch called "main" where we work on client part of app;
-- If you need to create a new branch (for example you will create a server part) it's name should to start by little letter;
-- Separate feature branches are used to solve specific problems. Each task has a number and a name (title). Accordingly, the branch for this task should look like:  
+- In this project you need to create separate feature branches of functions that are used to solve specific problems. Each task has a number and a name (title). Accordingly, the branch for this task should look like:  
  
 ```
 "{{issue_number}}-{{issue_name-long-name}}"
