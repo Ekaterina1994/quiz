@@ -6,16 +6,15 @@ import {Questions} from "src/app/component/questions/Questions";
 import {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
 
 export const QUIZ_PATH = "quiz"; // Path to QuizPage
+const questionClassName = clsx(styles.container);
 
 export const QuizPage: React.FC = () => {
-  const questionClassName = clsx(styles.container);
-
   return (
-    <>
-      <Link name="To menu" to={MAIN_PATH} />
-      <section className={questionClassName}>
+    <div>
+      <Link title="To menu" to={MAIN_PATH} />
+      <div className={questionClassName}>
         <Questions />
-      </section>
-    </>
+      </div>
+    </div>
   );
 };

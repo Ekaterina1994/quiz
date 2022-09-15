@@ -6,28 +6,28 @@ import {questionsRoundDTO} from "src/app/model/QuestionsRoundDTO";
 export class QuizRoundModel {
 
   /**
-	 * Text of question
-	 */
+   * Text of question
+   */
   public question: string;
 
   /**
-	 * Array of answers
-	 */
+   * Array of answers
+   */
   public choices: string[];
 
   /**
-	 * Text of qright answer
-	 */
+   * Text of qright answer
+   */
   public rightAnswer: string;
 
   /**
-	 * ID for each round
-	 */
+   * ID for each round
+   */
   public key: string;
 
   /**
-	 * Quiz round
-	 */
+   * Quiz round
+   */
   constructor(quizSeed: questionsRoundDTO) {
     this.question = quizSeed.question;
     this.choices = quizSeed.choices;

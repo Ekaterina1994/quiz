@@ -7,22 +7,22 @@ export interface SwitchProps {
   onToggle: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
+const CONTAINER_STYLES = clsx(switchStyles.container);
+const INPUT_STYLES = clsx(switchStyles.container__input);
+const SWITCH_STYLES = clsx(switchStyles.container__switch);
+
 /**
  * Switch component
  */
 export const Switch: React.FC<SwitchProps> = (props: SwitchProps) => {
-  const containerClassName = clsx(switchStyles.container);
-  const inputClassName = clsx(switchStyles.container__input);
-  const switchClassName = clsx(switchStyles.container__switch);
-
   return (
-    <label className={containerClassName}>
+    <label className={CONTAINER_STYLES}>
       <input
-        className={inputClassName} type="checkbox"
+        className={INPUT_STYLES} type="checkbox"
         checked={props.isToggle}
         onChange={props.onToggle}
       />
-      <div className={switchClassName} />
+      <div className={SWITCH_STYLES} />
     </label>
   );
 };

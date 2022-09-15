@@ -6,9 +6,15 @@ import {useFetch} from "src/app/component/questions/useFetch";
  * Custom hook
  * @returns score, questionIndex, answer, data and methods: onChange, submit, restart
  */
-export const useGetQuestions = (): [number, number, string, QuizRoundModel[],
-  {onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    submit: (event: React.MouseEvent) => void; restart: () => void;
+export const useGetQuestions = (): [
+  number,
+  number,
+  string,
+  QuizRoundModel[],
+  {
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    submit: (event: React.MouseEvent) => void;
+    restart: () => void;
   }] => {
 
   const [score, setScore] = useState<number>(0);
