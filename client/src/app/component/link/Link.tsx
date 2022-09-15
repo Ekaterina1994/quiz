@@ -11,6 +11,9 @@ export interface LinkProps {
   name: string;
 }
 
+/**
+ * Custom link
+ */
 const Link: React.FC<LinkProps> = (props: LinkProps) => {
   const linkClassName = clsx(styles.btn);
   return (

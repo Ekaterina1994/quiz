@@ -10,7 +10,7 @@ export interface ParagraphProps {
 };
 
 /**
- * Paragraph component
+ * Insert paragraph on pages
  */
 const Paragraph: React.FC<ParagraphProps> = (props: ParagraphProps) => {
   const paragraphClassName = clsx(styles.paragraph);

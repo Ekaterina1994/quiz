@@ -7,6 +7,9 @@ import {QUIZ_PATH} from "src/app/logic/quizPage/QuizPage";
 
 export const MAIN_PATH = "/"; // The first route acts as the root. It's path to MainPage
 
+/**
+ * Main page
+ */
 const MainPage: React.FC = () => {
   const mainClassName = clsx(styles.main);
 

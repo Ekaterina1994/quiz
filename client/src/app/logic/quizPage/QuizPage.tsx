@@ -7,6 +7,9 @@ import styles from "src/app/logic/quizPage/QuizPage.module.scss";
 
 export const QUIZ_PATH = "quiz"; // Path to QuizPage
 
+/**
+ * Quiz page
+ */
 const Quiz: React.FC = () => {
   const questionClassName = clsx(styles.container);
 

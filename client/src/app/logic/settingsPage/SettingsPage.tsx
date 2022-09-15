@@ -6,6 +6,9 @@ import {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
 
 export const SETTINGS_PATH = "settings"; // Path to SettingsPage
 
+/**
+ * Settings page
+ */
 const SettingsPage: React.FC = () => {
   const [isToggle, setIsToggle] = useState(false);
   const SETTINGS_PAGE = "Offline / Online";
