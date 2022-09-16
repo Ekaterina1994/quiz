@@ -3,8 +3,8 @@ import clsx from "clsx";
 import switchStyles from "src/app/component/switch/Switch.module.scss";
 
 export interface SwitchProps {
-  isToggle: boolean;
-  onToggle: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  isOnline: boolean;
+  hasConnection: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const CONTAINER_STYLES = clsx(switchStyles.container);
@@ -19,8 +19,8 @@ export const Switch: React.FC<SwitchProps> = (props: SwitchProps) => {
     <label className={CONTAINER_STYLES}>
       <input
         className={INPUT_STYLES} type="checkbox"
-        checked={props.isToggle}
-        onChange={props.onToggle}
+        checked={props.isOnline}
+        onChange={props.hasConnection}
       />
       <div className={SWITCH_STYLES} />
     </label>

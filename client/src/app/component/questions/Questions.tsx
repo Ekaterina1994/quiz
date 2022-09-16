@@ -1,16 +1,16 @@
 import React from "react";
 import {Button} from "src/app/component/button/Button";
 import {Paragraph, PARAGRAPH_STYLES} from "src/app/component/paragraph/Paragraph";
-import {useGetQuestions} from "src/app/component/questions/UseGetQuestions";
-import {Headline} from "../headline/Headline";
+import {useQuizMethods} from "src/app/component/questions/UseQuizMethods";
+import {getChoicesByQuestionIndex, getQuestionByQuestionIndex} from "src/app/component/questions/Helpers";
+import {Headline} from "src/app/component/headline/Headline";
 
 /**
  * Component for displaying quiz questions and answer options
  */
 export const Questions: React.FC = () => {
 
-  // Call custom hook
-  const [score, questionIndex, answer, question, methods] = useGetQuestions();
+  const [score, questionIndex, answer, questions, methods] = useQuizMethods();
 
   const renderAnswerElement = (choice: string, index: number): any => {
     return (
@@ -20,7 +20,7 @@ export const Questions: React.FC = () => {
             type="radio"
             name="choice"
             value={choice}
-            onChange={methods.onChange}
+            onChange={methods.checkAnswer}
             checked={answer === choice}
             key={index}
           />
@@ -30,20 +30,17 @@ export const Questions: React.FC = () => {
     );
   };
 
-  const renderAnswers = (): any => {
-    return question[questionIndex]?.choices.map(renderAnswerElement);
+  const renderAnswers = (): string[] | undefined => {
+    const choicesChoices = getChoicesByQuestionIndex(questionIndex, questions);
+    return choicesChoices.map(renderAnswerElement);
   };
 
-  const questionCondition = question && questionIndex < question.length;
+  const isLastQuestion = questionIndex < questions.length;
 
-  /**
-   * If index of question less then length of array with questions,
-   * then new question will show on the page, if not - then result will show
-   */
-  if (questionCondition) {
+  if (isLastQuestion) {
     return (
       <>
-        <Headline text={question[questionIndex]?.question} />
+        <Headline text={getQuestionByQuestionIndex(questionIndex, questions)} />
         {renderAnswers()}
         <Button title="Check" handleClick={methods.submit} />
         <Paragraph text={`score: ${score}`} />

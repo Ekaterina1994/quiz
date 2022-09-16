@@ -3,10 +3,10 @@ import {QuizRoundModel} from "src/app/model/QuizRoundModel";
 import {quizService} from "src/app/service/ServiceInitialization";
 
 /**
- * Custom hook
+ *
  * @returns questions
  */
-export const useFetch = (): [QuizRoundModel[]] => {
+export const useRoundQuestionAndAnswers = (): QuizRoundModel[] => {
 
   const [question, setQuestion] = useState<QuizRoundModel[]>([]);
 
@@ -19,6 +19,6 @@ export const useFetch = (): [QuizRoundModel[]] => {
     loadQuestion();
   }, []);
 
-  return [question];
+  return question;
 
 };
