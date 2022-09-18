@@ -5,7 +5,7 @@ import {Switch} from "src/app/component/switch/Switch";
 import {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
 
 export const SETTINGS_PATH = "settings";
-const SETTINGS_PAGE = "Offline / Online";
+const SETTINGS_TITLE = "Offline / Online";
 
 export const SettingsPage: React.FC = () => {
   const [isOnline, setIsOnline] = useState(false);
@@ -17,7 +17,7 @@ export const SettingsPage: React.FC = () => {
   return (
     <div>
       <Link title="To menu" to={MAIN_PATH} />
-      <Headline text={SETTINGS_PAGE} />
+      <Headline text={SETTINGS_TITLE} />
       <Switch isOnline={isOnline} hasConnection={changeConnection} />
     </div>
   );
