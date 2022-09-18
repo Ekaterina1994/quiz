@@ -1,10 +1,10 @@
 @import 'src/index.scss';
 
 .headline {
-	margin: $h1_margin;
-	font-size: $h1_font_size;
-	line-height: $h1_lineheight;
-	color: $color_text_main;
-	font-family: $normalized_font_family;
+	margin: 2.8rem 0 1.68rem 0;
+	font-size: 3.6rem;
+	line-height: 110%;
+	color: $black;
+	font-family: $font-family;
 	text-align: center;
 }

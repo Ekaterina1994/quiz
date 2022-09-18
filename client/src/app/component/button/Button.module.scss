@@ -2,28 +2,29 @@
 
 .btn {
   display: inline-block;
+  vertical-align: middle;
+  height: 54px;
+	width: 150px;
+  line-height: 54px;
+  padding: 0 29px;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+  color: $black;
+  background-color: $gold;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  font-family: $font-family;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
-  vertical-align: middle;
-  transition: $transition;
-  cursor: pointer;
-  height: $height_button;
-	width: $width_button;
-  line-height: $line-height;
-  font-size: $font_size_button;
-  padding: $padding_button;
-  text-decoration: none;
-  color: $color_text_main;
-  background-color: $btn_color;
-  text-align: center;
-  letter-spacing: $letter-spacing;
-  border: none;
-  border-radius: $border_radius;
-  text-transform: uppercase;
-  box-shadow: $box-shadow;
-  font-family: $normalized_font_family;
+  transition: 0.3s ease-out;
 
   &:hover {
-    background-color: $color_hover_link;
+    background-color: $color-hover;
   }
 }
