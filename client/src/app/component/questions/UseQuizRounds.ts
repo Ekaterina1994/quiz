@@ -6,19 +6,19 @@ import {quizService} from "src/app/service/ServiceInitialization";
  *
  * @returns questions
  */
-export const useRoundQuestionAndAnswers = (): QuizRoundModel[] => {
+export const useQuizRounds = (): QuizRoundModel[] => {
 
-  const [question, setQuestion] = useState<QuizRoundModel[]>([]);
+  const [quizRounds, setQuizRounds] = useState<QuizRoundModel[]>([]);
 
   // Get questions and give it to us
   const loadQuestion: () => void = async () => {
-    const newData: QuizRoundModel[] = await quizService.getQuestions();
-    setQuestion(newData);
+    const insertQuizData: QuizRoundModel[] = await quizService.getQuestions();
+    setQuizRounds(insertQuizData);
   };
   useEffect(() => {
     loadQuestion();
   }, []);
 
-  return question;
+  return quizRounds;
 
 };

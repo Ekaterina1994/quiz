@@ -1,11 +1,15 @@
 import React, {useState} from "react";
 import {QuizRoundModel} from "src/app/model/QuizRoundModel";
-import {useRoundQuestionAndAnswers} from "src/app/component/questions/useRoundQuestionAndAnswers";
-import {getAnswerByQuestionIndex} from "./Helpers";
+import {useQuizRounds} from "src/app/component/questions/UseQuizRounds";
+import {getAnswerByQuestionIndex} from "src/app/component/questions/Helpers";
 
 /**
  *
- * @returns score, questionIndex, answer, data and methods: onChange, submit, restart
+ * @returns score - stores the state of the current total score;
+ *          questionIndex - stores the state of the question number;
+ *          answer - stores the state of the selected response;
+ *          questions - stores the data state of the current quiz round;
+ *          methods: onChange, submit, restart
  */
 export const useQuizMethods = (): [
   number,
@@ -19,7 +23,7 @@ export const useQuizMethods = (): [
   }] => {
 
   const [score, setScore] = useState<number>(0);
-  const questions = useRoundQuestionAndAnswers();
+  const questions = useQuizRounds();
   const [questionIndex, setQuestionIndex] = useState<number>(0);
   const [answer, setAnswer] = useState<string>("");
 

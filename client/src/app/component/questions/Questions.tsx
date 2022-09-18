@@ -1,4 +1,4 @@
-import React from "react";
+import React, {ReactElement} from "react";
 import {Button} from "src/app/component/button/Button";
 import {Paragraph, PARAGRAPH_STYLES} from "src/app/component/paragraph/Paragraph";
 import {useQuizMethods} from "src/app/component/questions/UseQuizMethods";
@@ -12,7 +12,7 @@ export const Questions: React.FC = () => {
 
   const [score, questionIndex, answer, questions, methods] = useQuizMethods();
 
-  const renderAnswerElement = (choice: string, index: number): any => {
+  const renderAnswerElement = (choice: string, index: number): ReactElement => {
     return (
       <label key={choice}>
         <input
@@ -28,7 +28,7 @@ export const Questions: React.FC = () => {
     );
   };
 
-  const renderAnswers = (): string[] | undefined => {
+  const renderAnswers = (): ReactElement[] | undefined => {
     const choicesChoices = getChoicesByQuestionIndex(questionIndex, questions);
     return choicesChoices.map(renderAnswerElement);
   };
