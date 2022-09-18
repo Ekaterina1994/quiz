@@ -14,19 +14,17 @@ export const Questions: React.FC = () => {
 
   const renderAnswerElement = (choice: string, index: number): any => {
     return (
-      <h5 key={choice}>
-        <label>
-          <input
-            type="radio"
-            name="choice"
-            value={choice}
-            onChange={methods.checkAnswer}
-            checked={answer === choice}
-            key={index}
-          />
-          <span className={PARAGRAPH_STYLES}>{choice}</span>
-        </label>
-      </h5>
+      <label key={choice}>
+        <input
+          type="radio"
+          name="choice"
+          value={choice}
+          onChange={methods.checkAnswer}
+          checked={answer === choice}
+          key={index}
+        />
+        <span className={PARAGRAPH_STYLES}>{choice}</span>
+      </label>
     );
   };
 
