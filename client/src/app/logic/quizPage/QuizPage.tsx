@@ -1,23 +1,20 @@
 import React from "react";
-import Link from "src/app/component/link/Link";
-import Questions from "src/app/component/questions/Questions";
-import {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
 import clsx from "clsx";
 import styles from "src/app/logic/quizPage/QuizPage.module.scss";
+import {Link} from "src/app/component/link/Link";
+import {Questions} from "src/app/component/questions/Questions";
+import {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
 
 export const QUIZ_PATH = "quiz"; // Path to QuizPage
+const CONTAINER_STYLES = clsx(styles.container);
 
-const Quiz: React.FC = () => {
-  const questionClassName = clsx(styles.container);
-
+export const QuizPage: React.FC = () => {
   return (
-    <>
-      <Link name="To menu" to={MAIN_PATH} />
-      <section className={questionClassName}>
+    <div>
+      <Link title="To menu" to={MAIN_PATH} />
+      <div className={CONTAINER_STYLES}>
         <Questions />
-      </section>
-    </>
+      </div>
+    </div>
   );
 };
-
-export default Quiz;

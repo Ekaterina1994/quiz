@@ -13,10 +13,10 @@
     left: -99999px;
   }
   &__input:checked + &__switch {
-    background-color: $color_hover_link;
+    background-color: $color-hover;
   }
   &__input:focus + &__switch {
-    box-shadow: 0 0 1px $color_hover_link;
+    box-shadow: 0 0 1px $color-hover;
   }
   &__input:checked + &__switch:before {
     -webkit-transform: translateX(26px);
@@ -30,7 +30,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $color_switch;
+    background-color: #ccc;
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 34px;
@@ -41,7 +41,7 @@
       width: 26px;
       left: 4px;
       bottom: 4px;
-      background-color: $background_color;
+      background-color: $white;
       -webkit-transition: 0.4s;
       transition: 0.4s;
       border-radius: 50%;

@@ -4,22 +4,23 @@
 export interface questionsRoundDTO {
 
   /**
-	 * Text of question
-	 */
+   * Text of question
+   */
   question: string;
 
   /**
-	 * Array of answers
-	 */
+   * Array of answers
+   */
   choices: string[];
 
   /**
-	 * Text of qright answer
-	 */
+   * Text of qright answer
+   */
   rightAnswer: string;
 
   /**
-	 * ID for each round
-	 */
+   * ID for each round
+   */
   key: string;
+
 }

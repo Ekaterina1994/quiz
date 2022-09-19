@@ -1,23 +1,20 @@
 import React from "react";
-import Link from "src/app/component/link/Link";
-import Paragraph from "src/app/component/paragraph/Paragraph";
-import Headline from "src/app/component/headline/Headline";
+import clsx from "clsx";
+import styles from "src/app/logic/mainPage/MainPage.module.scss";
+import {Link} from "src/app/component/link/Link";
+import {Headline} from "src/app/component/headline/Headline";
 import {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
 
-const ErrorPage: React.FC = () => {
-  const CONTAINER = "container";
-  const ERROR_NUMBER = "404";
-  const ERROR_TEXT = "Settings Page";
+const CONTAINER_STYLES = clsx(styles.container);
+const ERROR_TEXT = "Error 404";
 
+export const ErrorPage: React.FC = () => {
   return (
-    <>
-      <Link name="To menu" to={MAIN_PATH} />
-      <section className={CONTAINER}>
-        <Headline text={ERROR_NUMBER} />
-        <Paragraph text={ERROR_TEXT} />
-      </section>
-    </>
+    <div>
+      <Link title="To menu" to={MAIN_PATH} />
+      <div className={CONTAINER_STYLES}>
+        <Headline text={ERROR_TEXT} />
+      </div>
+    </div>
   );
 };
-
-export default ErrorPage;

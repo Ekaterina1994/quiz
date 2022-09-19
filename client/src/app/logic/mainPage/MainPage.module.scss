@@ -1,12 +1,12 @@
 @import 'src/index.scss';
 
 .main {
-	width : $width_main;
-	height: $height_main;
-	margin: $margin_main;
+	width : 60vw;
+	height: 90vh;
+	margin: 0 20vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: $gap;
+	gap: 20px;
 }
 

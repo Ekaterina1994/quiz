@@ -14,23 +14,23 @@ export class QuizService {
   }
 
   /**
-	 * Return array with questions, answers, right answers, keys
-	 */
+   * Return array with questions, answers, right answers, keys
+   */
   public async getQuestions(): Promise<QuizRoundModel[]> {
 
     /**
-		 * Path to database in the Internet
-		 */
+     * Path to database in the Internet
+     */
     const url = this.baseUrl;
 
     /**
-		 * Get response from request to get data from internet
-		 */
+     * Get response from request to get data from internet
+     */
     const {content: questionsDTO}: {content: QuizRoundModel[]} = await fetchRequest.get(url);
 
     /**
-		 * New array with questions for all quiz
-		 */
+     * New array with questions for all quiz
+     */
     const questions = questionsDTO.map((questionsElement: questionsRoundDTO) => {
       return new QuizRoundModel(questionsElement);
     });

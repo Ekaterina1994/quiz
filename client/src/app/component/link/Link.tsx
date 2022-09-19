@@ -6,16 +6,15 @@ import styles from "src/app/component/button/Button.module.scss";
 /**
  * Contain attributes for each link
  */
-export interface LinkProps {
+interface LinkProps {
   to: string;
-  name: string;
+  title: string;
 }
 
-const Link: React.FC<LinkProps> = (props: LinkProps) => {
-  const linkClassName = clsx(styles.btn);
+const LINK_STYLES = clsx(styles.btn);
+
+export const Link: React.FC<LinkProps> = (props: LinkProps) => {
   return (
-    <NavLink className={linkClassName} to={props.to}>{props.name}</NavLink>
+    <NavLink className={LINK_STYLES} to={props.to}>{props.title}</NavLink>
   );
 };
-
-export default Link;

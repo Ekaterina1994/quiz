@@ -6,25 +6,23 @@ import styles from "src/app/component/button/Button.module.scss";
  * Contain attributes for each button
  */
 interface ButtonProps {
-  name: string;
+  title: string;
   handleClick: (event: React.MouseEvent<Element, MouseEvent>) => void;
 }
+
+const BUTTON_STYLES = clsx(styles.btn);
 
 /**
  * Button component
  */
-const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
-  const btnClassName = clsx(styles.btn);
-
+export const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   return (
     <button
-      className={btnClassName}
+      className={BUTTON_STYLES}
       type="button"
       onClick={props.handleClick}
     >
-      {props.name}
+      {props.title}
     </button>
   );
 };
-
-export default Button;

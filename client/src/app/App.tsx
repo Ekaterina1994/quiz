@@ -1,14 +1,14 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import MainPage, {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
-import SettingsPage, {SETTINGS_PATH} from "src/app/logic/settingsPage/SettingsPage";
-import QuizPage, {QUIZ_PATH} from "src/app/logic/quizPage/QuizPage";
-import ErrorPage from "src/app/logic/errorPage/ErrorPage";
+import {MainPage, MAIN_PATH} from "src/app/logic/mainPage/MainPage";
+import {SettingsPage, SETTINGS_PATH} from "src/app/logic/settingsPage/SettingsPage";
+import {QuizPage, QUIZ_PATH} from "src/app/logic/quizPage/QuizPage";
+import {ErrorPage} from "src/app/logic/errorPage/ErrorPage";
 
 /**
  * The main component with routes
  */
-const App: React.FC = () => {
+export const App: React.FC = () => {
 
   return (
     <Router>
@@ -21,5 +21,3 @@ const App: React.FC = () => {
     </Router>
   );
 };
-
-export default App;

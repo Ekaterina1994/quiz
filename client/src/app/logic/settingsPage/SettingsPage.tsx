@@ -1,26 +1,24 @@
 import React, {useState} from "react";
-import Link from "src/app/component/link/Link";
-import Headline from "src/app/component/headline/Headline";
-import Switch from "src/app/component/switch/Switch";
+import {Link} from "src/app/component/link/Link";
+import {Headline} from "src/app/component/headline/Headline";
+import {Switch} from "src/app/component/switch/Switch";
 import {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
 
-export const SETTINGS_PATH = "settings"; // Path to SettingsPage
+export const SETTINGS_PATH = "settings";
+const SETTINGS_TITLE = "Offline / Online";
 
-const SettingsPage: React.FC = () => {
-  const [isToggle, setIsToggle] = useState(false);
-  const SETTINGS_PAGE = "Offline / Online";
+export const SettingsPage: React.FC = () => {
+  const [isOnline, setIsOnline] = useState(false);
 
-  const handleChange = (): void => {
-    setIsToggle(!isToggle);
+  const changeConnection = (): void => {
+    setIsOnline(!isOnline);
   };
 
   return (
-    <>
-      <Link name="To menu" to={MAIN_PATH} />
-      <Headline text={SETTINGS_PAGE} />
-      <Switch isToggle={isToggle} onToggle={handleChange} />
-    </>
+    <div>
+      <Link title="To menu" to={MAIN_PATH} />
+      <Headline text={SETTINGS_TITLE} />
+      <Switch isOnline={isOnline} hasConnection={changeConnection} />
+    </div>
   );
 };
-
-export default SettingsPage;

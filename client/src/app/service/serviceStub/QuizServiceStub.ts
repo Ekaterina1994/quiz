@@ -8,8 +8,8 @@ import {questionsRoundDTO} from "src/app/model/QuestionsRoundDTO";
 export class QuizServiceStub {
 
   /**
-	 * Return array with questions, answers, right answers, keys
-	 */
+   * Return array with questions, answers, right answers, keys
+   */
   public async getQuestions(): Promise<QuizRoundModel[]> {
 
     const questions = questionsDTO.map((questionsElement: questionsRoundDTO) => {
