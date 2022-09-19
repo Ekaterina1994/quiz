@@ -7,6 +7,9 @@ import {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
 export const SETTINGS_PATH = "settings";
 const SETTINGS_TITLE = "Offline / Online";
 
+/**
+ * Data upload switching settings page
+ */
 export const SettingsPage: React.FC = () => {
   const [isOnline, setIsOnline] = useState(false);
 

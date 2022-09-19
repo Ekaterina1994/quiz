@@ -12,9 +12,6 @@ interface ButtonProps {
 
 const BUTTON_STYLES = clsx(styles.btn);
 
-/**
- * Button component
- */
 export const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   return (
     <button

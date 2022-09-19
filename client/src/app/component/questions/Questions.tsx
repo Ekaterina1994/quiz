@@ -12,6 +12,7 @@ export const Questions: React.FC = () => {
 
   const [score, questionIndex, answer, questions, methods] = useQuizMethods();
 
+  // Render answer radio input
   const renderAnswerElement = (choice: string, index: number): ReactElement => {
     return (
       <label key={choice}>

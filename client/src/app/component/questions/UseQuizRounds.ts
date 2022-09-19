@@ -4,7 +4,7 @@ import {quizService} from "src/app/service/ServiceInitialization";
 
 /**
  *
- * @returns questions
+ * @returns  score, questionIndex, answer, questions
  */
 export const useQuizRounds = (): QuizRoundModel[] => {
 
