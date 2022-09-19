@@ -9,6 +9,9 @@ interface HeadlineProps {
   text: string;
 };
 
+/**
+ * Insert headline on pages
+ */
 const HEADLINE_STYLES = clsx(styles.headline);
 
 export const Headline: React.FC<HeadlineProps> = (props: HeadlineProps) => {
