@@ -1,11 +1,12 @@
 import {QuizRoundModel} from "src/app/model/QuizRoundModel";
 import {fetchRequest} from "src/app/service/FetchUtils";
 import {questionsRoundDTO} from "src/app/model/QuestionsRoundDTO";
+import {QuizServiceMethods} from "src/app/service/QuizServiceMethods";
 
 /**
  * Use when the client have internet
  */
-export class QuizService {
+export class QuizService implements QuizServiceMethods {
 
   private baseUrl: string;
 
