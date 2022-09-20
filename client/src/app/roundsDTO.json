@@ -1,0 +1,53 @@
+[
+  {
+    "question": "What is your name?",
+    "answerVariants": [
+      {
+        "id":"0",
+        "answer": "Anna"
+      }, {
+        "id":"1",
+        "answer": "Victor"
+      }, {
+        "id":"2",
+        "answer": "Olga"
+      }
+    ],
+    "rightAnswerId": "2",
+		"id": "0"
+  },
+  {
+    "question": "What is your mother name?",
+    "answerVariants": [
+      {
+        "id":"3",
+        "answer": "Anna"
+      }, {
+        "id":"4",
+        "answer": "Victor"
+      }, {
+        "id":"5",
+        "answer": "Olga"
+      }
+    ],
+    "rightAnswerId": "4",
+		"id": "1"
+  },
+  {
+    "question": "What is your father name?",
+    "answerVariants": [
+      {
+        "id":"6",
+        "answer": "Anna"
+      }, {
+        "id":"7",
+        "answer": "Victor"
+      }, {
+        "id":"8",
+        "answer": "Olga"
+      }
+    ],
+    "rightAnswerId": "7",
+		"id": "2"
+  }
+]

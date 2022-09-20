@@ -4,11 +4,18 @@ import clsx from "clsx";
 import styles from "src/app/component/button/Button.module.scss";
 
 /**
- * Contain attributes for each link
+ * Link props
  */
 interface LinkProps {
+  /**
+   * Url addres
+   */
   to: string;
-  title: string;
+
+  /**
+   * Link value (text)
+   */
+  value: string;
 }
 
 const LINK_STYLES = clsx(styles.btn);
@@ -18,6 +25,6 @@ const LINK_STYLES = clsx(styles.btn);
  */
 export const Link: React.FC<LinkProps> = (props: LinkProps) => {
   return (
-    <NavLink className={LINK_STYLES} to={props.to}>{props.title}</NavLink>
+    <NavLink className={LINK_STYLES} to={props.to}>{props.value}</NavLink>
   );
 };

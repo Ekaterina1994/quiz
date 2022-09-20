@@ -2,9 +2,13 @@ import React, {useState} from "react";
 import {Link} from "src/app/component/link/Link";
 import {Headline} from "src/app/component/headline/Headline";
 import {Switch} from "src/app/component/switch/Switch";
-import {MAIN_PATH} from "src/app/logic/mainPage/MainPage";
+import {MAIN_PAGE_PATH} from "src/app/logic/mainPage/MainPage";
 
-export const SETTINGS_PATH = "settings";
+/**
+ * Settings page path
+ */
+export const SETTINGS_PAGE_PATH = "/settings";
+
 const SETTINGS_TITLE = "Offline / Online";
 
 /**
@@ -19,7 +23,7 @@ export const SettingsPage: React.FC = () => {
 
   return (
     <div>
-      <Link title="To menu" to={MAIN_PATH} />
+      <Link value="To menu" to={MAIN_PAGE_PATH} />
       <Headline text={SETTINGS_TITLE} />
       <Switch isOnline={isOnline} hasConnection={changeConnection} />
     </div>

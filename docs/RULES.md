@@ -37,13 +37,13 @@
 
 ## CODE
 
-- we use capital letters and an underscore, if the value of the constant is known before the code is executed and "hardcoded" (for example, the hexadecimal value for red):  
+- We use `UPPER_CASE`, if the value of the constant is known before the code is executed and "hardcoded" (for example, the hexadecimal value for red):  
 		  
 ```
 const COLOR_RED = "#F00";
 ```  
     
-- we use lower letters and "camelCase", if the constants are calculated during script execution (we don't know a result before script), but do not change after their initial assignment:  
+- We use lower letters and "camelCase", if the constants are calculated during script execution (we don't know a result before script), but do not change after their initial assignment:  
       
 
 ```

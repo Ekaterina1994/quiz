@@ -3,18 +3,21 @@ import clsx from "clsx";
 import styles from "src/app/component/paragraph/Paragraph.module.scss";
 
 /**
- * Contain attributes for each paragraph
+ * Paragraph props
  */
 interface ParagraphProps {
+  /**
+   * Text
+   */
   text: string;
 };
 
-export const PARAGRAPH_STYLES = clsx(styles.paragraph);
-
 /**
- * Insert paragraph on pages
+ * Paragraph on pages
  */
 export const Paragraph: React.FC<ParagraphProps> = (props: ParagraphProps) => {
+  const PARAGRAPH_STYLES = clsx(styles.paragraph);
+
   return (
     <p className={PARAGRAPH_STYLES}>{props.text}</p>
   );

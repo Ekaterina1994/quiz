@@ -3,18 +3,21 @@ import clsx from "clsx";
 import styles from "src/app/component/headline/Headline.module.scss";
 
 /**
- * Contain attributes for each headline
+ * Headline props
  */
 interface HeadlineProps {
+  /**
+   * Text
+   */
   text: string;
 };
 
-const HEADLINE_STYLES = clsx(styles.headline);
-
 /**
- * Insert headline on pages
+ * Headline on pages
  */
 export const Headline: React.FC<HeadlineProps> = (props: HeadlineProps) => {
+  const HEADLINE_STYLES = clsx(styles.headline);
+
   return (
     <h1 className={HEADLINE_STYLES}>{props.text}</h1>
   );

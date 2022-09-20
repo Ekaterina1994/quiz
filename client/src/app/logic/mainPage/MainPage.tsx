@@ -2,17 +2,24 @@ import React from "react";
 import clsx from "clsx";
 import styles from "src/app/logic/mainPage/MainPage.module.scss";
 import {Link} from "src/app/component/link/Link";
-import {SETTINGS_PATH} from "src/app/logic/settingsPage/SettingsPage";
-import {QUIZ_PATH} from "src/app/logic/quizPage/QuizPage";
+import {SETTINGS_PAGE_PATH} from "src/app/logic/settingsPage/SettingsPage";
+import {GAME_PAGE_PATH} from "src/app/logic/gamePage/GamePage";
 
-export const MAIN_PATH = "/"; // The first route acts as the root. It's path to MainPage
-const MAIN_STYLES = clsx(styles.main);
+/**
+ *  Main page path
+ */
+export const MAIN_PAGE_PATH = "/";
 
+/**
+ * Main page component
+ */
 export const MainPage: React.FC = () => {
+  const MAIN_PAGE_STYLES = clsx(styles.main);
+
   return (
-    <div className={MAIN_STYLES}>
-      <Link title="Start" to={QUIZ_PATH} />
-      <Link title="Settings" to={SETTINGS_PATH} />
+    <div className={MAIN_PAGE_STYLES}>
+      <Link value="Start" to={GAME_PAGE_PATH} />
+      <Link value="Settings" to={SETTINGS_PAGE_PATH} />
     </div>
   );
 };
