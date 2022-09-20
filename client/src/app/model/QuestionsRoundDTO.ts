@@ -14,7 +14,7 @@ export interface questionsRoundDTO {
   choices: string[];
 
   /**
-   * Text of qright answer
+   * Text of right answer
    */
   rightAnswer: string;
 

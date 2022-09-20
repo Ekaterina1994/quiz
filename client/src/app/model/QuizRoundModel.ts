@@ -16,7 +16,7 @@ export class QuizRoundModel {
   public choices: string[];
 
   /**
-   * Text of qright answer
+   * Text of right answer
    */
   public rightAnswer: string;
 

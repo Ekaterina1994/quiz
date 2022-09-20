@@ -4,7 +4,7 @@ import {questionsRoundDTO} from "src/app/model/QuestionsRoundDTO";
 import {QuizServiceMethods} from "src/app/service/QuizServiceMethods";
 
 /**
- * Use when the client have internet
+ * Use when the client have internet. We get a response with all data for quiz
  */
 export class QuizService implements QuizServiceMethods {
 

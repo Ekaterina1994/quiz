@@ -10,7 +10,7 @@ Follow the next steps for start project:
    `cd client`
 
 3. Install all the dependencies
-   `npm install`
+   `pnpm install`
 
 4. Start script for open application
-   `npm run client`
+   `pnpm run client`
