@@ -12,7 +12,7 @@ interface ParagraphProps {
 export const PARAGRAPH_STYLES = clsx(styles.paragraph);
 
 /**
- * Paragraph component
+ * Insert paragraph on pages
  */
 export const Paragraph: React.FC<ParagraphProps> = (props: ParagraphProps) => {
   return (

@@ -13,6 +13,9 @@ interface LinkProps {
 
 const LINK_STYLES = clsx(styles.btn);
 
+/**
+ * Custom link
+ */
 export const Link: React.FC<LinkProps> = (props: LinkProps) => {
   return (
     <NavLink className={LINK_STYLES} to={props.to}>{props.title}</NavLink>
