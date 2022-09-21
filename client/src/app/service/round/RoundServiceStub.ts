@@ -10,7 +10,7 @@ import {RoundServiceInterface} from "src/app/service/round/RoundServiceInterface
 export class RoundServiceStub implements RoundServiceInterface {
 
   /**
-   * Return array with questions, answers, right answers, keys
+   * Returns quiz rounds
    */
   public async getRounds(): Promise<RoundModel[]> {
 

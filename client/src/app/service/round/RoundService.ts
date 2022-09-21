@@ -10,15 +10,15 @@ import {RoundServiceInterface} from "src/app/service/round/RoundServiceInterface
 export class RoundService implements RoundServiceInterface {
 
   /**
-   * Service url addres
+   * Round api address
    */
-  private baseUrl: string;
+  private roundUrl: string;
 
   /**
-   * @param baseUrl service addres
+   * @param roundUrl round api address
    */
-  constructor(baseUrl: string) {
-    this.baseUrl = baseUrl;
+  constructor(roundUrl: string) {
+    this.roundUrl = roundUrl;
   }
 
   /**
@@ -26,7 +26,7 @@ export class RoundService implements RoundServiceInterface {
    */
   public async getRounds(): Promise<RoundModel[]> {
 
-    const roundsDTO: RoundDTO[] = await fetchRequest.get(this.baseUrl);
+    const roundsDTO: RoundDTO[] = await fetchRequest.get(this.roundUrl);
 
     const rounds = roundsDTO.map((round: RoundDTO) => {
       return new RoundModel(round);

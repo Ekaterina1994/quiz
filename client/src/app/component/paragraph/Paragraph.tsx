@@ -13,12 +13,14 @@ interface ParagraphProps {
 };
 
 /**
- * Paragraph on pages
+ * Paragraph
  */
 export const Paragraph: React.FC<ParagraphProps> = (props: ParagraphProps) => {
   const PARAGRAPH_STYLES = clsx(styles.paragraph);
 
   return (
-    <p className={PARAGRAPH_STYLES}>{props.text}</p>
+    <p className={PARAGRAPH_STYLES}>
+      {props.text}
+    </p>
   );
 };

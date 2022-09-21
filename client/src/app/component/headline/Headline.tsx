@@ -13,7 +13,7 @@ interface HeadlineProps {
 };
 
 /**
- * Headline on pages
+ * Headline
  */
 export const Headline: React.FC<HeadlineProps> = (props: HeadlineProps) => {
   const HEADLINE_STYLES = clsx(styles.headline);

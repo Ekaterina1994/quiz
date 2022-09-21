@@ -15,8 +15,6 @@ interface EndGameScreenProps {
 
 /**
  * @description Screen shows after end of the game
- * @param endGameScreenProps
- * @returns
  */
 export const EndGameScreen: React.FC<EndGameScreenProps> = (props: EndGameScreenProps) => {
   return (

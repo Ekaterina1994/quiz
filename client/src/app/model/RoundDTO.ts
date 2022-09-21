@@ -6,7 +6,7 @@ import {AnswerVariantDTO} from "./AnswerVariantDTO";
 export interface RoundDTO {
 
   /**
-   * ID for each round
+   * ID
    */
   id: string;
 
@@ -21,7 +21,7 @@ export interface RoundDTO {
   answerVariants: AnswerVariantDTO[];
 
   /**
-   * Text of qright answer
+   * Right answer id
    */
   rightAnswerId: string;
 }

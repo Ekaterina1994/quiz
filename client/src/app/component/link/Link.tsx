@@ -8,23 +8,25 @@ import styles from "src/app/component/button/Button.module.scss";
  */
 interface LinkProps {
   /**
-   * Url addres
+   * Url address
    */
   to: string;
 
   /**
-   * Link value (text)
+   * Text
    */
-  value: string;
+  text: string;
 }
-
-const LINK_STYLES = clsx(styles.btn);
 
 /**
  * Custom link
  */
 export const Link: React.FC<LinkProps> = (props: LinkProps) => {
+  const LINK_STYLES = clsx(styles.btn);
+
   return (
-    <NavLink className={LINK_STYLES} to={props.to}>{props.value}</NavLink>
+    <NavLink className={LINK_STYLES} to={props.to}>
+      {props.text}
+    </NavLink>
   );
 };

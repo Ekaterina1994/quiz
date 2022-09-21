@@ -14,7 +14,7 @@ export const ErrorPage: React.FC = () => {
 
   return (
     <div>
-      <Link value="To menu" to={MAIN_PAGE_PATH} />
+      <Link text="To menu" to={MAIN_PAGE_PATH} />
       <div className={CONTAINER_STYLES}>
         <Headline text={ERROR_TEXT} />
       </div>

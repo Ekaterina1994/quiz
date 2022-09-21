@@ -7,5 +7,5 @@ export interface RoundServiceInterface {
   /**
    * Returns quiz rounds
    */
-  getRounds(): Promise<RoundModel[]>
+  getRounds(): Promise<RoundModel[]>;
 }

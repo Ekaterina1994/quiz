@@ -1,3 +1,6 @@
+/**
+ * Answer business DTO
+ */
 export interface AnswerVariantDTO {
   /**
    * Answer id

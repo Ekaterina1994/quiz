@@ -3,12 +3,12 @@ import {AnswerVariantDTO} from "src/app/model/AnswerVariantDTO";
 import {RoundDTO} from "src/app/model/RoundDTO";
 
 /**
- * DTO of questions for each round
+ * Round business model
  */
 export class RoundModel {
 
   /**
-   * ID for each round
+   * Id
    */
   public id: string;
 
@@ -23,13 +23,10 @@ export class RoundModel {
   public answerVariants: AnswerVariantModel[];
 
   /**
-   * Text of qright answer
+   * Right answer id
    */
   public rightAnswerId: string;
 
-  /**
-   * Quiz round
-   */
   constructor(quizSeed: RoundDTO) {
     this.question = quizSeed.question;
     this.answerVariants = quizSeed.answerVariants.map(

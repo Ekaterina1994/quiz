@@ -6,20 +6,20 @@ import {SETTINGS_PAGE_PATH} from "src/app/logic/settingsPage/SettingsPage";
 import {GAME_PAGE_PATH} from "src/app/logic/gamePage/GamePage";
 
 /**
- *  Main page path
+ *  Path to Main page
  */
 export const MAIN_PAGE_PATH = "/";
 
 /**
- * Main page component
+ * Main page
  */
 export const MainPage: React.FC = () => {
   const MAIN_PAGE_STYLES = clsx(styles.main);
 
   return (
     <div className={MAIN_PAGE_STYLES}>
-      <Link value="Start" to={GAME_PAGE_PATH} />
-      <Link value="Settings" to={SETTINGS_PAGE_PATH} />
+      <Link text="Start" to={GAME_PAGE_PATH} />
+      <Link text="Settings" to={SETTINGS_PAGE_PATH} />
     </div>
   );
 };

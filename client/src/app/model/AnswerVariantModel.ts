@@ -1,15 +1,18 @@
 import {AnswerVariantDTO} from "src/app/model/AnswerVariantDTO";
 
+/**
+ * Answer business model
+ */
 export class AnswerVariantModel {
 
   /**
-     * Answer id
-     */
+   * Answer id
+   */
   public id: string;
 
   /**
-      * Answer text
-      */
+    * Answer text
+    */
   public answer: string;
 
   constructor(answerVariantDto: AnswerVariantDTO) {

@@ -1,27 +1,11 @@
 import React from "react";
-import {Paragraph} from "src/app/component/paragraph/Paragraph";
 import {AnswerVariantModel} from "src/app/model/AnswerVariantModel";
+import {AnswerWithRadio} from "./AnswerWithRadio";
 
-const renderAnswerElement = (
-  answerVariant: AnswerVariantModel,
-  setCheckedAnswerId: React.Dispatch<React.SetStateAction<string | null>>,
-): React.ReactElement => {
-  return (
-    <label key={answerVariant.id}>
-      <input
-        type="radio"
-        name="choice"
-        value={answerVariant.id}
-        onChange={() => {
-          return setCheckedAnswerId(answerVariant.id); ;
-        }}
-      />
-      <Paragraph text={answerVariant.answer} />
-    </label>
-  );
-};
-
-interface AnswersProps {
+/**
+ * Answers props
+ */
+interface CheckAnswerProps {
   /**
    * Answer's variants list
    */
@@ -33,18 +17,24 @@ interface AnswersProps {
   setCheckedAnswerId: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-export const Answers: React.FC<AnswersProps> = (props: AnswersProps) => {
+/**
+ * UI to check answer
+ */
+export const CheckAnswer: React.FC<CheckAnswerProps> = (props: CheckAnswerProps) => {
   return (
     <>
       {props
         .answerVariants
         .map((answerVariant: AnswerVariantModel) => {
-          return renderAnswerElement(
-            answerVariant,
-            props.setCheckedAnswerId,
+          return (
+            <AnswerWithRadio
+              key={answerVariant.id}
+              answerVariant={answerVariant}
+              setCheckedAnswerId={props.setCheckedAnswerId}
+            />
           );
-        },
-        )}
+        })
+      }
     </>
   );
 };

@@ -1,12 +1,22 @@
 import {RoundServiceStub} from "src/app/service/round/RoundServiceStub";
 import {RoundService} from "src/app/service/round/RoundService";
 import {RoundServiceInterface} from "src/app/service/round/RoundServiceInterface";
-import config from "src/app/config.json";
+
+const config = {
+  /**
+   * Connection game mode
+   */
+  IS_MODE_OFFLINE: true,
+
+  /**
+   * Url address to server
+   */
+  ROUND_API_URL: "http://localhost:3001",
+};
 
 /**
- * Class base on QuizServiceServiceStub (if we get data locally)
- * or QuizService (if we get data from internet).
+ * Provide rounds methods
  */
-export const roundService: RoundServiceInterface = config.IS_MODE_STUB
+export const roundService: RoundServiceInterface = config.IS_MODE_OFFLINE
   ? new RoundServiceStub()
-  : new RoundService(config.BASE_URL);
+  : new RoundService(config.ROUND_API_URL);

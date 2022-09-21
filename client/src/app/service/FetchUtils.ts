@@ -8,13 +8,9 @@ export enum FetchMethod {
 }
 
 /**
- * Request
- * @param url path to database with data for quiz
- * @param method GET or DELETE
- * @returns response with data (quiz questions, answers, etc) or Error
+ * Execute request and preprocess response
  */
-
-// eslint-disable-next-line
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const request = async (url: string, method: FetchMethod): Promise<any> => {
   const rawResponse = await fetch(url, {method});
   return rawResponse.json();
@@ -27,21 +23,21 @@ export const fetchRequest = {
 
   /**
    * @description create get request
-   * @param url request addres
+   * @param url request address
    * @returns server response
    */
   get: async <T>(url: string): Promise<T> => { return request(url, FetchMethod.GET); },
 
   /**
    * @description create delete request
-   * @param url requset addres
+   * @param url request address
    * @returns server response
    */
   delete: async <T>(url: string): Promise<T> => { return request(url, FetchMethod.DELETE); },
 
   /**
    * @description create post request
-   * @param url request addres
+   * @param url request address
    * @returns server response
    */
   post: async <T>(url: string): Promise<T> => { return request(url, FetchMethod.POST); },

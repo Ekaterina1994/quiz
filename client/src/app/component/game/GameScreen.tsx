@@ -5,9 +5,9 @@ import {Headline} from "src/app/component/headline/Headline";
 import {RoundModel} from "src/app/model/RoundModel";
 import {roundService} from "src/app/service/ServiceInitialization";
 import {StartGameScreen} from "src/app/component/game/StartGameScreen";
-import {getElementByIndex} from "src/app/component/game/arrayUtils";
+import {getElementByIndex} from "src/app/utils/arrayUtils";
 import {EndGameScreen} from "./EndGameScreen";
-import {Answers} from "./Answers";
+import {CheckAnswer} from "./Answers";
 
 /**
  * Component for displaying quiz questions and answer options
@@ -66,11 +66,11 @@ export const GameScreen: React.FC = () => {
     return (
       <>
         <Headline text={getElementByIndex(rounds, currentRoundIndex).question} />
-        <Answers
+        <CheckAnswer
           answerVariants={getElementByIndex(rounds, currentRoundIndex).answerVariants}
           setCheckedAnswerId={setCheckedAnswerId}
         />
-        <Button title="Check" handleClick={checkAnswer} />
+        <Button text="Check" handleClick={checkAnswer} />
         <Paragraph text={`score: ${scores}`} />
       </>
     );

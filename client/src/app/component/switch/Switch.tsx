@@ -6,8 +6,15 @@ import switchStyles from "src/app/component/switch/Switch.module.scss";
  * Switch props
  */
 export interface SwitchProps {
-  isOnline: boolean;
-  hasConnection: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  /**
+   * Flag shows switch position
+   */
+  isLeftPosition: boolean;
+
+  /**
+   * Callback trigger on change
+   */
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 /**
@@ -21,9 +28,10 @@ export const Switch: React.FC<SwitchProps> = (props: SwitchProps) => {
   return (
     <label className={CONTAINER_STYLES}>
       <input
-        className={INPUT_STYLES} type="checkbox"
-        checked={props.isOnline}
-        onChange={props.hasConnection}
+        className={INPUT_STYLES}
+        type="checkbox"
+        checked={props.isLeftPosition}
+        onChange={props.onChange}
       />
       <div className={SWITCH_STYLES} />
     </label>
