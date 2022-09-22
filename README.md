@@ -32,13 +32,23 @@ The folder "docs" contains the file "RULES.md" with project rules.
 
 P.S:
 We're ready to discuss any job offers and answer your questions. 
-Send me an email at a convenient time for you: katishteno@mail.ru
 
-**Ekaterina:**
-- YouTube: https://www.youtube.com/channel/UCEzXFClFND8K9vqYSfb3YAA
+## **_Current team contacts_**
+
+**Ekaterina** (Developer):
+
 - LinkedIn: https://www.linkedin.com/in/ekaterina-veretennikova/
 - CV: https://drive.google.com/file/d/1NviTOHXLySRWCSIPp9n_3J3hbzBOninB/view?usp=sharing
+- YouTube (videos with demo): https://www.youtube.com/channel/UCEzXFClFND8K9vqYSfb3YAA
 
-**Yuri:**
+**Yuri** (Developer):
+
 - LinkedIn: https://www.linkedin.com/in/yuri-prigara/
 - CV: https://www.linkedin.com/feed/update/urn:li:activity:6958064508523225089?utm_source=share&utm_medium=member_desktop
+
+**Veratsennikau Viktar** (Manager, consultant):
+
+- Mail: victorveretennikov58@gmail.com
+- LinkedIn: https://www.linkedin.com/in/victor-veretennikov
+- CV: https://drive.google.com/file/d/1nKV5lV-tq--4LLiMgPvIc1TB214PigSs/view?usp=sharing
+- YouTube (videos with review): https://www.youtube.com/channel/UCj7CJbhML-1VR2Aywqt7zSg
