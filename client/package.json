@@ -20,6 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:5000",
   "lint": "eslint \"src/**/*.ts\"",
   "lint-staged": {
     "*.ts": [

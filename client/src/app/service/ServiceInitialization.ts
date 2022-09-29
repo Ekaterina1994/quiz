@@ -6,12 +6,12 @@ const config = {
   /**
    * Connection game mode
    */
-  IS_MODE_OFFLINE: true,
+  IS_MODE_OFFLINE: false,
 
   /**
    * Url address to server
    */
-  ROUND_API_URL: "http://localhost:3001",
+  ROUND_API_URL: "/api/quiz",
 };
 
 /**
