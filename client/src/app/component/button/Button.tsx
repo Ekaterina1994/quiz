@@ -1,37 +1,34 @@
 import React from "react";
-import clsx from "clsx";
 import styles from "./Button.module.scss";
 
 /**
- * Button Props
+ * Button props
  */
 export interface ButtonProps {
   /**
-   * Text on button
+   * Text
    */
   text: string;
 
   /**
    * Callback triggered on click
    */
-  onClick: (event: React.MouseEvent<Element, MouseEvent>) => void;
+  onClick: () => any;
 }
 
 /**
- * Button component
+ * Custom link in menu
  */
 export const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
-  // storybook cant works with styles
-  const BUTTON_STYLES = clsx(styles.btn);
-
-  // const BUTTON_STYLES = "asd";
   return (
-    <button
-      className={BUTTON_STYLES}
-      type="button"
-      onClick={props.onClick}
-    >
-      {props.text}
-    </button>
+  // TODO: remove eslint-disable-next-line
+  // eslint-disable-next-line max-len
+  // eslint-disable-next-line jsx-a11y/anchor-is-valid, jsx-a11y/click-events-have-key-events, jsx-a11y/interactive-supports-focus
+    <a role="button" onClick={props.onClick}>
+      <li className={styles.li}>
+        <span className={styles.trim} />
+        {props.text}
+      </li>
+    </a>
   );
 };

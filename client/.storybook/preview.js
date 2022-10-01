@@ -6,4 +6,17 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  backgrounds: {
+    default: 'black',
+    values: [
+      {
+        name: 'white',
+        value: '#fff',
+      },
+      {
+        name: 'black',
+        value: '#000',
+      },
+    ],
+  },
 }

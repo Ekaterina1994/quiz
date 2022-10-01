@@ -15,6 +15,15 @@ due to bug with integration pnpm and storybook sometimes u need to exec next ste
 
    `rm -rf node_modules/.cache`
 
-2. Fix bug line in preset-create-react-app
+2. Fix [bug](https://github.com/storybookjs/storybook/issues/10668) line in preset-create-react-app: 
+   
+   replace 
+   
+   `var craWebpackConfigPath = path_1.join(scriptsPath, 'config', 'webpack.config');`
+   
+   with
+   
+   ` var craWebpackConfigPath = path_1.join(scriptsPath, 'react-scripts/config', 'webpack.config');`
 
-   `https://github.com/storybookjs/storybook/issues/10668`
+   
+
