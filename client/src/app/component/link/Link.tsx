@@ -1,32 +1,32 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import clsx from "clsx";
-import styles from "src/app/component/button/Button.module.scss";
+import styles from "src/app/component/link/Link.module.scss";
 
 /**
  * Link props
  */
 interface LinkProps {
   /**
-   * Url address
-   */
-  to: string;
-
-  /**
    * Text
    */
   text: string;
+
+  /**
+   * Destination path
+   */
+  to: string;
 }
 
 /**
- * Custom link
+ * Custom link component
  */
 export const Link: React.FC<LinkProps> = (props: LinkProps) => {
-  const LINK_STYLES = clsx(styles.btn);
-
   return (
-    <NavLink className={LINK_STYLES} to={props.to}>
-      {props.text}
+    <NavLink to={props.to ?? "/"} style={{display: "block"}}>
+      <span className={styles.li}>
+        <span className={styles.trim} />
+        {props.text}
+      </span>
     </NavLink>
   );
 };

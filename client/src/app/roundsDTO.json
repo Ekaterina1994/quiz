@@ -1,50 +1,50 @@
 [
   {
-    "question": "What is your name?",
+    "question": "Check fruit",
     "answerVariants": [
       {
         "id":"0",
-        "answer": "Anna"
+        "answer": "meat"
       }, {
         "id":"1",
-        "answer": "Victor"
+        "answer": "cherry"
       }, {
         "id":"2",
-        "answer": "Olga"
+        "answer": "apple"
       }
     ],
     "rightAnswerId": "2",
 		"id": "0"
   },
   {
-    "question": "What is your mother name?",
+    "question": "Number",
     "answerVariants": [
       {
         "id":"3",
-        "answer": "Anna"
+        "answer": "asd"
       }, {
         "id":"4",
-        "answer": "Victor"
+        "answer": "123"
       }, {
         "id":"5",
-        "answer": "Olga"
+        "answer": "dsa"
       }
     ],
     "rightAnswerId": "4",
 		"id": "1"
   },
   {
-    "question": "What is your father name?",
+    "question": "Name?",
     "answerVariants": [
       {
         "id":"6",
-        "answer": "Anna"
+        "answer": "AA"
       }, {
         "id":"7",
         "answer": "Victor"
       }, {
         "id":"8",
-        "answer": "Olga"
+        "answer": "BB"
       }
     ],
     "rightAnswerId": "7",

@@ -20,4 +20,13 @@ module.exports = {
       },
     },
   },
+  webpackFinal: async (config) => {
+    // resolve absolute paths in stories
+    config.resolve.modules = [
+      ...(config.resolve.modules || []),
+      path.resolve(__dirname, '../src'),
+    ];
+
+    return config;
+  },
 }
