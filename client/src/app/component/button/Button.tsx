@@ -1,11 +1,11 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "src/app/component/button/Button.module.scss";
+import styles from "./Button.module.scss";
 
 /**
- * Contain attributes for each button
+ * Button Props
  */
-interface ButtonProps {
+export interface ButtonProps {
   /**
    * Text on button
    */
@@ -14,20 +14,22 @@ interface ButtonProps {
   /**
    * Callback triggered on click
    */
-  handleClick: (event: React.MouseEvent<Element, MouseEvent>) => void;
+  onClick: (event: React.MouseEvent<Element, MouseEvent>) => void;
 }
 
 /**
  * Button component
  */
 export const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
+  // storybook cant works with styles
   const BUTTON_STYLES = clsx(styles.btn);
 
+  // const BUTTON_STYLES = "asd";
   return (
     <button
       className={BUTTON_STYLES}
       type="button"
-      onClick={props.handleClick}
+      onClick={props.onClick}
     >
       {props.text}
     </button>

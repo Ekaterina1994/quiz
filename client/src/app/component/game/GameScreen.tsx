@@ -70,7 +70,7 @@ export const GameScreen: React.FC = () => {
           answerVariants={getElementByIndex(rounds, currentRoundIndex).answerVariants}
           setCheckedAnswerId={setCheckedAnswerId}
         />
-        <Button text="Check" handleClick={checkAnswer} />
+        <Button text="Check" onClick={checkAnswer} />
         <Paragraph text={`score: ${scores}`} />
       </>
     );
