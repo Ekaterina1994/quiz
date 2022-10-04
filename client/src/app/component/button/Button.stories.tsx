@@ -8,10 +8,12 @@ export default {
 } as ComponentMeta<typeof ButtonComponent>;
 
 // eslint-disable-next-line react/react-in-jsx-scope, react/jsx-props-no-spreading
-const Template: ComponentStory<typeof ButtonComponent> = (args: ButtonProps) => {return <ButtonComponent {...args} />;};
+const Template: ComponentStory<typeof ButtonComponent> = (args: ButtonProps) => { return <ButtonComponent {...args} />; };
 
 export const Button = Template.bind({});
 Button.args = {
   text: "Hi there!",
-  onClick: () => {alert(123);},
+  onClick: () => {
+    alert(123);
+  },
 };

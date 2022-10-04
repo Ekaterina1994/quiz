@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import switchStyles from "src/app/component/switch/Switch.module.scss";
+import styles from "./Switch.module.scss";
 
 /**
  * Switch props
@@ -21,9 +21,9 @@ export interface SwitchProps {
  * Switch component
  */
 export const Switch: React.FC<SwitchProps> = (props: SwitchProps) => {
-  const CONTAINER_STYLES = clsx(switchStyles.container);
-  const INPUT_STYLES = clsx(switchStyles.container__input);
-  const SWITCH_STYLES = clsx(switchStyles.container__switch);
+  const CONTAINER_STYLES = clsx(styles.container);
+  const INPUT_STYLES = clsx(styles.container__input);
+  const SWITCH_STYLES = clsx(styles.container__switch);
 
   return (
     <label className={CONTAINER_STYLES}>
