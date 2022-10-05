@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "src/app/component/paragraph/Paragraph.module.scss";
+import styles from "./Paragraph.module.scss";
 
 /**
  * Paragraph props

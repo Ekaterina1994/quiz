@@ -1,13 +1,13 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "src/app/logic/game/gamePage/GamePage.module.scss";
-import {Paragraph} from "src/app/component/paragraph/Paragraph";
 import {AnswerVariantModel} from "src/app/model/AnswerVariantModel";
+import {Paragraph} from "../../../../component/paragraph/Paragraph";
+import styles from "../GamePage.module.scss";
 
 /**
  * Answer props
  */
-interface AnswerWithRadioProps {
+export interface AnswerWithRadioProps {
   /**
    * AnswerVariant for rendering
    */
