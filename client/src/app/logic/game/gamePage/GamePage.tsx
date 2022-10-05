@@ -23,7 +23,7 @@ export const GAME_PAGE_PATH = "/game";
  */
 export const GamePage: React.FC = () => {
   const navigation = useNavigate();
-  const GAME_PAGE_STYLES = clsx(styles.container);
+  const GAME_PAGE_STYLES = clsx(styles.game__container);
 
   const {scores, setScores, rounds}: GameStoreInterface = useContext(GameContext);
 
@@ -55,15 +55,17 @@ export const GamePage: React.FC = () => {
   };
 
   return (
-    <div className={GAME_PAGE_STYLES}>
+    <>
       <Link text="To main" to={MAIN_PAGE_PATH} />
       <Headline text={getElementByIndex(rounds, currentRoundIndex).question} />
-      <CheckAnswer
-        answerVariants={getElementByIndex(rounds, currentRoundIndex).answerVariants}
-        setCheckedAnswerId={setCheckedAnswerId}
-      />
-      <Button text="Check" onClick={checkAnswer} />
-      <Paragraph text={`score: ${scores}`} />
-    </div>
+      <div className={GAME_PAGE_STYLES}>
+        <CheckAnswer
+          answerVariants={getElementByIndex(rounds, currentRoundIndex).answerVariants}
+          setCheckedAnswerId={setCheckedAnswerId}
+        />
+        <Button text="Check" onClick={checkAnswer} />
+        <Paragraph text={`score: ${scores}`} />
+      </div>
+    </>
   );
 };
