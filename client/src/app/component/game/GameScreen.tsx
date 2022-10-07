@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import {Button} from "src/app/component/button/Button";
 import {Paragraph} from "src/app/component/paragraph/Paragraph";
 import {Headline} from "src/app/component/headline/Headline";
@@ -6,6 +6,8 @@ import {RoundModel} from "src/app/model/RoundModel";
 import {roundService} from "src/app/service/ServiceInitialization";
 import {StartGameScreen} from "src/app/component/game/StartGameScreen";
 import {getElementByIndex} from "src/app/utils/arrayUtils";
+import {ScoreContext} from "src/ScoreContext";
+// import {AfterGamePage} from "src/app/logic/afterGamePage/AfterGamePage";
 import {EndGameScreen} from "./EndGameScreen";
 import {CheckAnswer} from "./Answers";
 
@@ -14,11 +16,13 @@ import {CheckAnswer} from "./Answers";
  */
 export const GameScreen: React.FC = () => {
 
-  const [scores, setScores] = useState<number>(0);
+  // const [scores, setScores] = useState<number>(0);
   const [rounds, setRounds] = useState<RoundModel[]>([]);
   const [currentRoundIndex, setCurrentRoundIndex] = useState<number>(0);
   const [checkedAnswerId, setCheckedAnswerId] = useState<string | null>(null);
   const resetCheckedAnswerId = (): void => {return setCheckedAnswerId(null);};
+
+  const {scores, setScores} = useContext<any>(ScoreContext);
 
   const initGame: () => void = async () => {
     const insertQuizData: RoundModel[] = await roundService.getRounds();
@@ -78,6 +82,7 @@ export const GameScreen: React.FC = () => {
 
   // after game
   return (
-    <EndGameScreen score={scores} />
+    // <AfterGamePage />
+    <EndGameScreen />
   );
 };
