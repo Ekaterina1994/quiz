@@ -26,7 +26,6 @@ module.exports = {
       ...(config.resolve.modules || []),
       path.resolve(__dirname, '../src'),
     ];
-    config.cache = { type: 'memory' };
 
     return config;
   },
