@@ -28,4 +28,3 @@ const Template: ComponentStory<typeof SwitchComponent> = (args: SwitchProps) => 
 };
 
 export const Switch = Template.bind({});
-Switch.args = {isLeftPosition: false};
