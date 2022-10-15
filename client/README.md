@@ -1,16 +1,29 @@
-**_Instructions_**
+## Install dependencies
 
-Follow the next steps for start project:
+   `pnpm install`
+## Start module
 
-1. Clone repository on your computer
+   `pnpm run start`
 
-   `git clone git@github.com:Ekaterina1994/quiz.git`
+## Start storyBook
 
-2. Enter into folder "client"
-   `cd client`
+   `pnpm run storybook`
 
-3. Install all the dependencies
-   `npm install`
+due to bug with integration pnpm and storybook sometimes u need to exec next steps:
 
-4. Start script for open application
-   `npm run client`
+1. Clear file system cache
+
+   `rm -rf node_modules/.cache`
+
+2. Fix [bug](https://github.com/storybookjs/storybook/issues/10668) line in preset-create-react-app: 
+   
+   replace 
+   
+   `var craWebpackConfigPath = path_1.join(scriptsPath, 'config', 'webpack.config');`
+   
+   with
+   
+   ` var craWebpackConfigPath = path_1.join(scriptsPath, 'react-scripts/config', 'webpack.config');`
+
+   
+

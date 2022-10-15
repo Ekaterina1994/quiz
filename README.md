@@ -35,7 +35,7 @@ We're ready to discuss any job offers and answer your questions.
 
 ## **_Current team contacts_**
 
-**Ekaterina** Developer:
+**Ekaterina** (Developer):
 
 - LinkedIn: https://www.linkedin.com/in/ekaterina-veretennikova/
 - CV: https://drive.google.com/file/d/1NviTOHXLySRWCSIPp9n_3J3hbzBOninB/view?usp=sharing

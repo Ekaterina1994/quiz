@@ -10,7 +10,7 @@ import {MAIN_PAGE_PATH} from "src/app/logic/mainPage/MainPage";
  */
 export const ErrorPage: React.FC = () => {
   const CONTAINER_STYLES = clsx(styles.container);
-  const ERROR_TEXT = "Error";
+  const ERROR_TEXT = "Page not found";
 
   return (
     <div>
