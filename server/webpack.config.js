@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 module.exports = {
-  entry: "./server.js",
+  entry: "server.ts",
   mode,
   target: "node",
   output: {

@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
+    "target": "es2017",
+    "module": "esnext",
+    "skipLibCheck": true,
     "sourceMap": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "outDir": "./build",
+    "moduleResolution": "node"
   }
 }
 

@@ -3,20 +3,18 @@
   "version": "0.1.0",
   "description": "server by express",
   "main": "server.ts",
+  "type": "module",
   "scripts": {
-    "start": "node server.ts",
+    "build": "npx tsc",
+    "start": "node build/server.ts",
     "server": "nodemon server.ts",
-    "build": "webpack",
-    "serve": "webpack serve",
-    "build-prod": "webpack --mode=production",
-    "clean": "rd /s /q dist",
-    "start:dev": "NODE_ENV=development webpack",
-    "run:dev": "NODE_ENV=development nodemon build/index.js"
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q build/server.js\""
   },
   "keywords": [],
   "author": "Ekaterina Veretennikova",
   "license": "ISC",
   "dependencies": {
+    "arg": "^5.0.2",
     "concurrently": "^7.4.0",
     "express": "^4.18.1"
   },
