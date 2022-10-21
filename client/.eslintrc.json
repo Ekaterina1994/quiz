@@ -24,7 +24,11 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
+  
   "rules": {
+    "no-undef": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
     "class-methods-use-this": "off",
     "import/no-unresolved": "off",
     "no-absolute-path": "off",
