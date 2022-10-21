@@ -5,6 +5,8 @@ import {Switch as SwitchComponent, SwitchProps} from "./Switch";
 export default {
   title: "Switch",
   component: SwitchComponent,
+  args: {isLeftPosition: false},
+  argTypes: {isLeftPosition: {type: "boolean"}},
 } as ComponentMeta<typeof SwitchComponent>;
 
 const Template: ComponentStory<typeof SwitchComponent> = (args: SwitchProps) => {
@@ -24,4 +26,4 @@ const Template: ComponentStory<typeof SwitchComponent> = (args: SwitchProps) => 
 };
 
 export const Switch = Template.bind({});
-Switch.args = {isLeftPosition: false};
+Switch.args = {isLeftPosition: true};
