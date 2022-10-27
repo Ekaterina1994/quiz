@@ -36,8 +36,5 @@ module.exports = {
   externals: [nodeExternals()],
   watch: NODE_ENV === "development",
   plugins: [
-    new WebpackShellPlugin({
-      onBuildEnd: ['pnpm run:dev']
-    })
   ]
 };

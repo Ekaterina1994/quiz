@@ -2,7 +2,6 @@ import React from "react";
 import {createRoot} from "react-dom/client";
 import "src/index.scss";
 import {App} from "src/app/App";
-// import {ScoreContext} from "./ScoreContext";
 
 /**
  * Root node for rendering App
