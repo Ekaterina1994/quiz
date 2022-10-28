@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
   "stories": [
-    "../src/**/*.stories.mdx",
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
+    "../src/app/**/*.stories.mdx",
+    "../src/app/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   "addons": [
     "@storybook/addon-links",
@@ -24,7 +24,8 @@ module.exports = {
     // resolve absolute paths in stories
     config.resolve.modules = [
       ...(config.resolve.modules || []),
-      path.resolve(__dirname, '../src'),
+      path.resolve(__dirname, "../"),
+      path.resolve(__dirname, "../src")
     ];
 
     return config;

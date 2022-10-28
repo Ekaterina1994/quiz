@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./Switch.module.scss";
+import styles from "src/app/component/switch/Switch.module.scss";
 
 /**
  * Switch props

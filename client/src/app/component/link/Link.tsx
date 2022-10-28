@@ -1,6 +1,6 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
-import styles from "./Link.module.scss";
+import styles from "src/app/component/link/Link.module.scss";
 
 /**
  * Link props
