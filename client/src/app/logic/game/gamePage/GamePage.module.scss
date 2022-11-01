@@ -1,3 +1,17 @@
 .container {
-    
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.side {
+  flex: 30vw;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.main {
+  flex: 70vw;
+  background-color: white;
+  padding: 20px;
 }
