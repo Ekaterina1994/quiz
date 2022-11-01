@@ -10,20 +10,30 @@ export default {
 } as ComponentMeta<typeof SwitchComponent>;
 
 const Template: ComponentStory<typeof SwitchComponent> = (args: SwitchProps) => {
-  const [isOnlineMode, setIsOnlineMode] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
-  const changeConnectionMode = (): void => {
-    setIsOnlineMode(!isOnlineMode);
+  const changeChecked = (): void => {
+    setIsChecked(!isChecked);
   };
 
   return (
     <SwitchComponent
       {...args}
-      isLeftPosition={isOnlineMode}
-      onChange={changeConnectionMode}
+      isLeftPosition={isChecked}
+      onChange={changeChecked}
     />
   );
 };
 
 export const Switch = Template.bind({});
-Switch.args = {isLeftPosition: true};
+
+export const SwitchChecked: ComponentStory<typeof SwitchComponent> = (args: SwitchProps) => {
+
+  return (
+    <SwitchComponent
+      {...args}
+      isLeftPosition
+    />
+  );
+};
+SwitchChecked.args = {isLeftPosition: true};
