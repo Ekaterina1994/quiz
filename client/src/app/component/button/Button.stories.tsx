@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import {ComponentStory, ComponentMeta} from "@storybook/react";
 import {Button as ButtonComponent, ButtonProps} from "./Button";
 
@@ -7,11 +6,12 @@ export default {
   component: ButtonComponent,
 } as ComponentMeta<typeof ButtonComponent>;
 
-// eslint-disable-next-line react/react-in-jsx-scope, react/jsx-props-no-spreading
-const Template: ComponentStory<typeof ButtonComponent> = (args: ButtonProps) => {return <ButtonComponent {...args} />;};
+const Template: ComponentStory<typeof ButtonComponent> = (args: ButtonProps) => { return <ButtonComponent {...args} />; };
 
 export const Button = Template.bind({});
 Button.args = {
   text: "Hi there!",
-  onClick: () => {alert(123);},
+  onClick: () => {
+    alert(123);
+  },
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Button.module.scss";
+import styles from "src/app/component/button/Button.module.scss";
 
 /**
  * Button props

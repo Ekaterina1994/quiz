@@ -5,7 +5,7 @@ import styles from "src/app/component/link/Link.module.scss";
 /**
  * Link props
  */
-interface LinkProps {
+export interface LinkProps {
   /**
    * Text
    */
