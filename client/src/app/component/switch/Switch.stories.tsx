@@ -1,5 +1,5 @@
 import {ComponentStory, ComponentMeta} from "@storybook/react";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Switch as SwitchComponent, SwitchProps} from "./Switch";
 
 export default {
@@ -9,16 +9,18 @@ export default {
   argTypes: {isLeftPosition: {type: "boolean"}},
 } as ComponentMeta<typeof SwitchComponent>;
 
-const Template: ComponentStory<typeof SwitchComponent> = (args: SwitchProps) => {
-  const [isChecked, setIsChecked] = useState(false);
-
+const Template: ComponentStory<typeof SwitchComponent> = (props: SwitchProps) => {
+  const [isChecked, setIsChecked] = useState(props.isLeftPosition);
   const changeChecked = (): void => {
     setIsChecked(!isChecked);
   };
 
+  useEffect(() => {
+    changeChecked();
+  }, [props.isLeftPosition]);
+
   return (
     <SwitchComponent
-      {...args}
       isLeftPosition={isChecked}
       onChange={changeChecked}
     />
@@ -27,13 +29,4 @@ const Template: ComponentStory<typeof SwitchComponent> = (args: SwitchProps) => 
 
 export const Switch = Template.bind({});
 
-export const SwitchChecked: ComponentStory<typeof SwitchComponent> = (args: SwitchProps) => {
-
-  return (
-    <SwitchComponent
-      {...args}
-      isLeftPosition
-    />
-  );
-};
-SwitchChecked.args = {isLeftPosition: true};
+Switch.args = {isLeftPosition: true};
