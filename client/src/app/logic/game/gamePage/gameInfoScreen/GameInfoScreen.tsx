@@ -19,6 +19,7 @@ import {AFTER_GAME_PAGE_PATH} from "src/app/logic/game/afterGamePage/AfterGamePa
 export const GameInfoScreen: React.FC = () => {
   const navigation = useNavigate();
   const GAME_INFO_STYLES = clsx(styles.side);
+  const GAME_SCORE_STYLES = clsx(styles.score);
 
   const {scores, setScores, rounds}: GameStoreInterface = useContext(GameContext);
 
@@ -58,7 +59,9 @@ export const GameInfoScreen: React.FC = () => {
         setCheckedAnswerId={setCheckedAnswerId}
       />
       <Button text="Check" onClick={checkAnswer} />
-      <Paragraph text={`score: ${scores}`} />
+      <div className={GAME_SCORE_STYLES}>
+        <Paragraph text={`${scores}`} />
+      </div>
     </aside>
   );
 };
