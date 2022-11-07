@@ -1,5 +1,7 @@
 import React from "react";
 import {AnswerVariantModel} from "src/app/model/AnswerVariantModel";
+import clsx from "clsx";
+import styles from "src/app/logic/game/gamePage/GamePage.module.scss";
 import {AnswerWithRadio} from "./AnswerWithRadio";
 
 /**
@@ -21,8 +23,10 @@ interface CheckAnswerProps {
  * UI to check answer
  */
 export const CheckAnswer: React.FC<CheckAnswerProps> = (props: CheckAnswerProps) => {
+  const ANSWERS_STYLES = clsx(styles.game__answers);
+
   return (
-    <>
+    <div className={ANSWERS_STYLES}>
       {props
         .answerVariants
         .map((answerVariant: AnswerVariantModel) => {
@@ -35,6 +39,6 @@ export const CheckAnswer: React.FC<CheckAnswerProps> = (props: CheckAnswerProps)
           );
         })
       }
-    </>
+    </div>
   );
 };
