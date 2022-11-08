@@ -50,5 +50,5 @@ We're ready to discuss any job offers and answer your questions.
 
 - Mail: victorveretennikov58@gmail.com
 - LinkedIn: https://www.linkedin.com/in/victor-veretennikov
-- CV: https://drive.google.com/file/d/1nKV5lV-tq--4LLiMgPvIc1TB214PigSs/view?usp=sharing
+- CV: https://drive.google.com/file/d/1dhTnI04ZJCS7POMlp6y-LVpnEZzk3Sb0/view?usp=share_link
 - YouTube (videos with review): https://www.youtube.com/channel/UCj7CJbhML-1VR2Aywqt7zSg
