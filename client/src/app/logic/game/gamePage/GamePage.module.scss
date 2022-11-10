@@ -34,6 +34,27 @@
   padding: 20px;
 }
 
+.circles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 25px;
+}
+
+.circle {
+  -webkit-mask: url(../../../../resources/gamePage/circle.svg) no-repeat 50% 50%;
+  mask: url(../../../../resources/gamePage/circle.svg) no-repeat 50% 50%;
+  background-color: #e32636;
+  align-items: center;
+  background-size: contain;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  line-height: normal;
+  width: 54px;
+}
+
 .game {
   &__container {
     max-width: 450px;
