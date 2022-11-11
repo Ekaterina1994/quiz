@@ -1,4 +1,4 @@
-# KATE'S LOGS
+# VICTOR'S LOGS
 
 | Date(dd.mm.yy) | Hours (+- 0.5) | Done (commited in remote branch) | Problems (more than 3 hours thinking) |
 | :------------: | -------------- | :------------------------------: | ------------------------------------: |
