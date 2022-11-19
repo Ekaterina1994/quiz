@@ -2,13 +2,11 @@
   "name": "server",
   "version": "0.1.0",
   "description": "server by express",
-  "main": "server.ts",
+  "main": "./web/index.ts",
   "type": "module",
   "scripts": {
-    "build": "webpack",
-    "serve": "node ./build/index.js",
-    "start": "nodemon ./build/index.js",
-    "tri": "webpack"
+    "build": "webpack && echo {} >> ./build/package.json",
+    "start": " pnpm run build && webpack serve"
   },
   "keywords": [],
   "author": "Quiz",
@@ -31,6 +29,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "nodemon": "^2.0.20",
+    "nodemon-webpack-plugin": "^4.8.1",
     "prettier": "^2.7.1",
     "ts-loader": "^9.4.1",
     "typescript": "^4.8.4",

@@ -1,8 +1,7 @@
 import path from "path";
 console.log("webpack works!");
-// import nodeExternals from "webpack-node-externals";
-// import WebpackShellPlugin from "webpack-shell-plugin";
 import UglifyJsPlugin from "uglifyjs-webpack-plugin";
+import NodemonPlugin from "nodemon-webpack-plugin";
 
 const BUILD_DIRECTORY = path.resolve("./build");
 
@@ -14,7 +13,7 @@ if (process.env.NODE_ENV === "production") {
 export default {
   mode: NODE_ENV,
   entry: {
-    index: "./index.ts",
+    index: "./web/index.ts",
   },
   target: "node",
   devtool: 'inline-source-map',
@@ -28,7 +27,7 @@ export default {
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".ts", ".js"],
   },
   output: {
     filename: "[name].js",
@@ -39,5 +38,8 @@ export default {
     minimizer: [new UglifyJsPlugin({
         include: /\.min\.js$/
     })]
-},
+  },
+  plugins: [
+    new NodemonPlugin(),
+  ],
 };
