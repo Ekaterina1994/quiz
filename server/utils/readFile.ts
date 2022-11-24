@@ -1,17 +1,45 @@
+import console from "console";
 import fs from "fs";
 
-const FILE_PATH: string = "./quiz.json";
+let DATA_IN_STRING: string;
 
-let QUIZ: string;
+// Return a string with datas which were converted from json file
+// export const readFile = (PATH_TO_FILE: string) => {
+//   fs.readFile(PATH_TO_FILE, "utf-8", (err, data) => {
+//     if (err) {
+//       throw err;
+//     } else {
+//       DATA_IN_STRING = JSON.parse(data);
+//       console.log(DATA_IN_STRING);
+//       return DATA_IN_STRING;
+//     }
+//   });
+//   return DATA_IN_STRING;
+// } 
 
-// A string with datas which were converted from json file
-export const readFile = () => {
-  fs.readFile(FILE_PATH, "utf-8", (err, data) => {
-    if (err) {
-      throw err;
-    } else {
-      QUIZ = JSON.parse(data);
-      return QUIZ;
-    }
-  });
-} 
+
+
+// export const readFile = async (PATH_TO_FILE: string) => {
+//   try {
+//     const data = await fs.promises.readFile(PATH_TO_FILE, 'utf8')
+//     return data;
+//   }
+//   catch(err) {
+//     console.log(err)
+//   }
+// }
+
+
+
+export async function readFile(PATH_TO_FILE: string) {
+ let ress = new Promise((resolve, reject) => {
+    fs.readFile(PATH_TO_FILE, 'utf8', function (err, data) {
+      if (err) {
+        reject(err);
+      }
+      resolve(JSON.parse(data));
+    });
+ });
+  let resss = await ress;
+  console.log(resss);
+}
