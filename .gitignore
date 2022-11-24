@@ -79,3 +79,4 @@ logs
 .vscode/
 
 node_modules
+build
