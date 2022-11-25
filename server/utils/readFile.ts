@@ -31,15 +31,16 @@ let DATA_IN_STRING: string;
 
 
 
-export async function readFile(PATH_TO_FILE: string) {
-  let DATA = new Promise((resolve, reject) => {
-    fs.readFile(PATH_TO_FILE, 'utf8', function (err, data) {
-      if (err) {
-        reject(err);
-      }
-      resolve(data);
-    });
-  });
-  let DATA_IN_STRING = await DATA;
-  return DATA_IN_STRING;
+export const readFile = async (PATH_TO_FILE: string): Promise<string> => {
+  const data = await fs.promises.readFile(PATH_TO_FILE, 'utf8');
+  // let DATA = new Promise((resolve, reject) => {
+  //   fs.readFile(PATH_TO_FILE, 'utf8', (err, data) => {
+  //     if (err) {
+  //       reject(err);
+  //     }
+  //     resolve(data);
+  //   });
+  // });
+  // let DATA_IN_STRING = await DATA;
+  return data;
 }

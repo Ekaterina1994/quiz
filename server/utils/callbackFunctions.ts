@@ -1,14 +1,14 @@
 import { Request, Response } from "express";
 import { readFile } from "./readFile";
 
-const PATH_TO_FILE: string = "./quiz.json";
+const PATH_TO_FILE: string = "./roundsDTO.json";
 let DATA_IN_STRING: string;
 
 readFile(PATH_TO_FILE);
 
 export const handleStatus = (req: Request, res: Response): void => {
   try {
-    
+    console.log()
     res.status(200).json(DATA_IN_STRING);
   } catch (error) {
     res.status(500).json({error});

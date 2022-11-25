@@ -8,7 +8,7 @@ import { readFile } from "../utils/readFile";
 config();
 const app: Express = express();
 
-const PATH: string = "./quiz.json";
+const PATH: string = "./roundsDTO.json";
 // // let DATA_IN_STRING: string;
 
 // // readFile(PATH_TO_FILE);
@@ -20,20 +20,13 @@ const PATH: string = "./quiz.json";
 // readFile(PATH);
 // console.log(readFile(PATH));
 
-const data = async () => {
-  // console.log(await readFile(PATH));
-  const ddd = await readFile(PATH);
-  console.log(ddd);
-}; 
-
-data();
-
 // console.log(DATA_IN_STRING);
 
-  export const handleStatus = (req: Request, res: Response): void => {
+  export const handleStatus = async (req: Request, res: Response): Promise<void> => {
     try {
-      res.status(200).json(data);
-      console.log(res);
+      const rawRounds: string = await readFile(PATH);
+      const rounds = JSON.parse(rawRounds);
+      res.status(200).json(rounds);
     } catch (error) {
       res.status(500).json({error});
     }
@@ -48,7 +41,7 @@ export const PORT = process.env.PORT || 5000;
 
 
 // Method .get compare the path of requests (url) and if it's matches returns data in json format
-app.get("/api/quiz", handleStatus);
+app.get("/api/quiz", handleStatus); // обработать статус
 
 // App listening for connections on port
 app.listen(PORT, listenFunction);

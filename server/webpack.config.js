@@ -1,5 +1,4 @@
 import path from "path";
-console.log("webpack works!");
 import UglifyJsPlugin from "uglifyjs-webpack-plugin";
 import NodemonPlugin from "nodemon-webpack-plugin";
 
