@@ -4,6 +4,7 @@ import styles from "src/app/logic/game/gamePage/GamePage.module.scss";
 import {Link} from "src/app/component/link/Link";
 import {MAIN_PAGE_PATH} from "src/app/logic/mainPage/MainPage";
 import {GameContext, GameStoreInterface} from "src/app/logic/game/GameStore";
+import {RoundContext, RoundStoreInterface} from "src/app/logic/game/RoundStore";
 import {Headline} from "src/app/component/headline/Headline";
 import {CheckAnswer} from "src/app/logic/game/gamePage/answers/Answers";
 import {Button} from "src/app/component/button/Button";
@@ -22,8 +23,8 @@ export const GameInfoScreen: React.FC = () => {
   const GAME_SCORE_STYLES = clsx(styles.score);
 
   const {scores, setScores, rounds}: GameStoreInterface = useContext(GameContext);
+  const {currentRoundIndex, setCurrentRoundIndex}: RoundStoreInterface = useContext(RoundContext);
 
-  const [currentRoundIndex, setCurrentRoundIndex] = useState<number>(0);
   const [checkedAnswerId, setCheckedAnswerId] = useState<string | null>(null);
   const resetCheckedAnswerId = (): void => {
     return setCheckedAnswerId(null);

@@ -45,14 +45,20 @@
 .circle {
   -webkit-mask: url(../../../../resources/gamePage/circle.svg) no-repeat 50% 50%;
   mask: url(../../../../resources/gamePage/circle.svg) no-repeat 50% 50%;
-  background-color: #e32636;
+  background-color: #ccc;
   align-items: center;
   background-size: contain;
   display: flex;
-  height: 56px;
+  height: 60px;
   justify-content: center;
   line-height: normal;
-  width: 54px;
+  width: 58px;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.circle.active {
+  background-color: #e32636;
 }
 
 .game {
