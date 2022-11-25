@@ -16,23 +16,30 @@ const PATH: string = "./quiz.json";
 // let DATA_IN_STRING: string;
 
 // // Return a string with datas which were converted from json file
-let DATA_IN_STRING = readFile(PATH);
+
+// readFile(PATH);
 // console.log(readFile(PATH));
-readFile(PATH);
-console.log(readFile(PATH));
-;
+
+const data = async () => {
+  // console.log(await readFile(PATH));
+  const ddd = await readFile(PATH);
+  console.log(ddd);
+}; 
+
+data();
+
+// console.log(DATA_IN_STRING);
 
   export const handleStatus = (req: Request, res: Response): void => {
-    console.log(123);
     try {
-      res.status(200).json(DATA_IN_STRING);
+      res.status(200).json(data);
+      console.log(res);
     } catch (error) {
       res.status(500).json({error});
     }
   }
   
-  export const PORT = process.env.PORT;
-  
+export const PORT = process.env.PORT || 5000;
 // listenFunction(PORT);
 
   export const listenFunction = (): void => {

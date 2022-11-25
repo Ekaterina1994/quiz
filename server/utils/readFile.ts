@@ -32,14 +32,14 @@ let DATA_IN_STRING: string;
 
 
 export async function readFile(PATH_TO_FILE: string) {
- let ress = new Promise((resolve, reject) => {
+  let DATA = new Promise((resolve, reject) => {
     fs.readFile(PATH_TO_FILE, 'utf8', function (err, data) {
       if (err) {
         reject(err);
       }
-      resolve(JSON.parse(data));
+      resolve(data);
     });
- });
-  let resss = await ress;
-  console.log(resss);
+  });
+  let DATA_IN_STRING = await DATA;
+  return DATA_IN_STRING;
 }
